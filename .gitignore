@@ -1,0 +1,52 @@
+.bundle
+db/*.sqlite3
+log/*.log
+tmp/
+
+# OSX
+.DS_Store
+Icon?
+
+# Thumbnails
+._*
+
+# Files that might appear on external disk
+.Spotlight-V100
+.Trashes
+
+# Linux
+.*
+!.gitignore
+*~
+
+# KDE
+.directory
+
+# TextMate
+*.tmproj
+*.tmproject
+tmtags
+
+# Vim
+.*.sw[a-z]
+*.un~
+Session.vim
+
+# Rails
+*.rbc
+*.sassc
+.sass-cache
+capybara-*.html
+.rspec
+/.bundle
+/vendor/bundle
+/log/*
+/tmp/*
+/db/*.sqlite3
+/public/system/*
+/coverage/
+/spec/tmp/*
+**.orig
+config/*.yml
+rerun.txt
+pickle-email-*.html
