@@ -32,7 +32,7 @@ gem 'pg'
 
 gem "jquery-rails"
 gem 'devise'
-gem 'omniauth'
+gem 'omniauth', '>= 0.2.6'
 gem 'cancan'
 
 gem 'paperclip'
