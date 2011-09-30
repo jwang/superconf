@@ -39,7 +39,6 @@ gem 'cancan'
 gem 'fog'
 gem "paperclip", "~> 2.3"
 gem "state_machine"
-gem 'hoptoad_notifier'
 gem 'will_paginate', '~> 3.0'
 gem 'inherited_resources'
 gem 'event-calendar', :require => 'event_calendar'
