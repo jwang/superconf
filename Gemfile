@@ -6,6 +6,7 @@ gem 'rails', '3.1.0'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'pg'
+gem 'thin'
 
 # Use unicorn as the web server
 # gem 'unicorn'
@@ -29,24 +30,45 @@ gem 'pg'
 # group :development, :test do
 #   gem 'webrat'
 # end
-
 gem "jquery-rails"
 gem 'devise'
-gem 'omniauth', '>= 0.2.6'
+gem 'devise_invitable'
+gem "omniauth", "~> 0.3.0.rc3"
+gem 'oa-openid', :require => 'omniauth/openid'
 gem 'cancan'
-
-gem 'paperclip'
 gem 'fog'
-gem 'state_machine'
-gem 'thin'
-
-
+gem "paperclip", "~> 2.3"
+gem "state_machine"
+gem 'will_paginate', '~> 3.0'
+gem 'inherited_resources'
+gem 'event-calendar', :require => 'event_calendar'
 
 group :development, :test do
   gem "cucumber-rails"
+  gem "database_cleaner"
   gem "capybara"
   gem "rspec-rails", ">= 2.0.1"
-  gem "database_cleaner"
-  gem "factory_girl_rails"
   gem "shoulda-matchers"
+end
+
+gem 'simplecov', '>= 0.4.0', :require => false, :group => :test
+gem 'factory_girl_rails', :require => false, :group => :test
+
+group :development do
+  gem 'guard'
+  gem 'growl_notify' if RUBY_PLATFORM =~ /darwin/i
+  gem 'rb-fsevent', :require => false if RUBY_PLATFORM =~ /darwin/i
+  gem "launchy"
+  gem 'rb-fsevent'
+  gem 'guard-cucumber'
+  gem 'guard-coffeescript'
+  gem 'guard-livereload'
+  gem 'guard-rails'
+  gem 'guard-rspec'
+  gem 'guard-spork'
+  #gem 'guard-rails-assets'
+  #gem 'guard-sprockets'
+  gem 'guard-uglify'
+  gem 'spork', '~> 0.9.0.rc'
+  gem 'rails-footnotes', '>= 3.7'
 end
