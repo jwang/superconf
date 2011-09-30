@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.0.10'
+gem 'rails', '3.1.0'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -42,7 +42,6 @@ gem "state_machine"
 gem 'will_paginate', '~> 3.0'
 gem 'inherited_resources'
 gem 'event-calendar', :require => 'event_calendar'
-gem 'acts_as_commentable_with_threading'
 
 group :development, :test do
   gem "cucumber-rails"
