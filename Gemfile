@@ -40,7 +40,7 @@ gem 'fog'
 gem "paperclip", "~> 2.3"
 gem "state_machine"
 gem 'will_paginate', '~> 3.0'
-gem 'inherited_resources'
+#gem 'inherited_resources'
 gem 'event-calendar', :require => 'event_calendar'
 
 group :development, :test do
@@ -49,6 +49,7 @@ group :development, :test do
   gem "capybara"
   gem "rspec-rails", ">= 2.0.1"
   gem "shoulda-matchers"
+  gem 'faker'
 end
 
 gem 'simplecov', '>= 0.4.0', :require => false, :group => :test
@@ -56,6 +57,7 @@ gem 'factory_girl_rails', :require => false, :group => :test
 
 group :development do
   gem 'guard'
+  gem 'awesome_print'
   gem 'growl_notify' if RUBY_PLATFORM =~ /darwin/i
   gem 'rb-fsevent', :require => false if RUBY_PLATFORM =~ /darwin/i
   gem "launchy"
