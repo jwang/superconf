@@ -19,7 +19,7 @@ SuperConf is a conference planning web app.
 
 Suggested .rvmrc
 ```
-rvm use 1.9.2-p290 
-rvm gemset create superconf 
-rvm use 1.9.2-p290@superconf 
+rvm use 1.9.2-p290  
+rvm gemset create superconf  
+rvm use 1.9.2-p290@superconf
 ```
