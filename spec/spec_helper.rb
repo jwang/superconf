@@ -12,7 +12,7 @@ Spork.prefork do
 
   # Requires supporting ruby files with custom matchers and macros, etc,
   # in spec/support/ and its subdirectories.
-  Dir[Rails.root.join("spec/support/**/*.rb")].each {|f| require f}
+  Dir[Rails.root.join("spec/support/**/*.rb")].each { |f| require f }
 
   RSpec.configure do |config|
     # == Mock Framework
@@ -35,7 +35,8 @@ Spork.prefork do
 end
 
 Spork.each_run do
-  # This code will be run each time you run your specs.
+  FactoryGirl.definition_file_paths <<  File.join(Rails.root, 'spec', 'factories')
+  FactoryGirl.find_definitions # This code will be run each time you run your specs.
 
 end
 
