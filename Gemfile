@@ -49,6 +49,7 @@ group :development, :test do
   gem "capybara"
   gem "rspec-rails", ">= 2.0.1"
   gem "shoulda-matchers"
+  gem "faker"
 end
 
 gem 'simplecov', '>= 0.4.0', :require => false, :group => :test

@@ -1,5 +1,5 @@
 class ProposalController < ApplicationController
-  
+  before_filter :authenticate_user!  
   layout 'proposal_layout'
 
   def index
