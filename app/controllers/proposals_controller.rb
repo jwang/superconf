@@ -1,13 +1,12 @@
-class ProposalController < ApplicationController
+class ProposalsController < ApplicationController
   before_filter :authenticate_user!  
-  layout 'proposal_layout'
 
   def index
     @proposals = Proposal.all
   end
 
   def new
-    @proposal = Proposal.all.build
+    @proposal = Proposal.new
   end
 
   def edit

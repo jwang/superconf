@@ -1,0 +1,18 @@
+<div id="box">
+
+  <% if flash[:notice].present? || flash[:errors].present? %>
+    <div class="flashes notice">
+      <%= flash[:notice] || flash[:errors] %>
+    </div>
+  <% end %>
+
+  <h1><%= t('crud.new', :model => t('activerecord.models.proposals.one')) %></h1>
+  blah
+
+  <%= semantic_form_for(@proposal) do |f| %>
+    <% render "form_fields", :f => f %>
+  <% end %>
+
+
+  <%= link_to t('crud.back', :model => t('activerecord.models.proposals.many')), proposals_path %>
+</div>
