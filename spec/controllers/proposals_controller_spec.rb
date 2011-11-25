@@ -24,4 +24,12 @@ describe ProposalsController do
     end
   end
 
+  describe "#create" do
+    describe "with valid params" do
+    end
+
+    describe "with invalid prams" do
+    end
+  end
+
 end
