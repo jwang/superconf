@@ -42,6 +42,7 @@ gem "state_machine"
 gem 'will_paginate', '~> 3.0'
 gem 'inherited_resources'
 gem 'event-calendar', :require => 'event_calendar'
+gem 'formtastic'
 
 group :development, :test do
   gem "cucumber-rails"
