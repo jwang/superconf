@@ -8,6 +8,7 @@ en:
         one: Proposal
         many: Proposals
   crud:
-    edit: Edit
-    new: New
+    edit: "Edit %{model}"
+    new: "New %{model}"
+    back: "Back to %{model}"
   title: Title
