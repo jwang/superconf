@@ -1,4 +1,10 @@
 Superconf::Application.routes.draw do
+  
+  resources :events, :only => [:index, :show]
+  namespace :admin do
+      resources :events
+  end
+    
   root :to => "home#index"
   
   devise_for :users
