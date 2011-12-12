@@ -1,0 +1,49 @@
+<%= form_for(@sponsor) do |f| %>
+  <% if @sponsor.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@sponsor.errors.count, "error") %> prohibited this sponsor from being saved:</h2>
+
+      <ul>
+      <% @sponsor.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :event %><br />
+    <%= f.text_field :event %>
+  </div>
+  <div class="field">
+    <%= f.label :sponsorship_level %><br />
+    <%= f.text_field :sponsorship_level %>
+  </div>
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br />
+    <%= f.text_area :description %>
+  </div>
+  <div class="field">
+    <%= f.label :logo_file_name %><br />
+    <%= f.text_field :logo_file_name %>
+  </div>
+  <div class="field">
+    <%= f.label :logo_content_type %><br />
+    <%= f.text_field :logo_content_type %>
+  </div>
+  <div class="field">
+    <%= f.label :logo_file_size %><br />
+    <%= f.number_field :logo_file_size %>
+  </div>
+  <div class="field">
+    <%= f.label :logo_updated_at %><br />
+    <%= f.datetime_select :logo_updated_at %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
