@@ -1,8 +1,12 @@
 Superconf::Application.routes.draw do
 
+  resources :sponsors, :only => [:index]
   resources :events, :only => [:index, :show]
+
   namespace :admin do
       resources :events
+      resources :sponsorship_levels
+      resources :sponsors
   end
 
   root :to => "home#index"

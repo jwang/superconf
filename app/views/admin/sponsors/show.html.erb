@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Event:</b>
+  <%= @sponsor.event %>
+</p>
+
+<p>
+  <b>Sponsorship level:</b>
+  <%= @sponsor.sponsorship_level %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%= @sponsor.name %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @sponsor.description %>
+</p>
+
+<p>
+  <b>Logo file name:</b>
+  <%= @sponsor.logo_file_name %>
+</p>
+
+<p>
+  <b>Logo content type:</b>
+  <%= @sponsor.logo_content_type %>
+</p>
+
+<p>
+  <b>Logo file size:</b>
+  <%= @sponsor.logo_file_size %>
+</p>
+
+<p>
+  <b>Logo updated at:</b>
+  <%= @sponsor.logo_updated_at %>
+</p>
+
+
+<%= link_to 'Edit', edit_sponsor_path(@sponsor) %> |
+<%= link_to 'Back', sponsors_path %>
