@@ -2,12 +2,12 @@
 
 <p>
   <b>Event:</b>
-  <%= @sponsor.event %>
+  <%= @sponsor.event.name if @sponsor.event %>
 </p>
 
 <p>
   <b>Sponsorship level:</b>
-  <%= @sponsor.sponsorship_level %>
+  <%= @sponsor.sponsorship_level.name if @sponsor.sponsorship_level %>
 </p>
 
 <p>
@@ -20,26 +20,5 @@
   <%= @sponsor.description %>
 </p>
 
-<p>
-  <b>Logo file name:</b>
-  <%= @sponsor.logo_file_name %>
-</p>
-
-<p>
-  <b>Logo content type:</b>
-  <%= @sponsor.logo_content_type %>
-</p>
-
-<p>
-  <b>Logo file size:</b>
-  <%= @sponsor.logo_file_size %>
-</p>
-
-<p>
-  <b>Logo updated at:</b>
-  <%= @sponsor.logo_updated_at %>
-</p>
-
-
-<%= link_to 'Edit', edit_sponsor_path(@sponsor) %> |
-<%= link_to 'Back', sponsors_path %>
+<%= link_to 'Edit', edit_admin_event_sponsor_path(@event, @sponsor) %> |
+<%= link_to 'Back', admin_event_sponsors_path(@event) %>

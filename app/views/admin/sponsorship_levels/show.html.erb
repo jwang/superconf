@@ -1,2 +1,20 @@
-<h1>SponsorshipLevels#show</h1>
-<p>Find me in app/views/sponsorship_levels/show.html.erb</p>
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Event:</b>
+  <%= @sponsorship_level.event %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%= @sponsorship_level.name %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @sponsorship_level.description %>
+</p>
+
+<%= link_to 'Edit', edit_admin_event_sponsorship_level_path(@event, @sponsorship_level) %> |
+<%= link_to 'Back', admin_event_sponsorship_levels_path(@event) %>
+

@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe SponsorshipLevelsController do
+describe Admin::SponsorshipLevelsController do
 
   describe "GET 'index'" do
     it "should be successful" do

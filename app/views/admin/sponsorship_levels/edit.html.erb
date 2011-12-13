@@ -1,2 +1,7 @@
-<h1>SponsorshipLevels#edit</h1>
-<p>Find me in app/views/sponsorship_levels/edit.html.erb</p>
+<h1>Editing sponsorship level</h1>
+
+<%= render 'form' %>
+
+<%= link_to 'Show', [:admin, @event, @sponsorship_level] %> |
+<%= link_to 'Back', admin_event_sponsorship_levels_path(@event) %>
+

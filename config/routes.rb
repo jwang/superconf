@@ -10,9 +10,10 @@ Superconf::Application.routes.draw do
   end
 
   namespace :admin do
-      resources :events
+    resources :events do
       resources :sponsorship_levels
       resources :sponsors
+    end
   end
 
   root :to => "events#current"

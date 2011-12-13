@@ -2,5 +2,5 @@
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @sponsor %> |
-<%= link_to 'Back', sponsors_path %>
+<%= link_to 'Show', [:admin, @event, @sponsor] %> |
+<%= link_to 'Back', admin_event_sponsors_path(@event) %>
