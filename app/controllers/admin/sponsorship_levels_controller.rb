@@ -15,6 +15,7 @@ class Admin::SponsorshipLevelsController < ApplicationController
   # GET /sponsors/1.json
   def show
     @sponsorship_level = @event.sponsorship_levels.find(params[:id])
+    @sponsors = @event.sponsors.where(:sponsorship_level_id => @sponsorship_level)
 
     respond_to do |format|
       format.html # show.html.erb
