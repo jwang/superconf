@@ -2,14 +2,9 @@
 
 <table>
   <tr>
-    <th>Event</th>
     <th>Sponsorship level</th>
     <th>Name</th>
     <th>Description</th>
-    <th>Logo file name</th>
-    <th>Logo content type</th>
-    <th>Logo file size</th>
-    <th>Logo updated at</th>
     <th></th>
     <th></th>
     <th></th>
@@ -17,21 +12,16 @@
 
 <% @sponsors.each do |sponsor| %>
   <tr>
-    <td><%= sponsor.event %></td>
-    <td><%= sponsor.sponsorship_level %></td>
+    <td><%= sponsor.sponsorship_level.name if sponsor.sponsorship_level %></td>
     <td><%= sponsor.name %></td>
     <td><%= sponsor.description %></td>
-    <td><%= sponsor.logo_file_name %></td>
-    <td><%= sponsor.logo_content_type %></td>
-    <td><%= sponsor.logo_file_size %></td>
-    <td><%= sponsor.logo_updated_at %></td>
-    <td><%= link_to 'Show', sponsor %></td>
-    <td><%= link_to 'Edit', edit_sponsor_path(sponsor) %></td>
-    <td><%= link_to 'Destroy', sponsor, confirm: 'Are you sure?', method: :delete %></td>
+    <td><%= link_to 'Show', [:admin, @event, sponsor] %></td>
+    <td><%= link_to 'Edit', edit_admin_event_sponsor_path(@event, sponsor) %></td>
+    <td><%= link_to 'Destroy', [:admin, @event, sponsor], confirm: 'Are you sure?', method: :delete %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Sponsor', new_sponsor_path %>
+<%= link_to 'New Sponsor', new_admin_event_sponsor_path(@event) %>
