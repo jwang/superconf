@@ -11,6 +11,7 @@
   <%= content_tag :div, msg, :id => "flash_#{name}" if msg.is_a?(String) %>
 <%- end -%>
 <%= yield %>
+<%= render 'shared/sponsors' %>
 <%= render 'shared/footer' %>
 </body>
 </html>
