@@ -7,7 +7,7 @@
 
 <p>
   <b>Sponsorship level:</b>
-  <%= @sponsor.sponsorship_level.name if @sponsor.sponsorship_level %>
+  <%= link_to @sponsor.sponsorship_level.name, [:admin, @event, @sponsor.sponsorship_level] if @sponsor.sponsorship_level %>
 </p>
 
 <p>

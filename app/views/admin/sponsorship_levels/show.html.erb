@@ -2,7 +2,7 @@
 
 <p>
   <b>Event:</b>
-  <%= @sponsorship_level.event %>
+  <%= @sponsorship_level.event.name if @sponsorship_level.event %>
 </p>
 
 <p>
@@ -14,6 +14,13 @@
   <b>Description:</b>
   <%= @sponsorship_level.description %>
 </p>
+<p><b>Sponsors</b></p>
+<ul>
+  <% @sponsors.each do |sponsor| %>
+    <li><%= link_to sponsor.name, [:admin, @event, sponsor] %></li>
+  <% end %>
+</ul>
+
 
 <%= link_to 'Edit', edit_admin_event_sponsorship_level_path(@event, @sponsorship_level) %> |
 <%= link_to 'Back', admin_event_sponsorship_levels_path(@event) %>
