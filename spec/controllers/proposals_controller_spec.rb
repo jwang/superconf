@@ -20,7 +20,7 @@ describe ProposalsController do
 
     it "should render the new template" do
       get :new
-      response.should render_tmeplate "new"
+      response.should render_template "new"
     end
   end
 
