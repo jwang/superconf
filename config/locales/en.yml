@@ -11,4 +11,5 @@ en:
     edit: "Edit %{model}"
     new: "New %{model}"
     back: "Back to %{model}"
+    was_created: "%{model} was created"
   title: Title

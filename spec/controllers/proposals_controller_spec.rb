@@ -1,14 +1,23 @@
 require 'spec_helper'
 
 describe ProposalsController do
-  @user = login_user
+  def valid_attributes
+    Factory.attributes_for(:proposal)
+  end
+  before :all do
+    @user = Factory(:user)
+  end
+
+  login_user
 
   describe "#index" do
-    it "should display all proposals" do
+    it "should display the users' proposals" do
+      Proposal.destroy_all
       Factory(:proposal, :user => @user)
+      other_proposal = Factory(:proposal)
       get :index
-      assigns(:proposals).size.should > 0
-      assigns(:proposals).should == Proposal.all
+      assigns(:proposals).should == @user.proposals
+      assigns(:proposals).should_not include(other_proposal)
     end
   end
 
@@ -26,10 +35,75 @@ describe ProposalsController do
 
   describe "#create" do
     describe "with valid params" do
+      it "should create a new proposal" do
+        expect {
+          post :create, :proposal => valid_attributes
+        }.to change(Proposal,:count).by(1)
+      end
+
+      it "should set @proposal.user to current_user"do
+        post :create, :proposal => valid_attributes
+        assigns(:proposal).user.should == @user
+      end
+
+      it "should redirect to the new proposal page" do
+        post :create, :proposal => valid_attributes
+        response.should redirect_to proposal_path(Proposal.last)
+      end
     end
 
     describe "with invalid prams" do
+      it "should not create a new proposal" do
+        expect {
+          post :create, :proposal => {}
+        }.to change(Proposal,:count).by(0)
+      end
+
+      it "should re-render the new form" do
+        post :create, :proposal => {}
+        response.should render_template :new
+      end
     end
   end
 
+  describe "#edit" do
+    before :all do
+      @proposal = Factory(:proposal, :user => @user)
+    end
+
+    it "should find the proposal based on id" do
+      get :edit, :id => @proposal.to_param
+      assigns(:proposal).should == @proposal
+    end
+
+    it "should render the new template" do
+      get :edit, :id => @proposal.to_param
+      response.should render_template :edit
+    end
+
+  end
+
+  describe "#update" do
+    before :all do
+      @proposal = Factory(:proposal, :user => @user )
+    end
+
+    describe "with valid params" do
+      it "should create a new proposal" do
+        put :update, :id => @proposal, :proposal => {:title => "foo", :description => "bar"}
+        assigns(:proposal).title.should == "foo"
+        assigns(:proposal).description.should == "bar"
+      end
+
+      it "should set @proposal.user to current_user"do
+        put :update, :id => @proposal, :proposal => valid_attributes
+        assigns(:proposal).user.should == @user
+      end
+
+      it "should redirect to the new proposal page" do
+        put :update, :id => @proposal, :proposal => valid_attributes
+        response.should redirect_to proposal_path(Proposal.last)
+      end
+    end
+  end
 end

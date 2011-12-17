@@ -1,0 +1,17 @@
+<div id="box">
+
+  <% if flash[:notice].present? || flash[:errors].present? %>
+    <div class="flashes notice">
+      <%= flash[:notice] || flash[:errors] %>
+    </div>
+  <% end %>
+
+  <h1>Proposal Title: <%= @proposal.title %></h1>
+
+  <h3>Description:</h3>
+  <p><%= @proposal.description %></p>
+
+
+  <%= link_to t('crud.back', :model => t('activerecord.models.proposals.many')), proposals_path %>
+  <%= link_to t('crud.edit', :model => t('activerecord.models.proposals.one')), edit_proposal_path(@proposal) %>
+</div>

@@ -9,5 +9,7 @@ FactoryGirl.define do
 
   factory :proposal do
     title "New Proposal"
+    description "Awesome talk"
+    association :user, :factory => :user
   end
 end

@@ -18,10 +18,8 @@
       <tr>
         <td><%= proposal.title %></td>
         <td>
-          <%= link_to image_tag(edit_icon), edit_proposal_path(proposal), :title => t('crud.edit') %>
+          <%= link_to "Edit", edit_proposal_path(proposal), :title => "Edit Proposal" %>
         </td>
-        <td>
-          <%= link_to(image_tag(destroy_icon), proposal_path(proposal), :title => t('crud.destroy'), :method => :delete, :confirm => t('crud.confirm')) %>
       </tr>
     <% end %>
   </table>
