@@ -1,11 +1,18 @@
 Superconf::Application.routes.draw do
 
-  resources :events, :only => [:index, :show]
+  resources :events, :only => [:index, :show] do
+    member do
+      get :register
+      get :call_for_sponsors
+      get :call_for_proposals
+    end
+  end
+  
   namespace :admin do
-      resources :events
+    resources :events
   end
 
-  root :to => "home#index"
+  root :to => "events#current"
 
   devise_for :users
 
