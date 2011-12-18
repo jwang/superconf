@@ -2,4 +2,15 @@
 # See http://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
-  hello: "Hello world"
+  activerecord:
+    models:
+      proposals:
+        one: Proposal
+        many: Proposals
+  crud:
+    edit: "Edit %{model}"
+    new: "New %{model}"
+    back: "Back to %{model}"
+    was_created: "%{model} was created"
+    was_updated: "%{model} was updated"
+  title: Title

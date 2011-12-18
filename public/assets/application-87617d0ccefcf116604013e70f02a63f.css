@@ -1,8 +1,4 @@
-/* ...
-*= require_self
-*= require_tree .
 *= require formtastic
-*/
 
 ul.hmenu {
   list-style: none;

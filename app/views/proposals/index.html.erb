@@ -1,0 +1,28 @@
+<div id="box">
+
+  <% if flash[:notice].present? || flash[:errors].present? %>
+    <div class="flashes notice">
+      <%= flash[:notice] || flash[:errors] %>
+    </div>
+  <% end %>
+
+  <h1><%= t('activerecord.models.proposals.many') %></h1>
+
+  <table>
+    <tr>
+      <th><%= t(:title) %></th>
+      <th colspan="3">Actions</th>
+    </tr>
+
+    <% @proposals.each do |proposal| %>
+      <tr>
+        <td><%= proposal.title %></td>
+        <td>
+          <%= link_to t('crud.edit', :model => t('activerecord.models.proposals.one')), edit_proposal_path(proposal), :title => t('crud.edit', :model => t('activerecord.models.proposals.one')) %>
+        </td>
+      </tr>
+    <% end %>
+  </table>
+  <br/>
+  <%= link_to t('crud.new', :model => t('activerecord.models.proposals.one')), new_proposal_path %>
+</div>
