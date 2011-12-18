@@ -66,10 +66,6 @@ Spork.prefork do
 end
 
 Spork.each_run do
-<<<<<<< HEAD
-  FactoryGirl.definition_file_paths << File.join(Rails.root, 'spec', 'factories')
-  FactoryGirl.find_definitions # This code will be run each time you run your specs.
-=======
   # This code will be run each time you run your specs.
   require 'factory_girl_rails'
   
@@ -81,7 +77,6 @@ Spork.each_run do
   # Requires supporting ruby files with custom matchers and macros, etc,
   # in spec/support/ and its subdirectories.
   Dir[Rails.root.join("spec/support/**/*.rb")].each {|f| require f}
->>>>>>> development
 
 end
 
