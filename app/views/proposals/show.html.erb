@@ -6,7 +6,9 @@
     </div>
   <% end %>
 
-  <h1>Proposal Title: <%= @proposal.title %></h1>
+  <h1><%= t('activerecord.models.proposals.one') %></h1>
+
+  <h3><%= @proposal.title %></h3>
 
   <h3>Description:</h3>
   <p><%= @proposal.description %></p>

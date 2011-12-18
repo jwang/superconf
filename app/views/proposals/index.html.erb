@@ -18,7 +18,7 @@
       <tr>
         <td><%= proposal.title %></td>
         <td>
-          <%= link_to "Edit", edit_proposal_path(proposal), :title => "Edit Proposal" %>
+          <%= link_to t('crud.edit', :model => t('activerecord.models.proposals.one')), edit_proposal_path(proposal), :title => t('crud.edit', :model => t('activerecord.models.proposals.one')) %>
         </td>
       </tr>
     <% end %>

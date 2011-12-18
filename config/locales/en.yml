@@ -12,4 +12,5 @@ en:
     new: "New %{model}"
     back: "Back to %{model}"
     was_created: "%{model} was created"
+    was_updated: "%{model} was updated"
   title: Title

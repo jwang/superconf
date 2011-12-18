@@ -21,7 +21,7 @@ class ProposalsController < ApplicationController
     @proposal = current_user.proposals.build(params[:proposal])
 
     if @proposal.save
-      redirect_to(proposal_path(@proposal), :notice => "Proposal was created")
+      redirect_to(proposal_path(@proposal), :notice => t('crud.was_updated', :model => t('activerecord.models.proposals.one'), :name => t('activerecord.models.proposals.one')))
     else
       render :action => "new"
     end
@@ -31,7 +31,7 @@ class ProposalsController < ApplicationController
     @proposal = current_user.proposals.find(params[:id])
     params[:proposal].delete([:user_id])
     if @proposal.update_attributes(params[:proposal])
-      redirect_to(proposal_path(@proposal), :notice => t('crud.was_updated', :name => t('activerecord.models.proposal', :count => 1)))
+      redirect_to(proposal_path(@proposal), :notice => t('crud.was_created', :model => t('activerecord.models.proposals.one'), :name => t('activerecord.models.proposals.one')))
     else
       render :action => "edit"
     end
