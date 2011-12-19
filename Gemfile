@@ -41,6 +41,7 @@ gem "paperclip", "~> 2.3"
 gem "state_machine"
 gem 'will_paginate', '~> 3.0'
 gem 'event-calendar', :require => 'event_calendar'
+gem 'formtastic'
 
 group :development, :test do
   gem "cucumber-rails"
