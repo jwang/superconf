@@ -1,5 +1,7 @@
 class ProposalsController < ApplicationController
-  before_filter :authenticate_user!  
+  before_filter :authenticate_user!
+
+  layout 'proposal_layout'
 
   def index
     @proposals = current_user.proposals
