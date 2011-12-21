@@ -1,0 +1,27 @@
+<h1>Listing sponsors</h1>
+
+<table>
+  <tr>
+    <th>Sponsorship level</th>
+    <th>Name</th>
+    <th>Description</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @sponsors.each do |sponsor| %>
+  <tr>
+    <td><%= sponsor.sponsorship_level.name if sponsor.sponsorship_level %></td>
+    <td><%= sponsor.name %></td>
+    <td><%= sponsor.description %></td>
+    <td><%= link_to 'Show', [:admin, @event, sponsor] %></td>
+    <td><%= link_to 'Edit', edit_admin_event_sponsor_path(@event, sponsor) %></td>
+    <td><%= link_to 'Destroy', [:admin, @event, sponsor], confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Sponsor', new_admin_event_sponsor_path(@event) %>
