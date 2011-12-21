@@ -14,6 +14,7 @@ Superconf::Application.routes.draw do
       resources :sponsorship_levels
       resources :sponsors
     end
+    resources :snippets
   end
 
   root :to => "events#current"
