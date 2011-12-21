@@ -24,7 +24,7 @@ describe SponsorsController do
   # Sponsor. As you add validations to Sponsor, be sure to
   # update the return value of this method accordingly.
   def valid_attributes
-    {}
+    {:name => "sponsor name", :event_id => "1"}
   end
 
   describe "GET index" do

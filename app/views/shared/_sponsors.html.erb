@@ -1,10 +1,12 @@
-<% @event.sponsorship_levels.each do |sponsorship_level| %>
-  <h3><%= sponsorship_level.name %> Sponsors</h3>
-  <ul class="sponsors">
-    <% sponsorship_level.sponsors.each do |sponsor| %>
-      <li><%= sponsor.name %></li>
-    <% end %>
-  </ul>
+<% if @event && @event.sponsorship_levels %>
+  <% @event.sponsorship_levels.each do |sponsorship_level| %>
+    <h3><%= sponsorship_level.name %> Sponsors</h3>
+    <ul class="sponsors">
+      <% sponsorship_level.sponsors.each do |sponsor| %>
+        <li><%= sponsor.name %></li>
+      <% end %>
+    </ul>
+  <% end %>
 <% end %>
 <p>Interested in Sponsoring the Aloha Ruby Conference?<br />
 <a href="#">Download the Prospectus</a><br />
