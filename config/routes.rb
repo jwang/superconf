@@ -14,7 +14,7 @@ Superconf::Application.routes.draw do
 
   root :to => "events#current"
 
-  devise_for :users
+  devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
 
   resources :proposals
 

@@ -33,8 +33,9 @@ gem 'thin'
 gem "jquery-rails"
 gem 'devise'
 gem 'devise_invitable'
-gem "omniauth", "~> 0.3.0.rc3"
-gem 'oa-openid', :require => 'omniauth/openid'
+gem 'omniauth'
+gem 'omniauth-openid'
+gem 'oa-core'
 gem 'cancan'
 gem 'fog'
 gem "paperclip", "~> 2.3"
