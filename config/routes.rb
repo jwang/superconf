@@ -10,6 +10,7 @@ Superconf::Application.routes.draw do
   
   namespace :admin do
     resources :events
+    resources :snippets
   end
 
   root :to => "events#current"
