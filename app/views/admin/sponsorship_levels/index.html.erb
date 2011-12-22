@@ -1,0 +1,29 @@
+<h1>Listing sponsorship levels for <%= @event.name %> </h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Maximum</th>
+    <th>Status</th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @sponsorship_levels.each do |sponsorship_level| %>
+  <tr>
+    <td><%= sponsorship_level.name %></td>
+    <td><%= sponsorship_level.description %></td>
+    <td><%= sponsorship_level.maximum %></td>
+    <td><%= sponsorship_level.status %></td>
+    <td><%= link_to 'Show', [:admin, @event, sponsorship_level] %></td>
+    <td><%= link_to 'Edit', edit_admin_event_sponsorship_level_path(@event, sponsorship_level) %></td>
+    <td><%= link_to 'Destroy', [:admin, @event, sponsorship_level], confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Sponsorship Level', new_admin_event_sponsorship_level_path(@event) %>
+

@@ -1,5 +1,6 @@
 Superconf::Application.routes.draw do
 
+  resources :sponsors, :only => [:index]
   resources :events, :only => [:index, :show] do
     member do
       get :register
@@ -7,9 +8,12 @@ Superconf::Application.routes.draw do
       get :call_for_proposals
     end
   end
-  
+
   namespace :admin do
-    resources :events
+    resources :events do
+      resources :sponsorship_levels
+      resources :sponsors
+    end
   end
 
   root :to => "events#current"
