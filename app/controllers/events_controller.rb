@@ -23,7 +23,10 @@ class EventsController < ApplicationController
 
   def current
     @event = Event.last
-    redirect_to event_path(@event)
+    respond_to do |format|
+      format.html # show.html.erb
+      format.json { render json: @event }
+    end
   end
 
 end
