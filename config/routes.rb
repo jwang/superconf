@@ -11,6 +11,7 @@ Superconf::Application.routes.draw do
 
   namespace :admin do
     resources :events do
+      resources :snippets
       resources :sponsorship_levels
       resources :sponsors
     end
