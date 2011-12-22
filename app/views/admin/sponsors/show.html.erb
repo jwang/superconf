@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Event:</b>
+  <%= @sponsor.event.name if @sponsor.event %>
+</p>
+
+<p>
+  <b>Sponsorship level:</b>
+  <%= link_to @sponsor.sponsorship_level.name, [:admin, @event, @sponsor.sponsorship_level] if @sponsor.sponsorship_level %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%= @sponsor.name %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @sponsor.description %>
+</p>
+
+<%= link_to 'Edit', edit_admin_event_sponsor_path(@event, @sponsor) %> |
+<%= link_to 'Back', admin_event_sponsors_path(@event) %>
