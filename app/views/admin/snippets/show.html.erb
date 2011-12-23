@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @snippet.name %>
+</p>
+
+<p>
+  <b>Body:</b>
+  <%= @snippet.body %>
+</p>
+
+
+<%= link_to 'Edit', edit_admin_event_snippet_path(@snippet) %> |
+<%= link_to 'Back', admin_event_snippets_path(@event) %>

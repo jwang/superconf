@@ -8,9 +8,10 @@ Superconf::Application.routes.draw do
       get :call_for_proposals
     end
   end
-
+  
   namespace :admin do
     resources :events do
+      resources :snippets
       resources :sponsorship_levels
       resources :sponsors
     end
