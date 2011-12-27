@@ -1,25 +1,20 @@
 <p id="notice"><%= notice %></p>
 
-<%= render 'top' %>
+<%= render :partial => 'shared/snippet', :locals => { :snippet_name => "event_top_content" } %>
 
-<p>
-<%= link_to 'Register for this event', register_event_path(@event) %>
-</p>
-<p>
-<%= link_to 'Call for speaker proposals', call_for_proposals_event_path(@event) %>
-</p>
-<p>
-<%= link_to 'Want to be a sponsor for this event?', call_for_sponsors_event_path(@event) %>
-</p>
+<div id="calls-to-action">
+  <p>
+    <%= link_to 'Register for this event', register_event_path(@event) %>
+  </p>
 
-<p>
-  <b>Name:</b>
-  <%= @event.name %>
-</p>
+  <p>
+    <%= link_to 'Call for speaker proposals', call_for_proposals_event_path(@event) %>
+  </p>
 
-<p>
-  <b>Description:</b>
-  <%= @event.description %>
-</p>
+  <p>
+    <%= link_to 'Interested in Sponsoring the Aloha Ruby Conference?', call_for_sponsors_event_path(@event) %>
+  </p>
 
-<%= link_to 'Back', events_path %>
+</div>
+
+<%= render :partial => 'shared/snippet', :locals => { :snippet_name => "event_footer" } %>
