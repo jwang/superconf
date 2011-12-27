@@ -1,8 +1,7 @@
-<%= form_for @snippet, :url => admin_event_snippet_path do |f| %>
+<%= form_for([:admin, @event, @snippet]) do |f| %>
   <% if @snippet.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@snippet.errors.count, "error") %> prohibited this snippet from being saved:</h2>
-
       <ul>
       <% @snippet.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
