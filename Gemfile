@@ -60,8 +60,8 @@ gem 'factory_girl_rails', :require => false, :group => :test
 group :development do
   gem 'guard'
   gem 'awesome_print'
-  gem 'growl_notify' if RUBY_PLATFORM =~ /darwin/i
-  gem 'rb-fsevent', :require => false if RUBY_PLATFORM =~ /darwin/i
+  #gem 'growl_notify' if RUBY_PLATFORM =~ /darwin/i
+  #gem 'rb-fsevent', :require => false if RUBY_PLATFORM =~ /darwin/i
   gem "launchy"
   gem 'rb-fsevent'
   gem 'guard-cucumber'
