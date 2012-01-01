@@ -1,0 +1,8 @@
+FATAL:  could not create shared memory segment: Cannot allocate memory
+DETAIL:  Failed system call was shmget(key=5432001, size=4063232, 03600).
+HINT:  This error usually means that PostgreSQL's request for a shared memory segment exceeded available memory or swap space, or exceeded your kernel's SHMALL parameter.  You can either reduce the request size or reconfigure the kernel with larger SHMALL.  To reduce the request size (currently 4063232 bytes), reduce PostgreSQL's shared_buffers parameter (currently 300) and/or its max_connections parameter (currently 24).
+	The PostgreSQL documentation contains more information about shared memory configuration.
+FATAL:  could not create shared memory segment: Cannot allocate memory
+DETAIL:  Failed system call was shmget(key=5432001, size=4063232, 03600).
+HINT:  This error usually means that PostgreSQL's request for a shared memory segment exceeded available memory or swap space, or exceeded your kernel's SHMALL parameter.  You can either reduce the request size or reconfigure the kernel with larger SHMALL.  To reduce the request size (currently 4063232 bytes), reduce PostgreSQL's shared_buffers parameter (currently 300) and/or its max_connections parameter (currently 24).
+	The PostgreSQL documentation contains more information about shared memory configuration.
