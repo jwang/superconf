@@ -1,4 +1,4 @@
-# SuperConf [![Build Status](https://secure.travis-ci.org/jwang/superconf.png)](http://travis-ci.org/jwang/superconf)
+# SuperConf [![Build Status](https://secure.travis-ci.org/jwang/superconf.png)](http://travis-ci.org/jwang/superconf) [![Dependency Status](https://gemnasium.com/jwang/superconf.png)](https://gemnasium.com/jwang/superconf)
 
 SuperConf is a conference planning web app.
 
