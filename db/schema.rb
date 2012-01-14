@@ -39,6 +39,34 @@ ActiveRecord::Schema.define(:version => 20111221205350) do
     t.datetime "updated_at"
   end
 
+  create_table "sponsors", :force => true do |t|
+    t.integer  "event_id"
+    t.integer  "sponsorship_level_id"
+    t.string   "name"
+    t.text     "description"
+    t.string   "logo_file_name"
+    t.string   "logo_content_type"
+    t.integer  "logo_file_size"
+    t.datetime "logo_updated_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "sponsors", ["event_id"], :name => "index_sponsors_on_event_id"
+  add_index "sponsors", ["sponsorship_level_id"], :name => "index_sponsors_on_sponsorship_level_id"
+
+  create_table "sponsorship_levels", :force => true do |t|
+    t.integer  "event_id"
+    t.string   "name"
+    t.string   "status"
+    t.integer  "maximum"
+    t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "sponsorship_levels", ["event_id"], :name => "index_sponsorship_levels_on_event_id"
+
   create_table "users", :force => true do |t|
     t.string   "email",                                 :default => "", :null => false
     t.string   "encrypted_password",     :limit => 128, :default => "", :null => false
