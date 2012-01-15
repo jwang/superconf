@@ -1,18 +1,48 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Superconf</title>
-  <%= stylesheet_link_tag "application"%>
-  <%= stylesheet_link_tag "event_default"%>
-  <%= javascript_include_tag "application" %>
+  <title>Aloha Ruby Conference</title>
+  <%= stylesheet_link_tag "style", "formtastic" %>
   <%= csrf_meta_tag %>
+	<link rel="stylesheet" href="stylesheets/style.css" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		if (typeof jQuery == 'undefined')
+		{document.write(unescape("%3Cscript src='javascripts/jquery.min.js'%3E%3C/script%3E"));}
+	</script>
+  <%= javascript_include_tag "application", "dd-belatedpngfix-0.0.8a-min" %>
+	<!--[if IE 6]>
+	    <script src="DD_belatedPNG.js"></script>
+	    <script>
+	      DD_belatedPNG.fix('#container01');
+	    </script>
+	<![endif]-->
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/
+		html5.js"></script>
+	<![endif]-->
+	<title>Aloha Ruby Conference | Home</title>
 </head>
 <body>
-<%- flash.each do |name, msg| -%>
-  <%= content_tag :div, msg, :id => "flash_#{name}" if msg.is_a?(String) %>
-<%- end -%>
-<%= yield %>
-<%= render 'shared/sponsors' %>
-<%= render 'shared/footer' %>
+  <%- flash.each do |name, msg| -%>
+    <%= content_tag :div, msg, :id => "flash_#{name}" if msg.is_a?(String) %>
+  <%- end -%>
+  <div id="container01">
+    <%= render 'shared/nav' %>
+  </div>
+
+  <%= link_to "Register Now!", register_event_path(@event), :id => "registrationBanner" %>
+
+	<div id="container02">
+		<div id="mainbody">
+      <h1 id="title">Aloha Ruby Conference</h1>
+
+      <%= yield %>
+
+      </section>
+    </div>
+  </div>
+  <%= render 'shared/sponsors' %>
+  <%= render 'shared/footer' %>
 </body>
 </html>

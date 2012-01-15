@@ -8,7 +8,7 @@
   </head>
 <body>
 <ul class="hmenu">
-  <%= render 'shared/navigation' %>
+  <%= render :partial => "devise/shared/links" %>
 </ul>
 <%- flash.each do |name, msg| -%>
   <%= content_tag :div, msg, :id => "flash_#{name}" if msg.is_a?(String) %>

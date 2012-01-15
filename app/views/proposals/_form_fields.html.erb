@@ -1,6 +1,28 @@
+<p>Aloha Ruby Conference 2012 Call for Proposals</p>
+<p>Aloha Ruby Conference is now accepting proposals for talks. Aloha Ruby Conference 2012 happens on October 8-9 in Honolulu, Hawaii.</p>
+<p>Proposals will be accepted until Saturday 6/9/2012 at midnight PDT.</p>
+<p>Talks will be 45 minutes with no extra time for questions. Remember that nearly all our attendees use Ruby daily, so talks should be for an audience of intermediate or advanced Rubyists. Non-Ruby topics are acceptable if they are somehow related to Ruby, or just seriously awesome.</p>
+<p>Talks will be 45 minutes with no extra time for questions. Remember that nearly all our attendees use Ruby daily, so talks should be for an audience of intermediate or advanced Rubyists. Non-Ruby topics are acceptable if they are somehow related to Ruby, or just seriously awesome.</p>
+<p>Conference information: <%= link_to "http://aloharubyconf.com", "http://aloharubyconf.com" %></p>
+<p>Questions? email <a href="&#x6d;&#x61;&#105;&#x6c;&#x74;&#x6f;&#58;&#115;&#x70;&#x65;&#x61;&#107;&#x40;&#97;&#108;&#x6f;&#x68;&#x61;&#114;&#117;&#98;&#x79;&#99;&#111;&#110;&#x66;&#x2e;&#x63;&#111;&#x6d;">&#115;&#112;&#x65;&#x61;&#107;&#64;&#x61;&#108;&#111;&#104;&#x61;&#114;&#117;&#x62;&#x79;&#99;&#111;&#x6e;&#x66;&#46;&#99;&#x6f;&#x6d;</a></p>
 <%= f.inputs do %>
-  <%= f.input :title %>
-  <%= f.input :description %>
+  <h4>Speaker Info</h4>
+  <h5>Name</h5>
+  <%= f.input :first_name, :label => "First" %>
+  <%= f.input :last_name, :label => "Last" %>
+  <%= f.input :email, :label => "Email" %>
+  <%= f.input :location, :label => "Where do you live?", :hint => "City + State. Or City + Country if not USA." %>
+  <%= f.input :bio, :label => "Bio (for program)", :hint => "Tell us something about who you are and why people should be excited to hear a talk from you. 75-125 words." %>
+  <%= f.input :links, :label => "Website, Blog, etc." %>
+  <%= f.input :github, :label => "Github Username" %>
+  <%= f.input :twitter, :label => "Twiter Username" %>
+  <%= f.input :speaker_cv, :label => "How many conferences have you spoken at before?", :hint => "Just let us know if you are a noob or an old hand. You can include meetups and user groups. “None” and “lots” are acceptable answers." %>
+  <%= f.input :video_links, :label => "Are there videos of you speaking we can check out?", :hint => "Links to YouTube, Confreaks, Vimeo, etc. If we haven’t seen you speak before, this is a great way to show us what you can do." %>
+  <h4>Talk</h4>
+  <%= f.input :title, :label => "Title" %>
+  <%= f.input :description, :label => "Description (for program)", :hint => "Tell the attendees why they should want to see your talk. What are they going to learn?" %>
+  <%= f.input :notes, :label => "Notes for reviewers", :hint => "Please give us any information beyond the Description above that would help evaluate the proposal. Why is this an awesome talk for Aloha Ruby Conf?" %>
+  <%= f.input :new_talk, :label => "Is this a new talk?", :hint => "We very much prefer original material, but not exclusively. Please let us know if this talk has been given elsewhere, or has been submitted to another conference and is under consideration. Which conference, dates, is there video?" %>
 <% end %>
 <%= f.buttons do %>
   <%= f.commit_button %>

@@ -1,3 +1,5 @@
+<section id="mainContent" class="sub">
+<section class="contentBox speakerContent">
 <p id="notice"><%= notice %></p>
 
 <%= render 'top' %>
@@ -13,13 +15,15 @@
 </p>
 
 <p>
-  <b>Name:</b>
-  <%= @event.name %>
+<b>Name:</b>
+<%= @event.name %>
 </p>
 
 <p>
-  <b>Description:</b>
-  <%= @event.description %>
+<b>Description:</b>
+<%= @event.description %>
 </p>
 
 <%= link_to 'Back', events_path %>
+</section>
+</section>

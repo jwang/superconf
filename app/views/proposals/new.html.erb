@@ -1,17 +1,13 @@
-<div id="box">
+<section id="mainContent" class="sub">
+  <section class="contentBox speakerContent">
 
-  <% if flash[:notice].present? || flash[:errors].present? %>
-    <div class="flashes notice">
-      <%= flash[:notice] || flash[:errors] %>
-    </div>
-  <% end %>
-
-  <h1><%= t('crud.new', :model => t('activerecord.models.proposals.one')) %></h1>
+  <h3>Call for Proposals</h3>
 
   <%= semantic_form_for(@proposal) do |f| %>
     <% render "form_fields", :f => f %>
   <% end %>
 
 
-  <%= link_to t('crud.back', :model => t('activerecord.models.proposals.many')), proposals_path %>
-</div>
+  <%= link_to "Back to your Proposals", proposals_path %>
+  </section>
+</section>
