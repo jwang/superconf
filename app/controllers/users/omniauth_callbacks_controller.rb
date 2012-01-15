@@ -1,4 +1,5 @@
 class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
+  layout "application"
   def google
     @user = User.find_for_open_id(request.env["omniauth.auth"], current_user)
 
