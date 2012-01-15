@@ -1,12 +1,6 @@
-<div id="box">
-
-  <% if flash[:notice].present? || flash[:errors].present? %>
-    <div class="flashes notice">
-      <%= flash[:notice] || flash[:errors] %>
-    </div>
-  <% end %>
-
-  <h1><%= t('activerecord.models.proposals.many') %></h1>
+<section id="mainContent" class="sub">
+  <section class="contentBox speakerContent">
+  <h3><%= t('activerecord.models.proposals.many') %></h3>
 
   <table>
     <tr>
@@ -25,4 +19,5 @@
   </table>
   <br/>
   <%= link_to t('crud.new', :model => t('activerecord.models.proposals.one')), new_proposal_path %>
-</div>
+  </section>
+</section>

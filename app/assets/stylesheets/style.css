@@ -247,7 +247,7 @@ div.twitter{
 	right: -7px;
 }
 
-#registrationAvailable, #speakerSignUp, #sponsorSignUp{
+#registrationAvailable, #speakerSignUp, #sponsorSignUp, .contentBox{
 	background: url('../images/content-bg.png') repeat 0 0;
 	padding: 20px;
 	margin: 0 0 40px;
@@ -351,7 +351,7 @@ a#registrationButton:active{
 	margin: 0 0 20px;
 }
 
-#registrationAvailable h3{
+#registrationAvailable h3, .registrationContent h3{
 	background: url('../images/icon-registration.png') no-repeat 0 7px;
 	font-family: 'Museo-300';
 	font-size: 36px;
@@ -376,12 +376,12 @@ a.learnMore{
 	margin: 0 30px 0 0;
 }
 
-#speakerSignUp, #sponsorSignUp{
+#speakerSignUp, #sponsorSignUp, .smallBox{
 	width: 422px;
 	float: left;
 }
 
-#speakerSignUp h4, #sponsorSignUp h4{
+#speakerSignUp h4, #sponsorSignUp h4, .sponsorContent h4, .speakerContent h4, .sponsorContent h3, .speakerContent h3{
 	font-family: 'Museo-300';
 	font-size: 28px;
 	color: #bf7334;
@@ -390,11 +390,11 @@ a.learnMore{
 	text-shadow: 1px 2px 0px rgba(255,255,255, 0.4);
 }
 
-#speakerSignUp h4{
+#speakerSignUp h4, .speakerContent h4, .speakerContent h3{
 	background: url('../images/icon-speakers.png') no-repeat 0 7px;
 }
 
-#sponsorSignUp h4{
+#sponsorSignUp h4, .sponsorContent h4, .sponsorContent h3{
 	background: url('../images/icon-sponsors.png') no-repeat 0 7px;
 }
 

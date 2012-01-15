@@ -1,7 +1,5 @@
 class ProposalsController < ApplicationController
-  before_filter :authenticate_user!
-
-  layout 'proposal_layout'
+  before_filter :authenticate_user!, :set_program_tab
 
   def index
     @proposals = current_user.proposals
@@ -37,6 +35,12 @@ class ProposalsController < ApplicationController
     else
       render :action => "edit"
     end
+  end
+
+  private
+
+  def set_program_tab
+    @active_tab = "program"
   end
 
 end
