@@ -1,5 +1,5 @@
 class Admin::SponsorsController < ApplicationController
-
+  before_filter :authenticate_user!
   before_filter :find_event
 
   # GET /sponsors

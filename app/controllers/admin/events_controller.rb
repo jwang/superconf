@@ -1,5 +1,7 @@
 class Admin::EventsController < ApplicationController
-   # GET /events
+  before_filter :authenticate_user!
+
+  # GET /events
     # GET /events.json
     def index
       @events = Event.all
