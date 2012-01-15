@@ -22,11 +22,20 @@ class EventsController < ApplicationController
   end
 
   def current
+    @active_tab = "home"
     @event = Event.last
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @event }
     end
+  end
+
+  def call_for_sponsors
+    @active_tab = "sponsors"
+  end
+
+  def call_for_proposals
+    @active_tab = "program"
   end
 
 end

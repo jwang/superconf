@@ -1,19 +1,45 @@
-<div id="box">
+<section id="mainContent" class="sub">
+  <section class="contentBox speakerContent">
+  <h3>Proposal Information</h3>
 
-  <% if flash[:notice].present? || flash[:errors].present? %>
-    <div class="flashes notice">
-      <%= flash[:notice] || flash[:errors] %>
-    </div>
-  <% end %>
+  <p><strong>First Name:</strong></p>
+  <p><%= @proposal.first_name %></p>
 
-  <h1><%= t('activerecord.models.proposals.one') %></h1>
+  <p><strong>Last Name:</strong></p>
+  <p><%= @proposal.last_name %></p>
 
-  <h3><%= @proposal.title %></h3>
+  <p><strong>Email:</strong></p>
+  <p><%= @proposal.email %></p>
 
-  <h3>Description:</h3>
+  <p><strong>Where You're from:</strong></p>
+  <p><%= @proposal.location %></p>
+
+  <p><strong>Bio:</strong></p>
+  <p><%= @proposal.bio %></p>
+
+  <p><strong>Blog, Website, etc:</strong></p>
+  <p><%= @proposal.links %></p>
+
+  <p><strong>Github Username:</strong></p>
+  <p><%= @proposal.github %></p>
+
+  <p><strong>Twitter Username:</strong></p>
+  <p><%= @proposal.twitter %></p>
+
+  <p><strong>Previous Talks:</strong></p>
+  <p><%= @proposal.speaker_cv %></p>
+
+  <p><strong>Talk Videos:</strong></p>
+  <p><%= @proposal.video_links %></p>
+
+  <p><strong>Title:</strong></p>
+  <p><%= @proposal.title %></p>
+
+  <p><strong>Description:</strong></p>
   <p><%= @proposal.description %></p>
 
 
   <%= link_to t('crud.back', :model => t('activerecord.models.proposals.many')), proposals_path %>
   <%= link_to t('crud.edit', :model => t('activerecord.models.proposals.one')), edit_proposal_path(@proposal) %>
-</div>
+  </section>
+</section>

@@ -8,18 +8,19 @@ Superconf::Application.routes.draw do
       get :call_for_proposals
     end
   end
-  
+
   namespace :admin do
     resources :events do
       resources :snippets
       resources :sponsorship_levels
       resources :sponsors
     end
+    resources :snippets
   end
 
   root :to => "events#current"
 
-  devise_for :users
+  devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
 
   resources :proposals
 

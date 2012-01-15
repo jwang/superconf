@@ -1,13 +1,13 @@
 module ApplicationHelper
-  def destroy_icon
-    'admin/icons/delete.png'
+  def resource_name
+    :user
   end
 
-  def edit_icon
-    'admin/icons/pencil.png'
+  def resource
+    @resource ||= User.new
   end
 
-  def new_icon
-    'admin/icons/add.png'
+  def devise_mapping
+    @devise_mapping ||= Devise.mappings[:user]
   end
 end
