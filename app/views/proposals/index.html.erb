@@ -1,6 +1,8 @@
 <section id="mainContent" class="sub">
   <section class="contentBox speakerContent">
-  <h3><%= t('activerecord.models.proposals.many') %></h3>
+  <h3>Thank you for submitting a talk for Aloha Ruby Conf</h3>
+  <p>We will contact you if your we accept your proposal to talk at Aloha Ruby Conference</p>
+  <h4>Your Submitted Proposals</h4>
 
   <table>
     <tr>
@@ -12,12 +14,12 @@
       <tr>
         <td><%= proposal.title %></td>
         <td>
-          <%= link_to t('crud.edit', :model => t('activerecord.models.proposals.one')), edit_proposal_path(proposal), :title => t('crud.edit', :model => t('activerecord.models.proposals.one')) %>
+          <%= link_to "Forgot something?", :title => t('crud.edit', :model => t('activerecord.models.proposals.one')) %>
         </td>
       </tr>
     <% end %>
   </table>
   <br/>
-  <%= link_to t('crud.new', :model => t('activerecord.models.proposals.one')), new_proposal_path %>
+  <%= link_to "Submit a new Proposal", new_proposal_path %>
   </section>
 </section>

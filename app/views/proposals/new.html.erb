@@ -1,13 +1,13 @@
 <section id="mainContent" class="sub">
   <section class="contentBox speakerContent">
 
-  <h3><%= t('crud.new', :model => t('activerecord.models.proposals.one')) %></h3>
+  <h3>Call for Proposals</h3>
 
   <%= semantic_form_for(@proposal) do |f| %>
     <% render "form_fields", :f => f %>
   <% end %>
 
 
-  <%= link_to t('crud.back', :model => t('activerecord.models.proposals.many')), proposals_path %>
+  <%= link_to "Back to your Proposals", proposals_path %>
   </section>
 </section>

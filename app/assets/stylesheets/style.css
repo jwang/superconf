@@ -407,3 +407,8 @@ a.learnMore{
 .clear{
 	clear: both;
 }
+
+#new_proposal .inline-errors, #edit_proposal .inline-errors {
+  font-weight: bold;
+  color: red;
+}
