@@ -4,11 +4,9 @@
 <ul id="rightLinks">
   <li class="page-1 current"><%= link_to "Home", root_path %></li>
   <li class="page-2"><%= link_to "Program", "#" %></li>
-  <li class="page-3"><%= link_to "Sponsors", sponsors_path %></li>
+  <li class="page-3"><%= link_to "Sponsors", call_for_sponsors_event_path(@event) %></li>
 </ul>
-<a id="logo" class="home" href="index.html" title="Return to the homepage">
-  <%= image_tag "/images/logo.png", :alt => "Aloha Ruby Conference" %>
-</a>
+<%= link_to(image_tag("/images/logo.png", :alt => "Aloha Ruby Conference"), root_path, :id => "logo", :class => "home", :title => "Return to the homepage") %>
 <ul id="leftLinks">
   <li class="page-4"><%= link_to "Training", "#" %></li>
   <li class="page-5"><%= link_to "Location", "#" %></li>
