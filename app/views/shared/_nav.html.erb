@@ -2,15 +2,15 @@
 
 <nav>
 <ul id="rightLinks">
-  <li class="page-1 current"><%= link_to "Home", root_path %></li>
-  <li class="page-2"><%= link_to "Program", "#" %></li>
-  <li class="page-3"><%= link_to "Sponsors", call_for_sponsors_event_path(@event) %></li>
+  <li class="page-1 <%= "current" if @active_tab == "home" %>"><%= link_to "Home", root_path %></li>
+  <li class="page-2 <%= "current" if @active_tab == "program" %>"><%= link_to "Program", "#" %></li>
+  <li class="page-3 <%= "current" if @active_tab == "sponsors" %>"><%= link_to "Sponsors", call_for_sponsors_event_path(@event) %></li>
 </ul>
 <%= link_to(image_tag("/images/logo.png", :alt => "Aloha Ruby Conference"), root_path, :id => "logo", :class => "home", :title => "Return to the homepage") %>
 <ul id="leftLinks">
-  <li class="page-4"><%= link_to "Training", "#" %></li>
-  <li class="page-5"><%= link_to "Location", "#" %></li>
-  <li class="page-6"><%= link_to "Contact", "#" %></li>
+  <li class="page-4 <%= "current" if @active_tab == "training" %>"><%= link_to "Training", "#" %></li>
+  <li class="page-5 <%= "current" if @active_tab == "location" %>"><%= link_to "Location", "#" %></li>
+  <li class="page-6 <%= "current" if @active_tab == "contact" %>"><%= link_to "Contact", "#" %></li>
 </ul>
 <div class="clear"></div>
 </nav>
