@@ -462,6 +462,10 @@ a.learnMore{
 	float: right;
 }
 
+#location #registrationButton{
+	margin: 20px 0 20px 80px;
+}
+
 /* Classes */
 .clear{
 	clear: both;
