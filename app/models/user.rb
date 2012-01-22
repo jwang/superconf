@@ -8,8 +8,11 @@ class User < ActiveRecord::Base
   attr_accessible :email, :password, :password_confirmation, :remember_me
   has_many :proposals
 
+  validates_presence_of :role
+
   def self.find_for_open_id(access_token, signed_in_resource=nil)
     data = access_token.info
+
     if user = User.where(:email => data["email"]).first
       user
     else
@@ -17,4 +20,7 @@ class User < ActiveRecord::Base
     end
   end
 
+  def admin?
+    role.downcase == "admin"
+  end
 end
