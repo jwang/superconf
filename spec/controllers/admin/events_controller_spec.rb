@@ -13,6 +13,7 @@ describe Admin::EventsController do
 
   describe "GET index" do
     it "assigns all events as @events" do
+      Event.destroy_all
       event = Event.create! valid_attributes
       get :index
       assigns(:events).should eq([event])
