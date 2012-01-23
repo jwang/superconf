@@ -139,6 +139,9 @@ header nav ul li a{
 	color: #bf7334;
 	text-decoration: none;
 	text-shadow: 0px 0px 5px rgba(0,0,0, 0.5);
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
 }
 
 header nav ul li.current{	
@@ -153,7 +156,7 @@ header nav ul li.current{
 }
 
 header nav ul li a:hover, header nav ul li.current a{
-	color: #d57130;
+	color: #e5c1a2;
 }
 
 
@@ -169,6 +172,9 @@ ul#rightLinks, ul#leftLinks{
 a{
 	text-decoration: none;
 	color: #bf7334;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
 }
 
 footer{
@@ -247,8 +253,7 @@ div.twitter{
 	right: -7px;
 }
 
-#registrationAvailable, #speakerSignUp, #sponsorSignUp, .contentBox{
-	background: url('../images/content-bg.png') repeat 0 0;
+#registrationAvailable, #speakerSignUp, #sponsorSignUp, #location, .content_box {
 	padding: 20px;
 	margin: 0 0 40px;
 	border-radius: 20px;
@@ -257,6 +262,8 @@ div.twitter{
 	box-shadow: 0px 0px 10px rgba(0,0,0,0.25);
 	-moz-box-shadow: 0px 0px 10px rgba(0,0,0,0.25);
 	-webkit-box-shadow: 0px 0px 10px rgba(0,0,0,0.25);
+	background-color: rgba(255, 255, 255, .70);
+	/*background: url('../images/content-bg.png') repeat 0 0;*/
 }
 
 #featureContent{
@@ -302,39 +309,68 @@ div.twitter{
 	text-shadow: 1px 2px 0px rgba(255,255,255, 0.4);
 }
 
-a#registrationButton{
-	background: url('../images/register-button.png') no-repeat 0 0;
-	position: relative;
-	top: 0;
-	left: -5px;
-	z-index: 0;
-	display: block;
-	width: 251px;
-	height: 0;
-	padding: 61px 0 0;
-	overflow: hidden;
+#registrationButton{
+    margin: 10px auto 0;
+    display: inline-block;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    -webkit-box-shadow: 0 8px 0 #531618,  0 10px 10px rgba(0, 0, 0, .75);
+    -moz-box-shadow: 0 8px 0 #531618,  0 10px 10px rgba(0, 0, 0, .75);
+    box-shadow: 0 8px 0 #531618,  0 10px 10px rgba(0, 0, 0, .75);
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
 }
 
-a#registrationButton{
-	background: url('../images/register-button.png') no-repeat 0 0;
-	position: relative;
-	top: 0;
-	left: -5px;
-	z-index: 0;
+#registrationButton span{
 	display: block;
-	width: 251px;
-	height: 0;
-	padding: 61px 0 0;
-	overflow: hidden;
-	-webkit-transition: background 1s ease-in;
-	-moz-transition: background 1s ease-in;
-	-o-transition: background 1s ease-in;
-	transition: background 1s ease-in;
+    text-align: center;
+    font-size: 28px;
+    font-family: 'Museo-700', sans-serif;
+    color: #531618;
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.25);
+    background: #8a2227;
+    background: -webkit-gradient(linear, left top, left bottom, from(#9b232b), to(#782123));
+    background: -moz-linear-gradient(top, #9b232b, #782123);
+    -webkit-box-shadow: inset 0 2px 1px rgba(242, 65, 80, 1);
+    -moz-box-shadow: inset 0 2px 1px rgba(242, 65, 80, 1);
+    box-shadow: inset 0 2px 1px rgba(242, 65, 80, 1);
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    padding: 8px 18px;
+    cursor: pointer;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
 }
 
-a#registrationButton:active{
-	background: url('../images/register-button-hover.png') no-repeat 0 0;
-	
+#registrationButton span:hover{
+	display: block;
+    color: #FFFFFF;
+    text-shadow: 0 -1px 1px rgba(19, 65, 88, .8);
+}
+
+#registrationButton span:active{
+	display: block;
+    -webkit-transition: -webkit-transform 0s ease-in-out;
+    -moz-transition: -moz-transform 0s ease-in-out;
+    transition: transform 0s ease-in-out;
+    -webkit-box-shadow: 0 0px 0 #531618,  0 8px 15px rgba(0, 0, 0, .5);
+    -moz-box-shadow: 0 0px 0 #531618,  0 8px 15px rgba(0, 0, 0, .5);
+    box-shadow: 0 0px 0 #531618,  0 8px 15px rgba(0, 0, 0, .5);
+}
+
+
+#registrationButton:active span{
+	display: block;
+  -webkit-transform: translate(0,8px);
+  -moz-transform: translate(0,8px);
+  transform: translate(0,8px);
+  -webkit-transition: -webkit-transform 0s ease-in-out;
+  -moz-transition: -moz-transform 0s ease-in-out;
+  transition: transform 0s ease-in-out;
 }
 
 #mainContent{
@@ -351,14 +387,22 @@ a#registrationButton:active{
 	margin: 0 0 20px;
 }
 
-#registrationAvailable h3, .registrationContent h3{
-	background: url('../images/icon-registration.png') no-repeat 0 7px;
+#registrationAvailable h3, #location h2#title, .registrationContent h3{
 	font-family: 'Museo-300';
 	font-size: 36px;
 	color: #bf7334;
 	margin: 0 0 25px;
-	padding: 0 0 0 50px;
 	text-shadow: 1px 2px 0px rgba(255,255,255, 0.4);
+}
+
+#registrationAvailable h3{
+	background: url('../images/icon-registration.png') no-repeat 0 7px;
+	padding: 0 0 0 50px;
+}
+
+#location h2#title{
+	background: url('../images/icon-location.png') no-repeat 0 7px;
+	padding: 0 0 0 30px;
 }
 
 a.learnMore{
@@ -401,6 +445,25 @@ a.learnMore{
 #mainContent.sub #registrationAvailable h4{
 	margin: 10px 0;
 	color: #bf7334;
+}
+
+/* Location Page Styles */
+#location .details{
+	float: left;
+	width: 480px;
+}
+
+#location .details h3{
+	font-size: 21px;
+	margin: 0 0 10px;
+}
+
+#location .map{
+	float: right;
+}
+
+#location #registrationButton{
+	margin: 20px 0 20px 80px;
 }
 
 /* Classes */
