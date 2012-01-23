@@ -5,6 +5,12 @@ describe Admin::EventsController do
     Factory.attributes_for(:event) #{}
   end
 
+  before :all do
+    @admin = Factory(:admin) if @admin.nil?
+  end
+
+  login_admin
+
   describe "GET index" do
     it "assigns all events as @events" do
       event = Event.create! valid_attributes

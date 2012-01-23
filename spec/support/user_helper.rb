@@ -11,7 +11,7 @@ def login_user
   end
 end
 
-def login_user
+def login_admin
   before :each do
     @request.env["devise.mapping"] = Devise.mappings[:user]
     if @admin

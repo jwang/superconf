@@ -1,5 +1,4 @@
-class Admin::EventsController < ApplicationController
-  before_filter :authenticate_user!
+class Admin::EventsController < Admin::AdminController
 
   # GET /events
     # GET /events.json

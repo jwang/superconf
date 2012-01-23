@@ -1,5 +1,4 @@
-class Admin::SnippetsController < ApplicationController
-  before_filter :authenticate_user!
+class Admin::SnippetsController < Admin::AdminController
   before_filter :find_event
 
   # GET /snippets

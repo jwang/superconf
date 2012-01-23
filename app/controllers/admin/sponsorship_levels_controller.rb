@@ -1,6 +1,4 @@
-class Admin::SponsorshipLevelsController < ApplicationController
-  before_filter :authenticate_user!
-  before_filter :find_event
+class Admin::SponsorshipLevelsController < Admin::AdminController
   # GET /sponsors
   # GET /sponsors.json
   def index
