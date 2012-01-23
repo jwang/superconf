@@ -253,7 +253,7 @@ div.twitter{
 	right: -7px;
 }
 
-#registrationAvailable, #speakerSignUp, #sponsorSignUp, #location, .content_box {
+#registrationAvailable, #speakerSignUp, #sponsorSignUp, #location, .content_box, .contentBox {
 	padding: 20px;
 	margin: 0 0 40px;
 	border-radius: 20px;
