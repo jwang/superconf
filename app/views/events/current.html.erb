@@ -6,7 +6,7 @@
   <h2 class="time">October 8-9, 2012</h2>
   <h3 class="location">Honolulu, Hawaii</h3>
   <h4 class="place">at the Sheraton Waikiki Beach Hotel</h4>
-  <%= link_to "Register Here!", register_event_path(@event), :id => "registrationButton" %>
+  <%= link_to "<span>Register Here!</span>".html_safe, register_event_path(@event), :id => "registrationButton" %>
   </section>
   <div class="clear"></div>
   </section><!-- End of Feature Content -->
