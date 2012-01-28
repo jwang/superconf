@@ -1,5 +1,12 @@
 class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
   layout "application"
+
+  def failure
+    #raise env['oauth'].inspect
+    #raise env['omniauth.error'].methods.inspect
+    puts "omnifail " + env['omniauth.error'].response.inspect
+  end
+
   def google
     @user = User.find_for_open_id(request.env["omniauth.auth"], current_user)
 
