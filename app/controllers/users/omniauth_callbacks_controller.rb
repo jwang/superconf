@@ -4,7 +4,7 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
   def failure
     #raise env['oauth'].inspect
     #raise env['omniauth.error'].methods.inspect
-    puts "omnifail " + env['omniauth.error'].response.inspect
+    puts "omnifail " + env['omniauth.error'].describe_blame.inspect
   end
 
   def google
