@@ -5,7 +5,8 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
     #raise env['oauth'].inspect
     #raise env['omniauth.error'].methods.inspect
     puts "omnifail " + env['omniauth.error'].response.inspect
-    puts "oauth" + env['oauth'].inspect
+    puts "omniauth.auth" + env['omniauth.auth'].inspect
+    puts "omniauth" + env['omniauth'].inspect
   end
 
   def google
