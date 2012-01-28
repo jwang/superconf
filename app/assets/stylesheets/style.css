@@ -309,7 +309,7 @@ div.twitter{
 	text-shadow: 1px 2px 0px rgba(255,255,255, 0.4);
 }
 
-#registrationButton{
+#registrationButton, .registrationButton {
     margin: 10px auto 0;
     display: inline-block;
     -webkit-border-radius: 10px;
@@ -323,7 +323,7 @@ div.twitter{
     transition: all 0.2s ease-in-out;
 }
 
-#registrationButton span{
+#registrationButton span, .registrationButton span {
 	display: block;
     text-align: center;
     font-size: 28px;
@@ -346,13 +346,13 @@ div.twitter{
     transition: all 0.2s ease-in-out;
 }
 
-#registrationButton span:hover{
+#registrationButton span:hover, .registrationButton span:hover{
 	display: block;
     color: #FFFFFF;
     text-shadow: 0 -1px 1px rgba(19, 65, 88, .8);
 }
 
-#registrationButton span:active{
+#registrationButton span:active, .registrationButton span:active {
 	display: block;
     -webkit-transition: -webkit-transform 0s ease-in-out;
     -moz-transition: -moz-transform 0s ease-in-out;
@@ -363,7 +363,7 @@ div.twitter{
 }
 
 
-#registrationButton:active span{
+#registrationButton:active span, .registration_button:active span {
 	display: block;
   -webkit-transform: translate(0,8px);
   -moz-transform: translate(0,8px);
@@ -372,6 +372,17 @@ div.twitter{
   -moz-transition: -moz-transform 0s ease-in-out;
   transition: transform 0s ease-in-out;
 }
+
+.buttonContainer {
+  width: 620px;
+  margin: auto;
+  margin-bottom: 80px;
+}
+
+#google {
+  margin-right: 24px;
+}
+
 
 #mainContent{
 	padding: 0 0 150px;
