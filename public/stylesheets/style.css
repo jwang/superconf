@@ -382,7 +382,7 @@ div.twitter{
 }
 
 #mainContent p{
-	color: #63432a;
+	color: #63432A;
 	text-shadow: 1px 2px 0px rgba(255,255,255, 0.5);
 	margin: 0 0 20px;
 }
@@ -475,6 +475,62 @@ a.learnMore{
 .locationAction {
 	text-align: center;
 }
+
+/***************************
+Speakers
+***************************/
+div.speaker{
+	padding: 20px;
+	border-bottom: 1px solid #ba9d86;
+	border-top: 1px solid #FFFFFF;
+	width: 580px;
+}
+
+div.speaker.first{
+	border-top: 0 none;
+}
+
+div.speaker.last{
+	border-bottom: 0 none;
+}
+
+img.speaker{
+	float: left;
+	width: 150px;
+	height: 150px;
+	margin: 0 20px 0 0;
+}
+
+.name, .session{
+        padding: 0 0 10px
+}
+
+div.speaker-content{
+	float: left;
+	width: 400px;
+}
+
+.socialmedia p{
+	margin: 0 0 10px !important;
+}
+
+/***************************
+Call For Proposals (WuFoo Form)
+***************************/
+.wufoo {
+	font-family: 'OpenSansRegular', 'Lucida Grande', Helvetica, Arial, sans-serif;
+	letter-spacing: .01em;
+	font-size: 16px;
+	color: #63432a;
+}
+
+.info h2 {
+	font-weight: normal;
+	font-size: 160%;
+	margin: 0 0 5px 0;
+	clear: left;
+}
+
 
 /* Classes */
 .clear{
