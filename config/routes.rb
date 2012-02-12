@@ -1,5 +1,10 @@
 Superconf::Application.routes.draw do
 
+  # redirects for static old static pages
+  match "/cfp" => redirect("/events/1/call_for_proposals")
+  match "/sponsors" => redirect("/events/1/call_for_sponsors")
+  match "/location" => redirect("/events/1/location")
+
   resources :sponsors, :only => [:index]
   resources :events, :only => [:index, :show] do
     member do
