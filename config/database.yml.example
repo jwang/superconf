@@ -13,7 +13,7 @@ development:
   encoding: unicode
   database: superconf_development
   pool: 5
-  username: superconf
+  username: postgres
   password:
 
   # Connect on a TCP socket. Omitted by default since the client uses a
@@ -39,7 +39,7 @@ test: &test
   encoding: unicode
   database: superconf_test
   pool: 5
-  username: superconf
+  username: postgres
   password:
 
 production:
@@ -47,7 +47,7 @@ production:
   encoding: unicode
   database: superconf_production
   pool: 5
-  username: superconf
+  username: postgres
   password:
 
 cucumber:

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Super Conf Admin</title>
+  <%= stylesheet_link_tag :all %>
+  <%= stylesheet_link_tag "application" %>
+  <%= javascript_include_tag :all %>
+  <%= csrf_meta_tag %>
+</head>
+<body>
+<ul class="hmenu">
+  <%= render 'shared/navigation' %>
+</ul>
+<%- flash.each do |name, msg| -%>
+  <%= content_tag :div, msg, :id => "flash_#{name}" if msg.is_a?(String) %>
+<%- end -%>
+<%= yield %>
+<%= render 'shared/footer' %>
+</body>
+</html>
+

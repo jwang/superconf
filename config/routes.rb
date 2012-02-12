@@ -1,5 +1,27 @@
 Superconf::Application.routes.draw do
+
+  resources :sponsors, :only => [:index]
+  resources :events, :only => [:index, :show] do
+    member do
+      get :register
+      get :call_for_sponsors
+      get :call_for_proposals
+    end
+  end
+  
+  namespace :admin do
+    resources :events do
+      resources :snippets
+      resources :sponsorship_levels
+      resources :sponsors
+    end
+  end
+
+  root :to => "events#current"
+
   devise_for :users
+
+  resources :proposals
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

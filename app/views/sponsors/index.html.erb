@@ -1,0 +1,41 @@
+<h1>Event Sponsors</h1>
+
+<p>Sponsor the Aloha Ruby Conference!</p>
+<p>Sponsoring the Aloha Ruby Conference is a great way to get access to the top
+Ruby talent from around the world. Whether your goals are recruiting, brand 
+awareness, developer adoption, or anything else, we bring together several 
+hundred highly qualified engineers, in an intimate, network-heavy environment.</p>
+
+To learn more about sponsoring, <a href="/assets/aloha_ruby_conf_sponsorship_prospectus.pdf">download</a>
+the prospectus or contact <a href="mailto:sponsors@aloharubyconf.com">John Wang</a>.
+
+
+<table>
+  <tr>
+    <th>Event</th>
+    <th>Sponsorship level</th>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Logo file name</th>
+    <th>Logo content type</th>
+    <th>Logo file size</th>
+    <th>Logo updated at</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @sponsors.each do |sponsor| %>
+  <tr>
+    <td><%= sponsor.event %></td>
+    <td><%= sponsor.sponsorship_level %></td>
+    <td><%= sponsor.name %></td>
+    <td><%= sponsor.description %></td>
+    <td><%= sponsor.logo_file_name %></td>
+    <td><%= sponsor.logo_content_type %></td>
+    <td><%= sponsor.logo_file_size %></td>
+    <td><%= sponsor.logo_updated_at %></td>
+ </tr>
+<% end %>
+</table>
+
