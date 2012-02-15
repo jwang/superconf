@@ -1,12 +1,11 @@
 class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
   layout "application"
 
-  def failure
+  def not_failure
     puts "omnifail " + env['omniauth.error'].response.inspect
-    puts "omnifail reason " + env['omniauth.error'].error_reason.inspect
-    puts "omnifail type" + env['omniauth.error.type'].inspect
     puts "omniauth.auth" + env['omniauth.auth'].inspect
     puts "omniauth" + env['omniauth'].inspect
+    puts "omnifail type" + env['omniauth.error.type'].inspect
   end
 
   def google
