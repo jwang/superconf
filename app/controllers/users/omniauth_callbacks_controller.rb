@@ -2,6 +2,7 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
   layout "application"
 
   def failure
+    puts "request " + request.inspect
     puts "omnifail " + env['omniauth.error'].response.inspect
     puts "omniauth.auth" + env['omniauth.auth'].inspect
     puts "omniauth" + env['omniauth'].inspect
