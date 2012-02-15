@@ -7,7 +7,7 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
     puts "omniauth.auth" + env['omniauth.auth'].inspect
     puts "omniauth" + env['omniauth'].inspect
     puts "omnifail type" + env['omniauth.error.type'].inspect
-    redirect_to user_omniauth_authorize_path(:github, params)
+    redirect_to ("https://github.com/login/oauth/access_token?code=params[:code]")
   end
 
   def google
