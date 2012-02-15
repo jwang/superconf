@@ -7,7 +7,7 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
     puts "omniauth.auth" + env['omniauth.auth'].inspect
     puts "omniauth" + env['omniauth'].inspect
     puts "omnifail type" + env['omniauth.error.type'].inspect
-    redirect_to ("https://github.com/login/oauth/access_token?code=params[:code]")
+    redirect_to ("https://github.com/login/oauth/access_token?client_id=#{ENV['GITHUB_KEY']}&code=#{params[:code]}&redirect_uri=http://aloharubyconf-qa.herokuapp.com/users/auth/github/callback")
   end
 
   def google
