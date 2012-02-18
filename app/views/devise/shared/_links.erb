@@ -41,7 +41,6 @@
     <%- if devise_mapping.omniauthable? %>
       <div class="buttonContainer">
         <%= link_to "<span>Sign in with Google</span>".html_safe, omniauth_authorize_path(resource_name, :google), :id => "google", :class => "registrationButton" %>
-          <%= link_to "<span>Sign in with GitHub</span>".html_safe, omniauth_authorize_path(resource_name, :github), :class => "registrationButton" %>
-        </div>
+      </div>
     <% end -%>
-<% end -%>
+  <% end -%>
