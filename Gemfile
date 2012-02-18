@@ -32,7 +32,6 @@ gem 'thin'
 # end
 gem "jquery-rails"
 gem 'devise'
-gem 'devise_invitable'
 gem 'omniauth'
 gem 'omniauth-openid'
 gem 'omniauth-github'

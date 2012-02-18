@@ -4,7 +4,10 @@ describe Admin::SponsorshipLevelsController do
 
   before(:all) do
     @event = Event.create(:name => "Event Sponsorship")
+    @admin = Factory(:admin) if @admin.nil?
   end
+
+  login_admin
 
   after(:all) do
     @event.destroy

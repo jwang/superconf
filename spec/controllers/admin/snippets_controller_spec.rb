@@ -3,11 +3,15 @@ require 'spec_helper'
 describe Admin::SnippetsController do
   before(:all) do
     @event = Event.create(:name => "Event Name")
+    @admin = Factory(:admin) if @admin.nil?
   end
+
 
   after(:all) do
     @event.destroy
   end
+
+  login_admin
 
   def valid_attributes
     {:name => "top_snippet", :event_id => @event.id}
