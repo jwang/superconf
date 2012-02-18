@@ -1,15 +1,23 @@
 Superconf::Application.routes.draw do
 
+  # redirects for static old static pages
+  match "/cfp" => redirect("/events/1/call_for_proposals")
+  match "/sponsors" => redirect("/events/1/call_for_sponsors")
+  match "/location" => redirect("/events/1/location")
+
   resources :sponsors, :only => [:index]
   resources :events, :only => [:index, :show] do
     member do
       get :register
       get :call_for_sponsors
       get :call_for_proposals
+      get :location
+      get :program
     end
   end
 
   namespace :admin do
+    get "dasboard", :to => "admin#dashboard", :as => :dashboard
     resources :events do
       resources :snippets
       resources :sponsorship_levels
@@ -20,7 +28,9 @@ Superconf::Application.routes.draw do
 
   root :to => "events#current"
 
-  devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
+  devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" } do
+    get '/users/auth/:provider' => 'users/omniauth_callbacks#passthru'
+  end
 
   resources :proposals
 

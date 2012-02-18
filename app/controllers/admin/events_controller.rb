@@ -1,5 +1,6 @@
-class Admin::EventsController < ApplicationController
-   # GET /events
+class Admin::EventsController < Admin::AdminController
+
+  # GET /events
     # GET /events.json
     def index
       @events = Event.all

@@ -38,4 +38,12 @@ class EventsController < ApplicationController
     @active_tab = "program"
   end
 
+  def location
+    @active_tab = "location"
+  end
+
+  def program
+    @active_tab = "program"
+  end
+
 end

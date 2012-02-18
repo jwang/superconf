@@ -1,5 +1,4 @@
-class Admin::SnippetsController < ApplicationController
-
+class Admin::SnippetsController < Admin::AdminController
   before_filter :find_event
 
   # GET /snippets
