@@ -50,7 +50,7 @@ describe EventsController do
       assigns(:event).should eq(@event)
     end
 
-    it "should render the location template" do
+    it "should render the program template" do
       get :program, :id => @event.to_param
       response.should render_template :program
     end
@@ -58,6 +58,23 @@ describe EventsController do
     it "should set @active_tab to 'program'" do
       get :program, :id => @event.to_param
       assigns(:active_tab).should == "program"
+    end
+  end
+
+  describe "GET training" do
+    it "assigns the requested event as @event" do
+      get :training, :id => @event.to_param
+      assigns(:event).should eq(@event)
+    end
+
+    it "should render the training template" do
+      get :training, :id => @event.to_param
+      response.should render_template :training
+    end
+
+    it "should set @active_tab to 'training'" do
+      get :training, :id => @event.to_param
+      assigns(:active_tab).should == "training"
     end
   end
 end

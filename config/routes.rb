@@ -13,6 +13,7 @@ Superconf::Application.routes.draw do
       get :call_for_proposals
       get :location
       get :program
+      get :training
     end
   end
 

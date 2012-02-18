@@ -46,4 +46,8 @@ class EventsController < ApplicationController
     @active_tab = "program"
   end
 
+  def training
+    @active_tab = "training"
+  end
+
 end
