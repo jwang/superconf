@@ -11,7 +11,9 @@
         <ul class="nav">
           <li class="<%= @active_tab.eql?("events") ? "active" : "" %>"><%= link_to "Events", admin_events_path %></li>
           <li class="<%= @active_tab.eql?("snippets") ? "active" : "" %>"><%= link_to "Snippets", admin_snippets_path %></li>
-          <li class="right"><%= link_to "Sign Out", destroy_user_session_path %></li>
+        </ul>
+        <ul class="nav pull-right">
+          <li><%= link_to "Sign Out", destroy_user_session_path %></li>
         </ul>
       </div><!--/.nav-collapse -->
     </div>

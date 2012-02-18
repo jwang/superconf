@@ -19,12 +19,28 @@ describe Admin::SponsorsController do
     {:name => "sponsor", :event_id => @event.id}
   end
 
+  shared_examples_for "an admin event sponsors view" do |action, single_action|
+    it "should set @active_tab to events" do
+      event = Factory(:event)
+      sponsor = Factory(:sponsor, :event => event)
+      if single_action
+        get action, :event_id => event.to_param, :id => sponsor.to_param
+      else
+        get action, :event_id => event.to_param
+      end
+      assigns(:active_tab).should == "events"
+      assigns(:active_sub_tab).should == "sponsors"
+    end
+  end
+
+
   describe "GET index" do
     it "assigns all sponsors as @sponsors" do
       sponsor = Sponsor.create! valid_attributes
       get :index, :event_id => @event.id
       assigns(:sponsors).should eq([sponsor])
     end
+    it_should_behave_like "an admin event sponsors view", :index
   end
 
   describe "GET show" do
@@ -33,6 +49,7 @@ describe Admin::SponsorsController do
       get :show, :id => sponsor.id.to_s, :event_id => @event.id
       assigns(:sponsor).should eq(sponsor)
     end
+    it_should_behave_like "an admin event sponsors view", :show, true
   end
 
   describe "GET new" do
@@ -40,6 +57,7 @@ describe Admin::SponsorsController do
       get :new, :event_id => @event.id
       assigns(:sponsor).should be_a_new(Sponsor)
     end
+    it_should_behave_like "an admin event sponsors view", :new
   end
 
   describe "GET edit" do
@@ -48,6 +66,7 @@ describe Admin::SponsorsController do
       get :edit, :id => sponsor.id.to_s, :event_id => @event.id
       assigns(:sponsor).should eq(sponsor)
     end
+    it_should_behave_like "an admin event sponsors view", :edit, true
   end
 
   describe "POST create" do

@@ -10,6 +10,7 @@ describe EventsController do
   end
 
   before :all do
+    Event.destroy_all
     @event = Event.create! valid_attributes
   end
 

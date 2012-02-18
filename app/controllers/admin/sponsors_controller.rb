@@ -1,4 +1,7 @@
 class Admin::SponsorsController < Admin::AdminController
+  before_filter :load_event
+  before_filter :load_sponsor, :only => [:show, :edit, :update, :destroy]
+  before_filter :set_sponsors_tab, :only => [:index, :new, :show, :edit]
 
   # GET /sponsors
   # GET /sponsors.json
@@ -14,7 +17,6 @@ class Admin::SponsorsController < Admin::AdminController
   # GET /sponsors/1
   # GET /sponsors/1.json
   def show
-    @sponsor = @event.sponsors.find(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
@@ -35,7 +37,6 @@ class Admin::SponsorsController < Admin::AdminController
 
   # GET /sponsors/1/edit
   def edit
-    @sponsor = @event.sponsors.find(params[:id])
   end
 
   # POST /sponsors
@@ -57,7 +58,6 @@ class Admin::SponsorsController < Admin::AdminController
   # PUT /sponsors/1
   # PUT /sponsors/1.json
   def update
-    @sponsor = @event.sponsors.find(params[:id])
 
     respond_to do |format|
       if @sponsor.update_attributes(params[:sponsor])
@@ -82,8 +82,19 @@ class Admin::SponsorsController < Admin::AdminController
     end
   end
 
-  def find_event
+
+  private
+
+  def load_event
     @event = Event.find(params[:event_id])
   end
 
+  def load_sponsor
+    @sponsor = @event.sponsors.find(params[:id])
+  end
+
+  def set_sponsors_tab
+    @active_tab = "events"
+    @active_sub_tab = "sponsors"
+  end
 end
