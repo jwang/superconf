@@ -2,6 +2,8 @@ class Admin::AdminController < ApplicationController
   before_filter :authenticate_user!
   before_filter :enforce_admin
   before_filter :find_event
+
+  layout 'admin'
   
   def dashboard
     redirect_to admin_events_path

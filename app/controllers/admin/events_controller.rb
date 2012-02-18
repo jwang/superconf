@@ -3,6 +3,7 @@ class Admin::EventsController < Admin::AdminController
   # GET /events
     # GET /events.json
     def index
+      @active_tab="events"
       @events = Event.all
 
       respond_to do |format|
