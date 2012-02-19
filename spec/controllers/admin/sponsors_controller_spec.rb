@@ -3,7 +3,7 @@ require 'spec_helper'
 describe Admin::SponsorsController do
   before(:all) do
     @admin = Factory(:admin) if @admin.nil?
-    @event = Event.create(:name => "Event Name")
+    @event = Factory(:event)
   end
 
   login_admin

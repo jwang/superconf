@@ -3,7 +3,7 @@ require 'spec_helper'
 describe Admin::SponsorshipLevelsController do
 
   before(:all) do
-    @event = Event.create(:name => "Event Sponsorship")
+    @event = Factory(:event)
     @admin = Factory(:admin) if @admin.nil?
   end
 
