@@ -4,7 +4,7 @@
 <ul id="rightLinks">
   <li class="page-1 <%= "current" if @active_tab == "home" %>"><%= link_to "Home", root_path %></li>
   <li class="page-2 <%= "current" if @active_tab == "program" %>"><%= link_to "Program", program_event_path(@event.year) %></li>
-  <li class="page-3 <%= "current" if @active_tab == "sponsors" %>"><%= link_to "Sponsors", call_for_sponsors_event_path(@event.year) %></li>
+  <li class="page-3 <%= "current" if @active_tab == "sponsors" %>"><%= link_to "Sponsors", sponsors_event_path(@event.year) %></li>
 </ul>
 <%= link_to(image_tag("/images/logo.png", :alt => "Aloha Ruby Conference"), root_path, :id => "logo", :class => "home", :title => "Return to the homepage") %>
 <ul id="leftLinks">

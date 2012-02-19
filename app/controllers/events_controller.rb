@@ -35,6 +35,10 @@ class EventsController < ApplicationController
     @active_tab = "sponsors"
   end
 
+  def sponsors
+    @active_tab = "sponsors"
+  end
+
   def call_for_proposals
     @active_tab = "program"
   end
