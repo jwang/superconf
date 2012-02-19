@@ -11,7 +11,29 @@ describe Admin::EventsController do
 
   login_admin
 
+  shared_examples_for "an admin events view" do |action, single_action|
+    it "should set @active_tab to events" do
+      event = Event.create! valid_attributes
+      if single_action
+        get action, :id => event.to_param
+      else
+        get action
+      end
+      assigns(:active_tab).should == "events"
+    end
+  end
+
+  shared_examples_for "a single admin event view" do |action|
+    it "should set @active_tab to events" do
+      event = Event.create! valid_attributes
+      get action, :id => event.to_param
+      assigns(:active_sub_tab).should == "event"
+    end
+  end
+
   describe "GET index" do
+    it_should_behave_like "an admin events view", :index
+
     it "assigns all events as @events" do
       Event.destroy_all
       event = Event.create! valid_attributes
@@ -21,9 +43,12 @@ describe Admin::EventsController do
   end
 
   describe "GET show" do
+    it_should_behave_like "an admin events view", :show, true
+    it_should_behave_like "a single admin event view", :show
+
     it "assigns the requested event as @event" do
       event = Event.create! valid_attributes
-      get :show, :id => event.id.to_s
+      get :show, :id => event.to_param
       assigns(:event).should eq(event)
     end
   end
@@ -33,13 +58,19 @@ describe Admin::EventsController do
       get :new
       assigns(:event).should be_a_new(Event)
     end
+    it_should_behave_like "an admin events view", :new
   end
 
   describe "GET edit" do
+    before :all do
+      @event = Event.create! valid_attributes
+    end
+    it_should_behave_like "an admin events view", :edit, true
+    it_should_behave_like "a single admin event view", :edit
+
     it "assigns the requested event as @event" do
-      event = Event.create! valid_attributes
-      get :edit, :id => event.id.to_s
-      assigns(:event).should eq(event)
+      get :edit, :id => @event.to_param
+      assigns(:event).should eq(@event)
     end
   end
 
@@ -110,7 +141,7 @@ describe Admin::EventsController do
         event = Event.create! valid_attributes
         # Trigger the behavior that occurs when invalid params are submitted
         Event.any_instance.stub(:save).and_return(false)
-        put :update, :id => event.id.to_s, :event => {}
+        put :update, :id => event.to_param, :event => {}
         assigns(:event).should eq(event)
       end
 
@@ -118,7 +149,7 @@ describe Admin::EventsController do
         event = Event.create! valid_attributes
         # Trigger the behavior that occurs when invalid params are submitted
         Event.any_instance.stub(:save).and_return(false)
-        put :update, :id => event.id.to_s, :event => {}
+        put :update, :id => event.to_param, :event => {}
         response.should render_template("edit")
       end
     end
@@ -128,13 +159,13 @@ describe Admin::EventsController do
     it "destroys the requested event" do
       event = Event.create! valid_attributes
       expect {
-        delete :destroy, :id => event.id.to_s
+        delete :destroy, :id => event.to_param
       }.to change(Event, :count).by(-1)
     end
 
     it "redirects to the events list" do
       event = Event.create! valid_attributes
-      delete :destroy, :id => event.id.to_s
+      delete :destroy, :id => event.to_param
       response.should redirect_to(admin_events_url)
     end
   end

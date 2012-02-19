@@ -10,6 +10,7 @@ Superconf::Application.routes.draw do
     member do
       get :register
       get :call_for_sponsors
+      get :sponsors
       get :call_for_proposals
       get :location
       get :program

@@ -1,0 +1,21 @@
+<div class="navbar navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+      <%= link_to "Super Conf Admin", admin_dashboard_path, :class => "brand" %>
+      <div class="nav-collapse">
+        <ul class="nav">
+          <li class="<%= @active_tab.eql?("events") ? "active" : "" %>"><%= link_to "Events", admin_events_path %></li>
+          <li class="<%= @active_tab.eql?("snippets") ? "active" : "" %>"><%= link_to "Snippets", admin_snippets_path %></li>
+        </ul>
+        <ul class="nav pull-right">
+          <li><%= link_to "Sign Out", destroy_user_session_path %></li>
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div>
+  </div>
+</div>

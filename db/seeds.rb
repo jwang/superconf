@@ -6,5 +6,10 @@
 #   cities = City.create([{ :name => 'Chicago' }, { :name => 'Copenhagen' }])
 #   Mayor.create(:name => 'Daley', :city => cities.first)
 puts 'SETTING UP DEFAULT USER LOGIN'
-user = User.create! :email => 'user@test.com', :password => 'please', :password_confirmation => 'please'
+user = User.create :email => 'user@test.com', :password => 'please', :password_confirmation => 'please'
 puts 'New user created: ' << user.email
+puts 'SETTING UP DEFAULT EVENT'
+event = Event.create(:name => "Default Event", :year => Time.current.to_s)
+puts 'Event created: ' << event.name
+
+
