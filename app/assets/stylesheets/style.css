@@ -540,6 +540,49 @@ div.speaker-content{
 .socialmedia p{
 	margin: 0 0 10px !important;
 }
+/***************************
+Sponsors
+***************************/
+div.sponsorLogo, div.sponsorDesc {
+  display: block;
+  float: left;
+}
+
+div.sponsorLogo {
+  width: 100px;
+  height: 100px;
+  border: 1px solid red;
+  margin-top: 5px;
+}
+
+div.sponsorDesc {
+  width: 740px;
+  margin-left: 40px;
+}
+
+div.rubySponsorLogo {
+}
+
+div.rubySponsorDesc {
+}
+
+div.goldSponsorLogo {
+}
+
+div.goldSponsorDesc {
+}
+
+div.silverSponsorLogo {
+}
+
+div.silverSponsorDesc {
+}
+
+div.bronzeSponsorLogo {
+}
+
+div.bronzeSponsorDesc {
+}
 
 /***************************
 Call For Proposals (WuFoo Form)
