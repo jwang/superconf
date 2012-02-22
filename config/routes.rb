@@ -15,6 +15,7 @@ Superconf::Application.routes.draw do
       get :location
       get :program
       get :training
+      get :contact
     end
   end
 

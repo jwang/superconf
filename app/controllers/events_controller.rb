@@ -55,6 +55,10 @@ class EventsController < ApplicationController
     @active_tab = "training"
   end
 
+  def contact
+    @active_tab = "contact"
+  end
+
   private 
 
   def load_by_year
