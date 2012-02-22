@@ -233,6 +233,17 @@ div.twitter{
 	display: block;
 }
 
+#footer div#copyright {
+  text-align: top;
+  margin-top: -20px;
+}
+
+#footer div#copyright img {
+  position: relative;
+  display: inline;
+  top: 10px;
+}
+
 
 /* ID's */
 #logo{
