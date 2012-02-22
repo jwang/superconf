@@ -409,6 +409,11 @@ div.twitter{
 	margin: 0 0 20px;
 }
 
+#mainContent ul{
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
 #registrationAvailable h3, #location h2#title, .registrationContent h3{
 	font-family: 'Museo-300';
 	font-size: 36px;
