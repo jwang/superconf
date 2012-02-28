@@ -2,7 +2,7 @@
 <html>
 <head>
   <title>Aloha Ruby Conference</title>
-  <%= stylesheet_link_tag "style", "formtastic" %>
+  <%= stylesheet_link_tag "formtastic", "wufoo", "style" %>
   <%= csrf_meta_tag %>
 	<link rel="stylesheet" href="stylesheets/style.css" />
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
@@ -10,7 +10,7 @@
 		if (typeof jQuery == 'undefined')
 		{document.write(unescape("%3Cscript src='javascripts/jquery.min.js'%3E%3C/script%3E"));}
 	</script>
-  <%= javascript_include_tag "application", "dd-belatedpngfix-0.0.8a-min" %>
+  <%= javascript_include_tag "application", "dd-belatedpngfix-0.0.8a-min", "wufoo" %>
 	<!--[if IE 6]>
 	    <script src="DD_belatedPNG.js"></script>
 	    <script>

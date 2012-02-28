@@ -4,6 +4,7 @@ Author: Mike King (@micjamking)
 
 
 /* General Page Layout */
+
 * {
 	margin: 0;
 	padding: 0;
@@ -262,6 +263,7 @@ div.twitter{
 	z-index: 3;
 	top: 0;
 	right: -7px;
+	display: none;
 }
 
 #registrationAvailable, #speakerSignUp, #sponsorSignUp, #location, .content_box, .contentBox {
