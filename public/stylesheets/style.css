@@ -5,34 +5,34 @@ Author: Mike King (@micjamking)
 
 /* General Page Layout */
 * {
-	margin: 0;
-	padding: 0;
-	outline: 0;
+  margin: 0;
+  padding: 0;
+  outline: 0;
 }
 
 html{
-	height: 100%;
-	background: #eee8da url('../images/canvas-pattern.jpg') repeat fixed 0 0;
+  height: 100%;
+  background: #eee8da url('../images/canvas-pattern.jpg') repeat fixed 0 0;
 }
 
 body{
-	background: url('../images/hawaii-background-1.jpg') no-repeat fixed center 84px;
-	font-family: 'OpenSansRegular', 'Lucida Grande', Helvetica, Arial, sans-serif;
-	font-size: 16px;
-	color: #63432a;
+  background: url('../images/hawaii-background-1.jpg') no-repeat fixed center 84px;
+  font-family: 'OpenSansRegular', 'Lucida Grande', Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  color: #63432a;
 }
 
 
 /* HTML5 Tags */
 header, section, footer, aside, article, nav, figure{
-	display: block;
+  display: block;
 }
 
 /* MyFonts Webfont */
 @font-face {font-family: 'Museo-700';src: url('../fonts/museo/1BE773_0_0.eot');src: url('../fonts/museo/1BE773_0_0.eot?#iefix') format('embedded-opentype'),url('../fonts/museo/1BE773_0_0.woff') format('woff'),url('../fonts/museo/1BE773_0_0.ttf') format('truetype'),url('../fonts/museo/1BE773_0_0.svg#wf') format('svg');}
 
 @font-face {font-family: 'Museo-300';src: url('../fonts/museo/1BE773_1_0.eot');src: url('../fonts/museo/1BE773_1_0.eot?#iefix') format('embedded-opentype'),url('../fonts/museo/1BE773_1_0.woff') format('woff'),url('../fonts/museo/1BE773_1_0.ttf') format('truetype'),url('../fonts/museo/1BE773_1_0.svg#wf') format('svg');}
- 
+
 @font-face {font-family: 'Museo-500';src: url('../fonts/museo/1BE773_2_0.eot');src: url('../fonts/museo/1BE773_2_0.eot?#iefix') format('embedded-opentype'),url('../fonts/museo/1BE773_2_0.woff') format('woff'),url('../fonts/museo/1BE773_2_0.ttf') format('truetype'),url('../fonts/museo/1BE773_2_0.svg#wf') format('svg');}
 
 @font-face {font-family: 'MuseoSlab-500';src: url('../fonts/museo/1BE9BE_0_0.eot');src: url('../fonts/museo/1BE9BE_0_0.eot?#iefix') format('embedded-opentype'),url('../fonts/museo/1BE9BE_0_0.woff') format('woff'),url('../fonts/museo/1BE9BE_0_0.ttf') format('truetype');}
@@ -77,54 +77,54 @@ header, section, footer, aside, article, nav, figure{
 
 /* Containers */
 #container01{
-	background: url('../images/header-bg.png') repeat-x center top;
-	height: 144px;
-	width: 100%;
-	position: fixed;
-	top: 0;
-	left: 0;    
-	z-index: 1;
+  background: url('../images/header-bg.png') repeat-x center top;
+  height: 144px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
 }
 #container02{
-	width: 960px;
-	margin: 0 auto;
-	min-height: 900px;
+  width: 960px;
+  margin: 0 auto;
+  min-height: 900px;
 }
 
 
 /* Markup Tags */
 h1#title{
-	font-family: 'MuseoSlab-500', 'Lucida Grande', Helvetica, Arial, sans-serif;
-	font-size: 60px;
-	color: #b12731;
-	text-align: center;
-	text-shadow: 1px 2px 0px rgba(255,255,255, 0.4);
-	padding: 144px 0 0;
+  font-family: 'MuseoSlab-500', 'Lucida Grande', Helvetica, Arial, sans-serif;
+  font-size: 60px;
+  color: #b12731;
+  text-align: center;
+  text-shadow: 1px 2px 0px rgba(255,255,255, 0.4);
+  padding: 144px 0 0;
 }
 
 h2,h3,h4,h5,h6{
-	font-family: 'Museo-500', 'Lucida Grande', Helvetica, Arial, sans-serif;
-	color: #63432a;
+  font-family: 'Museo-500', 'Lucida Grande', Helvetica, Arial, sans-serif;
+  color: #63432a;
 }
 
 header{
-	width: 960px;
-	height: 144px;
-	position: relative;
-	z-index: 2;
-	margin: 0 auto;
+  width: 960px;
+  height: 144px;
+  position: relative;
+  z-index: 2;
+  margin: 0 auto;
 }
 
 header nav{
-	margin: 0 auto;
-	width: 920px;
+  margin: 0 auto;
+  width: 920px;
 }
 
 header nav ul li{
-	list-style: none;
-	display: inline;
-	padding: 5px 12px;
-	margin: 0 10px;
+  list-style: none;
+  display: inline;
+  padding: 5px 12px;
+  margin: 0 10px;
 }
 
 header nav ul#rightLinks{
@@ -134,179 +134,179 @@ header nav ul#leftLinks{
 }
 
 header nav ul li a{
-	font-family: 'Museo-700';
-	font-size: 18px;
-	color: #bf7334;
-	text-decoration: none;
-	text-shadow: 0px 0px 5px rgba(0,0,0, 0.5);
+  font-family: 'Museo-700';
+  font-size: 18px;
+  color: #bf7334;
+  text-decoration: none;
+  text-shadow: 0px 0px 5px rgba(0,0,0, 0.5);
     -webkit-transition: all 0.2s ease-in-out;
     -moz-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
 }
 
-header nav ul li.current{	
-   	background: rgb(89, 18, 2); /* The Fallback */
-   	background: rgba(89, 18, 2, 0.45);
-	box-shadow: inset 0px 0px 5px 1px rgba(0,0,0, 0.5);
-	box-shadow: 1px 1px 0px 0px rgba(255,255,255, 0.2);
-	-moz-box-shadow: 1px 1px 0px 0px rgba(255,255,255, 0.2);
-	-webkit-box-shadow: 1px 1px 0px 0px rgba(255,255,255, 0.2);
-	height: 28px;
-	border-radius: 13px;
+header nav ul li.current{
+    background: rgb(89, 18, 2); /* The Fallback */
+    background: rgba(89, 18, 2, 0.45);
+  box-shadow: inset 0px 0px 5px 1px rgba(0,0,0, 0.5);
+  box-shadow: 1px 1px 0px 0px rgba(255,255,255, 0.2);
+  -moz-box-shadow: 1px 1px 0px 0px rgba(255,255,255, 0.2);
+  -webkit-box-shadow: 1px 1px 0px 0px rgba(255,255,255, 0.2);
+  height: 28px;
+  border-radius: 13px;
 }
 
 header nav ul li a:hover, header nav ul li.current a{
-	color: #e5c1a2;
+  color: #e5c1a2;
 }
 
 
 ul#rightLinks, #logo, ul#leftLinks{
-	float: left;
+  float: left;
 }
 
 ul#rightLinks, ul#leftLinks{
-	width: 361px;
-	margin: 30px 0 0;
+  width: 361px;
+  margin: 30px 0 0;
 }
 
 a{
-	text-decoration: none;
-	color: #bf7334;
+  text-decoration: none;
+  color: #bf7334;
     -webkit-transition: all 0.2s ease-in-out;
     -moz-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
 }
 
 footer{
-	background: url('../images/footer-bg.png') repeat-x center bottom;
-	height: 144px;
-	width: 100%;
-	position: fixed;
-	bottom: 0;
-	left: 0;
+  background: url('../images/footer-bg.png') repeat-x center bottom;
+  height: 144px;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
 }
 
 #footer{
-	margin: 69px auto 0;
-	width: 960px;
-	font-family: 'Museo-700';
-	font-size: 12px;
-	color: #d57130;
-	text-shadow: 0px 0px 5px rgba(0,0,0, 0.5);
-	text-align: center;
+  margin: 69px auto 0;
+  width: 960px;
+  font-family: 'Museo-700';
+  font-size: 12px;
+  color: #d57130;
+  text-shadow: 0px 0px 5px rgba(0,0,0, 0.5);
+  text-align: center;
 }
 
 #footer div.socialMedia{
-	width: 255px;
-	margin: 0 auto 20px;
-	text-align: left;
+  width: 255px;
+  margin: 0 auto 20px;
+  text-align: left;
 }
 
 div.twitter, div.google, div.twitter p, div.google p{
-	float: left;
+  float: left;
 }
 
 div.twitter p, div.google p{
-	padding: 8px 0 0;
-	margin: 0 10px 0 0;
+  padding: 8px 0 0;
+  margin: 0 10px 0 0;
 }
 
 div.twitter{
-	margin: 0 30px 0 0;
+  margin: 0 30px 0 0;
 }
 
 #footer div.socialMedia a.twitter{
-	background: url('../images/twitter-icon.png') no-repeat 0 0;
-	width: 37px;
-	height: 0;
-	padding: 28px 0 0;
-	overflow: hidden;
-	display: block;
+  background: url('../images/twitter-icon.png') no-repeat 0 0;
+  width: 37px;
+  height: 0;
+  padding: 28px 0 0;
+  overflow: hidden;
+  display: block;
 }
 
 #footer div.socialMedia a.googlePlus{
-	background: url('../images/google-icon.png') no-repeat 0 0;
-	width: 30px;
-	height: 0;
-	padding: 30px 0 0;
-	overflow: hidden;
-	display: block;
+  background: url('../images/google-icon.png') no-repeat 0 0;
+  width: 30px;
+  height: 0;
+  padding: 30px 0 0;
+  overflow: hidden;
+  display: block;
 }
 
 
 /* ID's */
 #logo{
-	text-align: center;
-	width: 198px;
-	margin: 0 auto;
+  text-align: center;
+  width: 198px;
+  margin: 0 auto;
 }
 
 #registrationBanner{
-	background: url('../images/register-banner.png') no-repeat 0 0;
-	position: fixed;
-	height: 0;
-	width: 140px;
-	padding: 140px 0 0;
-	overflow: hidden;
-	z-index: 3;
-	top: 0;
-	right: -7px;
+  background: url('../images/register-banner.png') no-repeat 0 0;
+  position: fixed;
+  height: 0;
+  width: 140px;
+  padding: 140px 0 0;
+  overflow: hidden;
+  z-index: 3;
+  top: 0;
+  right: -7px;
 }
 
 #registrationAvailable, #speakerSignUp, #sponsorSignUp, #location{
-	padding: 20px;
-	margin: 0 0 40px;
-	border-radius: 20px;
-	-moz-border-radius: 20px;
-	-webkit-border-radius: 20px;
-	box-shadow: 0px 0px 10px rgba(0,0,0,0.25);
-	-moz-box-shadow: 0px 0px 10px rgba(0,0,0,0.25);
-	-webkit-box-shadow: 0px 0px 10px rgba(0,0,0,0.25);
-	background-color: rgba(255, 255, 255, .70);
-	/*background: url('../images/content-bg.png') repeat 0 0;*/
+  padding: 20px;
+  margin: 0 0 40px;
+  border-radius: 20px;
+  -moz-border-radius: 20px;
+  -webkit-border-radius: 20px;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.25);
+  -moz-box-shadow: 0px 0px 10px rgba(0,0,0,0.25);
+  -webkit-box-shadow: 0px 0px 10px rgba(0,0,0,0.25);
+  background-color: rgba(255, 255, 255, .70);
+  /*background: url('../images/content-bg.png') repeat 0 0;*/
 }
 
 #featureContent{
-	margin: 0 0 40px;
+  margin: 0 0 40px;
 }
 
 #featureContent img{
-	position: relative;
-	left: -37px;
-	top: 13px;
-	z-index: 0;
-	float: left;
-	margin: 0 20px 0 0;
+  position: relative;
+  left: -37px;
+  top: 13px;
+  z-index: 0;
+  float: left;
+  margin: 0 20px 0 0;
 }
 
 #conferenceInfo{
-	padding: 53px 0 0;
+  padding: 53px 0 0;
 }
 
 #conferenceInfo h2.time{
-	font-family: 'Museo-300';
-	font-weight: normal;
-	font-size: 30px;
-	color: #FFFFFF;
-	margin: 0 0 5px;
+  font-family: 'Museo-300';
+  font-weight: normal;
+  font-size: 30px;
+  color: #FFFFFF;
+  margin: 0 0 5px;
 }
 
 #conferenceInfo h3.location{
-	font-family: 'Museo-300';
-	font-weight: normal;
-	font-size: 42px;
-	color: #bf7334;
-	margin: 0 0 5px;
-	text-shadow: 1px 2px 0px rgba(255,255,255, 0.4);
+  font-family: 'Museo-300';
+  font-weight: normal;
+  font-size: 42px;
+  color: #bf7334;
+  margin: 0 0 5px;
+  text-shadow: 1px 2px 0px rgba(255,255,255, 0.4);
 }
 
 #conferenceInfo h4.place{
-	font-family: 'Museo-300';
-	font-weight: normal;
-	font-size: 21px;
-	color: #63432a;
-	margin: 0 0 15px;
-	text-shadow: 1px 2px 0px rgba(255,255,255, 0.4);
+  font-family: 'Museo-300';
+  font-weight: normal;
+  font-size: 21px;
+  color: #63432a;
+  margin: 0 0 15px;
+  text-shadow: 1px 2px 0px rgba(255,255,255, 0.4);
 }
 
 #registrationButton{
@@ -324,7 +324,7 @@ div.twitter{
 }
 
 #registrationButton span{
-	display: block;
+  display: block;
     text-align: center;
     font-size: 28px;
     font-family: 'Museo-700', sans-serif;
@@ -347,13 +347,13 @@ div.twitter{
 }
 
 #registrationButton span:hover{
-	display: block;
+  display: block;
     color: #FFFFFF;
     text-shadow: 0 -1px 1px rgba(19, 65, 88, .8);
 }
 
 #registrationButton span:active{
-	display: block;
+  display: block;
     -webkit-transition: -webkit-transform 0s ease-in-out;
     -moz-transition: -moz-transform 0s ease-in-out;
     transition: transform 0s ease-in-out;
@@ -364,7 +364,7 @@ div.twitter{
 
 
 #registrationButton:active span{
-	display: block;
+  display: block;
   -webkit-transform: translate(0,8px);
   -moz-transform: translate(0,8px);
   transform: translate(0,8px);
@@ -374,131 +374,131 @@ div.twitter{
 }
 
 #mainContent{
-	padding: 0 0 150px;
+  padding: 0 0 150px;
 }
 
 #mainContent.sub{
-	margin: 40px 0 0;
+  margin: 40px 0 0;
 }
 
 #mainContent p{
-	color: #63432A;
-	text-shadow: 1px 2px 0px rgba(255,255,255, 0.5);
-	margin: 0 0 20px;
+  color: #63432A;
+  text-shadow: 1px 2px 0px rgba(255,255,255, 0.5);
+  margin: 0 0 20px;
 }
 
 #registrationAvailable h3, #location h2#title{
-	font-family: 'Museo-300';
-	font-size: 36px;
-	color: #bf7334;
-	margin: 0 0 25px;
-	text-shadow: 1px 2px 0px rgba(255,255,255, 0.4);
+  font-family: 'Museo-300';
+  font-size: 36px;
+  color: #bf7334;
+  margin: 0 0 25px;
+  text-shadow: 1px 2px 0px rgba(255,255,255, 0.4);
 }
 
 #registrationAvailable h3{
-	background: url('../images/icon-registration.png') no-repeat 0 7px;
-	padding: 0 0 0 50px;
+  background: url('../images/icon-registration.png') no-repeat 0 7px;
+  padding: 0 0 0 50px;
 }
 
 #location h2#title{
-	background: url('../images/icon-location.png') no-repeat 0 7px;
-	padding: 0 0 0 30px;
+  background: url('../images/icon-location.png') no-repeat 0 7px;
+  padding: 0 0 0 30px;
 }
 
 a.learnMore{
-	background: url('../images/arrow.png') no-repeat 95px 5px;
-	font-size: 16px;
-	color: #bf7334;
-	text-shadow: 1px 2px 0px rgba(255,255,255, 0.4);
-	display: block;
-	width: 120px;
-	float: right;
-	text-decoration: none;
+  background: url('../images/arrow.png') no-repeat 95px 5px;
+  font-size: 16px;
+  color: #bf7334;
+  text-shadow: 1px 2px 0px rgba(255,255,255, 0.4);
+  display: block;
+  width: 120px;
+  float: right;
+  text-decoration: none;
 }
 
 #speakerSignUp{
-	margin: 0 30px 0 0;
+  margin: 0 30px 0 0;
 }
 
 #speakerSignUp, #sponsorSignUp{
-	width: 422px;
-	float: left;
+  width: 422px;
+  float: left;
 }
 
 #speakerSignUp h4, #sponsorSignUp h4{
-	font-family: 'Museo-300';
-	font-size: 28px;
-	color: #bf7334;
-	margin: 0 0 25px;
-	padding: 0 0 0 50px;
-	text-shadow: 1px 2px 0px rgba(255,255,255, 0.4);
+  font-family: 'Museo-300';
+  font-size: 28px;
+  color: #bf7334;
+  margin: 0 0 25px;
+  padding: 0 0 0 50px;
+  text-shadow: 1px 2px 0px rgba(255,255,255, 0.4);
 }
 
 #speakerSignUp h4{
-	background: url('../images/icon-speakers.png') no-repeat 0 7px;
+  background: url('../images/icon-speakers.png') no-repeat 0 7px;
 }
 
 #sponsorSignUp h4{
-	background: url('../images/icon-sponsors.png') no-repeat 0 7px;
+  background: url('../images/icon-sponsors.png') no-repeat 0 7px;
 }
 
 #mainContent.sub #registrationAvailable h4{
-	margin: 10px 0;
-	color: #bf7334;
+  margin: 10px 0;
+  color: #bf7334;
 }
 
 /* Location Page Styles */
 #location .details{
-	float: left;
-	width: 480px;
+  float: left;
+  width: 480px;
 }
 
 #location .details h3{
-	font-size: 21px;
-	margin: 0 0 10px;
+  font-size: 21px;
+  margin: 0 0 10px;
 }
 
 #location .map{
-	float: right;
+  float: right;
 }
 
 #location #registrationButton{
-	margin: 20px 0 20px;
+  margin: 20px 0 20px;
 }
 
 .quote{
-	margin: 30px 0 0;
-	float: right;
-	width: 400px;
+  margin: 30px 0 0;
+  float: right;
+  width: 400px;
 }
 
 .locationAction {
-	text-align: center;
+  text-align: center;
 }
 
 /***************************
 Speakers
 ***************************/
 div.speaker{
-	padding: 20px;
-	border-bottom: 1px solid #ba9d86;
-	border-top: 1px solid #FFFFFF;
-	width: 580px;
+  padding: 20px;
+  border-bottom: 1px solid #ba9d86;
+  border-top: 1px solid #FFFFFF;
+  width: 580px;
 }
 
 div.speaker.first{
-	border-top: 0 none;
+  border-top: 0 none;
 }
 
 div.speaker.last{
-	border-bottom: 0 none;
+  border-bottom: 0 none;
 }
 
 img.speaker{
-	float: left;
-	width: 150px;
-	height: 150px;
-	margin: 0 20px 0 0;
+  float: left;
+  width: 150px;
+  height: 150px;
+  margin: 0 20px 0 0;
 }
 
 .name, .session{
@@ -506,33 +506,60 @@ img.speaker{
 }
 
 div.speaker-content{
-	float: left;
-	width: 400px;
+  float: left;
+  width: 400px;
 }
 
 .socialmedia p{
-	margin: 0 0 10px !important;
+  margin: 0 0 10px !important;
 }
 
 /***************************
 Call For Proposals (WuFoo Form)
 ***************************/
 .wufoo {
-	font-family: 'OpenSansRegular', 'Lucida Grande', Helvetica, Arial, sans-serif;
-	letter-spacing: .01em;
-	font-size: 16px;
-	color: #63432a;
+  font-family: 'OpenSansRegular', 'Lucida Grande', Helvetica, Arial, sans-serif;
+  letter-spacing: .01em;
+  font-size: 16px;
+  color: #63432a;
 }
 
 .info h2 {
-	font-weight: normal;
-	font-size: 160%;
-	margin: 0 0 5px 0;
-	clear: left;
+  font-weight: normal;
+  font-size: 160%;
+  margin: 0 0 5px 0;
+  clear: left;
 }
 
 
 /* Classes */
 .clear{
-	clear: both;
+  clear: both;
+}
+
+.speaker-wrapper {
+  margin-bottom: 40px;
+}
+
+img.speaker, .speaker-info {
+  float: left;
+}
+
+img.speaker {
+}
+
+.speaker-info {
+  float: left;
+  width: 700px;
+  margin-left: 24px;
+}
+
+.speaker-info .name {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.speaker-info .session {
+  font-size: 20px;
+  font-weight: bold;
 }
