@@ -466,6 +466,23 @@ a.learnMore{
   margin: 20px 0 20px;
 }
 
+#location ul{
+  margin: 20px 20px;
+}
+#location pre{
+  height: 94px;
+}
+
+#location .note ol{
+  margin: 20px 36px;
+}
+
+#location .note ol li.code {
+  font-family: monospace;
+}
+
+
+
 .quote{
   margin: 30px 0 0;
   float: right;
