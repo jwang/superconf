@@ -473,12 +473,26 @@ a.learnMore{
   height: 94px;
 }
 
-#location .note ol{
-  margin: 20px 36px;
+#location .note table{
+  margin-bottom: 20px;
 }
 
-#location .note ol li.code {
+#location table td.gutter pre.line-numbers {
+  padding-top: 7px;
+  width: 15px;
+  line-height: 10px;
+}
+
+#location table td.gutter pre.line-numbers span.line-number {
+  display: inherit;
+  width: 12px;
+}
+
+#location table td.code span.line {
+  display: block;
   font-family: monospace;
+  padding-top: 2px;
+  line-height: 18px;
 }
 
 
