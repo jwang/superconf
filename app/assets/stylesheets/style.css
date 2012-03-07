@@ -233,6 +233,17 @@ div.twitter{
 	display: block;
 }
 
+#footer div#copyright {
+  text-align: top;
+  margin-top: -20px;
+}
+
+#footer div#copyright img {
+  position: relative;
+  display: inline;
+  top: 10px;
+}
+
 
 /* ID's */
 #logo{
@@ -398,6 +409,11 @@ div.twitter{
 	margin: 0 0 20px;
 }
 
+#mainContent ul{
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
 #registrationAvailable h3, #location h2#title, .registrationContent h3{
 	font-family: 'Museo-300';
 	font-size: 36px;
@@ -528,6 +544,49 @@ div.speaker-content{
 
 .socialmedia p{
 	margin: 0 0 10px !important;
+}
+/***************************
+Sponsors
+***************************/
+div.sponsorLogo, div.sponsorDesc {
+  display: block;
+  float: left;
+}
+
+div.sponsorLogo {
+  width: 100px;
+  height: 100px;
+  border: 1px solid red;
+  margin-top: 5px;
+}
+
+div.sponsorDesc {
+  width: 740px;
+  margin-left: 40px;
+}
+
+div.rubySponsorLogo {
+}
+
+div.rubySponsorDesc {
+}
+
+div.goldSponsorLogo {
+}
+
+div.goldSponsorDesc {
+}
+
+div.silverSponsorLogo {
+}
+
+div.silverSponsorDesc {
+}
+
+div.bronzeSponsorLogo {
+}
+
+div.bronzeSponsorDesc {
 }
 
 /***************************

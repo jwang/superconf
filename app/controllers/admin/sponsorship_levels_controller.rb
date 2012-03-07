@@ -1,4 +1,8 @@
 class Admin::SponsorshipLevelsController < Admin::AdminController
+  before_filter :load_event
+  before_filter :load_sponsorship_level, :only => [:show, :edit, :update, :destroy]
+  before_filter :set_sponsorship_level_tab, :only => [:index, :new, :show, :edit]
+
   # GET /sponsors
   # GET /sponsors.json
   def index
@@ -13,7 +17,6 @@ class Admin::SponsorshipLevelsController < Admin::AdminController
   # GET /sponsors/1
   # GET /sponsors/1.json
   def show
-    @sponsorship_level = @event.sponsorship_levels.find(params[:id])
     @sponsors = @event.sponsors.where(:sponsorship_level_id => @sponsorship_level)
 
     respond_to do |format|
@@ -35,7 +38,6 @@ class Admin::SponsorshipLevelsController < Admin::AdminController
 
   # GET /sponsors/1/edit
   def edit
-    @sponsorship_level = @event.sponsorship_levels.find(params[:id])
   end
 
   # POST /sponsors
@@ -57,7 +59,6 @@ class Admin::SponsorshipLevelsController < Admin::AdminController
   # PUT /sponsors/1
   # PUT /sponsors/1.json
   def update
-    @sponsorship_level = @event.sponsorship_levels.find(params[:id])
 
     respond_to do |format|
       if @sponsorship_level.update_attributes(params[:sponsorship_level])
@@ -73,7 +74,6 @@ class Admin::SponsorshipLevelsController < Admin::AdminController
   # DELETE /sponsors/1
   # DELETE /sponsors/1.json
   def destroy
-    @sponsorship_level = @event.sponsorship_levels.find(params[:id])
     @sponsorship_level.destroy
 
     respond_to do |format|
@@ -82,8 +82,19 @@ class Admin::SponsorshipLevelsController < Admin::AdminController
     end
   end
 
-  def find_event
+  private
+
+  def load_event
     @event = Event.find(params[:event_id])
+  end
+
+  def load_sponsorship_level
+    @sponsorship_level = @event.sponsorship_levels.find(params[:id])
+  end
+
+  def set_sponsorship_level_tab
+    @active_tab = "events"
+    @active_sub_tab = "sponsorship_levels"
   end
 
 end

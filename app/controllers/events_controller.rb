@@ -1,4 +1,5 @@
 class EventsController < ApplicationController
+  before_filter :load_by_year, :except => [:index, :show, :current]
   # GET /events
   # GET /events.json
   def index
@@ -34,6 +35,10 @@ class EventsController < ApplicationController
     @active_tab = "sponsors"
   end
 
+  def sponsors
+    @active_tab = "sponsors"
+  end
+
   def call_for_proposals
     @active_tab = "program"
   end
@@ -46,4 +51,18 @@ class EventsController < ApplicationController
     @active_tab = "program"
   end
 
+  def training
+    @active_tab = "training"
+  end
+
+  def contact
+    @active_tab = "contact"
+  end
+
+  private 
+
+  def load_by_year
+    @event = Event.find_by_year(params[:id])
+    @event = Event.find(params[:id]) if @event.nil?
+  end
 end

@@ -2,20 +2,24 @@
 <html>
 <head>
   <title>Super Conf Admin</title>
-  <%= stylesheet_link_tag :all %>
-  <%= stylesheet_link_tag "application" %>
-  <%= javascript_include_tag :all %>
+  <%= stylesheet_link_tag "admin/bootstrap" %>
+  <style>
+    body {
+      padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+    }
+  </style>
+  <%= stylesheet_link_tag "admin/bootstrap-responsive" %>
+  <%= javascript_include_tag "application", "admin/bootstrap" %>
   <%= csrf_meta_tag %>
 </head>
 <body>
-<ul class="hmenu">
-  <%= render 'shared/navigation' %>
-</ul>
-<%- flash.each do |name, msg| -%>
-  <%= content_tag :div, msg, :id => "flash_#{name}" if msg.is_a?(String) %>
-<%- end -%>
-<%= yield %>
-<%= render 'shared/footer' %>
+  <%= render 'admin/shared/nav' %>
+  <div class="container">
+    <%- flash.each do |name, msg| -%>
+      <%= content_tag :div, msg, :id => "flash_#{name}" if msg.is_a?(String) %>
+    <%- end -%>
+    <%= yield %>
+  </div>
 </body>
 </html>
 
