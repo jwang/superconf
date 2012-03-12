@@ -412,6 +412,7 @@ div.twitter{
   color: #63432A;
   text-shadow: 1px 2px 0px rgba(255,255,255, 0.5);
   margin: 0 0 20px;
+  line-height: 24px;
 }
 
 #registrationAvailable h3, #location h2#title, .registrationContent h3, .speakerContent h3{
@@ -595,7 +596,7 @@ div.speaker{
   padding: 20px;
   border-bottom: 1px solid #ba9d86;
   border-top: 1px solid #FFFFFF;
-  width: 580px;
+  width: 570px;
 }
 
 div.speaker.first{
@@ -607,10 +608,20 @@ div.speaker.last{
 }
 
 img.speaker{
+  	width: 150px;
+  	height: 150px;
+  	margin: 0 30px 15px 0;
+	border: 3px solid #63432A;
+	box-shadow: 1px 2px 0px rgba(255, 255, 255, 0.5);
+}
+
+div.imageInfo{
   float: left;
-  width: 150px;
-  height: 150px;
-  margin: 0 20px 0 0;
+}
+
+.name{
+	font-size: 24px;
+	text-shadow: 1px 2px 0px rgba(255, 255, 255, 0.5);
 }
 
 .name, .session{
@@ -619,11 +630,39 @@ img.speaker{
 
 div.speaker-content{
   float: left;
-  width: 400px;
+  width: 380px;
 }
 
-.socialmedia p{
-  margin: 0 0 10px !important;
+div.speaker .socialmedia{
+	float: left;
+}
+
+div.speaker .socialmedia a{
+	font-size: 12px;
+  	margin: 0 0 10px -5px !important;
+	display: block;
+	padding: 0 0 0 35px;
+	height: 20px;
+}
+
+div.speaker .socialmedia a.twitter{
+	background: url('../images/icon-twitter.png') no-repeat left 0px;
+	height: 17px;
+	padding: 3px 0 0 28px;
+  	margin: 0 0 6px 0px !important;
+}
+
+div.speaker .socialmedia a.github{
+	background: url('../images/icon-github.png') no-repeat left 0px;
+	padding: 8px 0 0 35px;
+}
+
+div.speaker .socialmedia a.website{
+	background: url('../images/icon-world.png') no-repeat 8px 0px;
+}
+
+section#speakers{
+	width: 610px;
 }
 
 /******************************
@@ -667,6 +706,13 @@ form.wufoo ul li h3, #registrationAvailable form.wufoo ul li h3{
 form.wufoo {
     border-top: 2px solid rgba(255, 255, 255, .4);
     padding: 1em 0 1em;
+}
+
+.contact form.wufoo {
+    border-top: 0 none;
+    /* border-right: 2px solid rgba(255, 255, 255, .4); */
+	width: 610px;
+	float: left;
 }
 
 form.wufoo ul li input, form.wufoo ul li textarea{
@@ -747,7 +793,7 @@ form li#foli111 div label, form li#foli111 span label {
 
 #submit #saveForm{
     text-align: center;
-    font-size: 28px;
+    font-size: 21px;
     font-family: 'Museo-700', sans-serif;
     color: #531618;
     text-shadow: 0 1px 1px rgba(255, 255, 255, 0.25);
@@ -836,4 +882,12 @@ img.speaker {
 .speaker-info .session {
   font-size: 20px;
   font-weight: bold;
+}
+
+.contactContent{
+	border-left: 2px solid rgba(143, 127, 110, .4);
+	padding: 0 0 0 20px;
+	float: left;
+	width: 280px;
+	height: 100%;
 }
