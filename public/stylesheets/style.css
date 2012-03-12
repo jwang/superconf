@@ -134,11 +134,11 @@ header nav ul#leftLinks{
 }
 
 header nav ul li a{
-  font-family: 'Museo-700';
-  font-size: 18px;
-  color: #bf7334;
-  text-decoration: none;
-  text-shadow: 0px 0px 5px rgba(0,0,0, 0.5);
+  	font-family: 'Museo-700';
+  	font-size: 18px;
+  	color: #bf7334;
+  	text-decoration: none;
+  	text-shadow: 0px 0px 5px rgba(0,0,0, 0.5);
     -webkit-transition: all 0.2s ease-in-out;
     -moz-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
@@ -147,12 +147,12 @@ header nav ul li a{
 header nav ul li.current{
     background: rgb(89, 18, 2); /* The Fallback */
     background: rgba(89, 18, 2, 0.45);
-  box-shadow: inset 0px 0px 5px 1px rgba(0,0,0, 0.5);
-  box-shadow: 1px 1px 0px 0px rgba(255,255,255, 0.2);
-  -moz-box-shadow: 1px 1px 0px 0px rgba(255,255,255, 0.2);
-  -webkit-box-shadow: 1px 1px 0px 0px rgba(255,255,255, 0.2);
-  height: 28px;
-  border-radius: 13px;
+  	box-shadow: inset 0px 0px 5px 1px rgba(0,0,0, 0.5);
+  	-webkit-box-shadow: 1px 1px 0px 0px rgba(255,255,255, 0.2);
+  	-moz-box-shadow: 1px 1px 0px 0px rgba(255,255,255, 0.2);
+  	box-shadow: 1px 1px 0px 0px rgba(255,255,255, 0.2);
+  	height: 28px;
+  	border-radius: 13px;
 }
 
 header nav ul li a:hover, header nav ul li.current a{
@@ -170,8 +170,8 @@ ul#rightLinks, ul#leftLinks{
 }
 
 a{
-  text-decoration: none;
-  color: #bf7334;
+  	text-decoration: none;
+  	color: #bf7334;
     -webkit-transition: all 0.2s ease-in-out;
     -moz-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
@@ -179,27 +179,31 @@ a{
 
 footer{
   background: url('../images/footer-bg.png') repeat-x center bottom;
-  height: 144px;
+  height: 40px;
   width: 100%;
   position: fixed;
   bottom: 0;
   left: 0;
+  border-top: 2px solid #6B1111;
+  -webkit-box-shadow: 0px 0px 15px rgba(0,0,0,0.5);
+  -moz-box-shadow: 0px 0px 15px rgba(0,0,0,0.5);
+  box-shadow: 0px 0px 15px rgba(0,0,0,0.5);
 }
 
 #footer{
-  margin: 69px auto 0;
-  width: 960px;
+  margin: 0 auto;
   font-family: 'Museo-700';
   font-size: 12px;
   color: #d57130;
   text-shadow: 0px 0px 5px rgba(0,0,0, 0.5);
   text-align: center;
+  width: 960px;
 }
 
 #footer div.socialMedia{
-  width: 255px;
-  margin: 0 auto 20px;
+  margin: 8px auto;
   text-align: left;
+	float: right;
 }
 
 div.twitter, div.google, div.twitter p, div.google p{
@@ -212,7 +216,7 @@ div.twitter p, div.google p{
 }
 
 div.twitter{
-  margin: 0 30px 0 0;
+  margin: 0 15px 0 0;
 }
 
 #footer div.socialMedia a.twitter{
@@ -233,17 +237,10 @@ div.twitter{
   display: block;
 }
 
-#footer div#copyright {
-  text-align: top;
-  margin-top: -20px;
+#footer p.copyright {
+	float: left;
+	margin: 15px 0 0;
 }
-
-#footer div#copyright img {
-  position: relative;
-  display: inline;
-  top: 10px;
-}
-
 
 /* ID's */
 #logo{
@@ -252,7 +249,7 @@ div.twitter{
   margin: 0 auto;
 }
 
-#registrationBanner{
+/*#registrationBanner{
   background: url('../images/register-banner.png') no-repeat 0 0;
   position: fixed;
   height: 0;
@@ -261,19 +258,18 @@ div.twitter{
   overflow: hidden;
   z-index: 3;
   top: 0;
-  right: -7px;	
-	display: none;
-}
+  right: -7px;
+}*/
 
-#registrationAvailable, #speakerSignUp, #sponsorSignUp, #location, .content_box, .contentBox{
+#registrationAvailable, #speakerSignUp, #sponsorSignUp, #currentSponsors, #location, .content_box, .contentBox{
   padding: 20px;
   margin: 0 0 40px;
-  border-radius: 20px;
-  -moz-border-radius: 20px;
   -webkit-border-radius: 20px;
-  box-shadow: 0px 0px 10px rgba(0,0,0,0.25);
-  -moz-box-shadow: 0px 0px 10px rgba(0,0,0,0.25);
+  -moz-border-radius: 20px;
+  border-radius: 20px;
   -webkit-box-shadow: 0px 0px 10px rgba(0,0,0,0.25);
+  -moz-box-shadow: 0px 0px 10px rgba(0,0,0,0.25);
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.25);
   background-color: rgba(255, 255, 255, .70);
   /*background: url('../images/content-bg.png') repeat 0 0;*/
 }
@@ -365,7 +361,7 @@ div.twitter{
 }
 
 #registrationButton span:active, .registrationButton span:active{
-  display: block;
+  	display: block;
     -webkit-transition: -webkit-transform 0s ease-in-out;
     -moz-transition: -moz-transform 0s ease-in-out;
     transition: transform 0s ease-in-out;
@@ -404,7 +400,7 @@ div.twitter{
 }
 
 #mainContent ul{
-  padding-left: 20px;
+  padding: 0 20px;
   margin-bottom: 20px;
 }
 
@@ -432,6 +428,26 @@ div.twitter{
   padding: 0 0 0 50px;
 }
 
+#registrationAvailable #speakers h3, #registrationAvailable #schedule h3, #location h3.entry-title{
+	background: 0 none;
+	padding: 0 0 0 20px;
+	font-size: 28px;
+	margin: 0 0 20px;
+}
+
+#location h3.entry-title{
+	font-family: 'Museo-300';
+	margin: 10px 0 20px;
+	padding: 0;
+  	color: #bf7334;
+  	text-shadow: 1px 2px 0px rgba(255,255,255, 0.4);
+}
+
+#registrationAvailable #schedule h3{
+	padding: 0;
+
+}
+
 #location h2#title{
   background: url('../images/icon-location.png') no-repeat 0 7px;
   padding: 0 0 0 30px;
@@ -448,34 +464,30 @@ a.learnMore{
   text-decoration: none;
 }
 
-.sponsorships {
+.sponsorships, .mini-sponsorships{
   padding: 20px;
   margin: 0 0 40px;
-  border-radius: 20px;
-  -moz-border-radius: 20px;
   -webkit-border-radius: 20px;
-  box-shadow: 0px 0px 10px rgba(0,0,0,0.25);
-  -moz-box-shadow: 0px 0px 10px rgba(0,0,0,0.25);
+  -moz-border-radius: 20px;
+  border-radius: 20px;
   -webkit-box-shadow: 0px 0px 10px rgba(0,0,0,0.25);
+  -moz-box-shadow: 0px 0px 10px rgba(0,0,0,0.25);
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.25);
   background-color: rgba(255, 255, 255, .70);
 }
 
 .mini-sponsorships {
-  padding: 20px;
-  margin: 0 0 40px;
-  border-radius: 20px;
-  -moz-border-radius: 20px;
-  -webkit-border-radius: 20px;
-  box-shadow: 0px 0px 10px rgba(0,0,0,0.25);
-  -moz-box-shadow: 0px 0px 10px rgba(0,0,0,0.25);
-  -webkit-box-shadow: 0px 0px 10px rgba(0,0,0,0.25);
-  background-color: rgba(255, 255, 255, .70);
   height: 150px;
 }
 
 .mini-sponsorships h3 {
   font-size: 22px;
 }
+
+.mini-sponsorships img{
+  margin: 20px 0 0;
+}
+
 .sponsor-photo {
   float: left;
   width: 250px;
@@ -496,20 +508,25 @@ a.learnMore{
    text-shadow: 1px 2px 0px rgba(255,255,255, 0.4);
 }
 
-.sponsor-desc {
-  width: 700px;
+.sponsor-silver {
+  margin: 20px 0 0;
 }
 
 #speakerSignUp{
-  margin: 0 30px 0 0;
+  margin: 0 30px 30px 0;
 }
 
-#speakerSignUp, #sponsorSignUp{
-  width: 422px;
+#speakerSignUp, #sponsorSignUp, #currentSponsors{
+  width: 570px;
   float: left;
 }
 
-#speakerSignUp h4, #sponsorSignUp h4{
+#currentSponsors {
+  	width: 280px;
+	float: right;
+}
+
+#speakerSignUp h4, #sponsorSignUp h4, #currentSponsors h4{
   font-family: 'Museo-300';
   font-size: 28px;
   color: #bf7334;
@@ -522,7 +539,7 @@ a.learnMore{
   background: url('../images/icon-speakers.png') no-repeat 0 7px;
 }
 
-#sponsorSignUp h4{
+#sponsorSignUp h4, #currentSponsors h4{
   background: url('../images/icon-sponsors.png') no-repeat 0 7px;
 }
 
@@ -531,19 +548,47 @@ a.learnMore{
   color: #bf7334;
 }
 
+#currentSponsors p{
+	text-align: center;
+}
+
+#currentSponsors p a{
+	margin: 0 auto 30px;
+	display: block;
+}
+
+#info p{
+	font-size: 18px;
+	margin: 10px 0 30px !important;
+}
+
+#info.sponsorInfo p{
+	margin: 10px 0 !important;
+}
+
 /* Location Page Styles */
 #location .details{
   float: left;
   width: 480px;
+  margin: 10px 0 0;
 }
 
-#location .details h3{
-  font-size: 21px;
-  margin: 0 0 10px;
+#location .details h3 {
+	margin: 0px 0 10px;
+}
+
+#location .details h3 a{
+  	font-size: 28px;
+	font-family: 'Museo-300';
+	margin: 10px 0 20px;
+	padding: 0;
+	color: #bf7334;
+	text-shadow: 1px 2px 0px rgba(255,255,255, 0.4);
 }
 
 #location .map{
   float: right;
+  margin: 10px 0 0;
 }
 
 #location #registrationButton{
@@ -559,6 +604,9 @@ a.learnMore{
 
 #location .note table{
   margin-bottom: 20px;
+  background-color: rgba(255,255,255,0.65);
+  padding: 10px;
+  border-radius: 6px;
 }
 
 #location table td.gutter pre.line-numbers {
@@ -663,6 +711,16 @@ div.speaker .socialmedia a.website{
 
 section#speakers{
 	width: 610px;
+	float: left;
+	margin: 20px 0 0;
+}
+
+aside#sidebar{
+	width: 260px;
+	float: left;
+	border-left: 2px solid rgba(143, 127, 110, .4);
+	padding: 0 0 0 20px;
+	height: 400px;
 }
 
 /******************************
@@ -692,7 +750,7 @@ Wufoo Form Theme
 form.wufoo ul li h3, #registrationAvailable form.wufoo ul li h3{
 	background: 0 none !important;
 	font-weight: normal;
-	font-size: 21px;
+	font-size: 28px;
 	line-height: 135%;
 	margin: 0 0 3px 0;
 	width: auto;
@@ -703,9 +761,13 @@ form.wufoo ul li h3, #registrationAvailable form.wufoo ul li h3{
 	margin: 0;
 }
 
+.proposalContent{
+	border-bottom: 2px solid rgba(143, 127, 110, .4);
+}
+
 form.wufoo {
     border-top: 2px solid rgba(255, 255, 255, .4);
-    padding: 1em 0 1em;
+    /*padding: 1em 0 1em;*/
 }
 
 .contact form.wufoo {
@@ -757,7 +819,7 @@ form li.section {
 }
 
 form li#foli141{
-	width: 100%;
+	/*width: 100%;*/
 	padding: 0 0 30px;
 	border-bottom: 2px solid rgba(143, 127, 110, .4);	
 }
@@ -884,10 +946,13 @@ img.speaker {
   font-weight: bold;
 }
 
-.contactContent{
-	border-left: 2px solid rgba(143, 127, 110, .4);
-	padding: 0 0 0 20px;
+.sidebar{
+	padding: 20px;
 	float: left;
-	width: 280px;
-	height: 100%;
+	width: 260px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    
+	background: rgba(255, 255, 255, 0.65);
 }
