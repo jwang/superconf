@@ -499,6 +499,34 @@ a.learnMore{
   height: 300px;
 }
 
+#currentSponsors .sponsor{
+	float: none;
+	width: inherit;
+	height: inherit;
+  	border-bottom: 1px solid #ba9d86;
+  	border-top: 1px solid #FFFFFF;
+	padding: 20px 0;	
+}
+
+#currentSponsors .sponsor.first{
+	border-top: 0 none;
+	padding: 0 0 20px;
+}
+
+#currentSponsors .sponsor.last{
+	border-bottom: 0 none;
+	padding: 20px 0 0;
+}
+
+#currentSponsors .sponsor p, #currentSponsors .sponsor p a{
+	margin: 0;
+}
+
+#currentSponsors .sponsor h3{
+	text-align: center;
+	margin: 0 0 10px;
+}
+
 .sponsorships h3 {
    font-family: 'Museo-300';
    font-weight: normal;
