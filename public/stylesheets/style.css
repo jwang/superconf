@@ -233,6 +233,17 @@ div.twitter{
   display: block;
 }
 
+#footer div#copyright {
+  text-align: top;
+  margin-top: -20px;
+}
+
+#footer div#copyright img {
+  position: relative;
+  display: inline;
+  top: 10px;
+}
+
 
 /* ID's */
 #logo{
@@ -250,10 +261,11 @@ div.twitter{
   overflow: hidden;
   z-index: 3;
   top: 0;
-  right: -7px;
+  right: -7px;	
+	display: none;
 }
 
-#registrationAvailable, #speakerSignUp, #sponsorSignUp, #location{
+#registrationAvailable, #speakerSignUp, #sponsorSignUp, #location, .content_box, .contentBox{
   padding: 20px;
   margin: 0 0 40px;
   border-radius: 20px;
@@ -309,7 +321,7 @@ div.twitter{
   text-shadow: 1px 2px 0px rgba(255,255,255, 0.4);
 }
 
-#registrationButton{
+#registrationButton, .registrationButton{
     margin: 10px auto 0;
     display: inline-block;
     -webkit-border-radius: 10px;
@@ -323,7 +335,7 @@ div.twitter{
     transition: all 0.2s ease-in-out;
 }
 
-#registrationButton span{
+#registrationButton span, .registrationButton span {
   display: block;
     text-align: center;
     font-size: 28px;
@@ -346,13 +358,13 @@ div.twitter{
     transition: all 0.2s ease-in-out;
 }
 
-#registrationButton span:hover{
+#registrationButton span:hover, .registrationButton span:hover{
   display: block;
     color: #FFFFFF;
     text-shadow: 0 -1px 1px rgba(19, 65, 88, .8);
 }
 
-#registrationButton span:active{
+#registrationButton span:active, .registrationButton span:active{
   display: block;
     -webkit-transition: -webkit-transform 0s ease-in-out;
     -moz-transition: -moz-transform 0s ease-in-out;
@@ -363,7 +375,7 @@ div.twitter{
 }
 
 
-#registrationButton:active span{
+#registrationButton:active span, .registration_button:active span{
   display: block;
   -webkit-transform: translate(0,8px);
   -moz-transform: translate(0,8px);
@@ -371,6 +383,16 @@ div.twitter{
   -webkit-transition: -webkit-transform 0s ease-in-out;
   -moz-transition: -moz-transform 0s ease-in-out;
   transition: transform 0s ease-in-out;
+}
+
+.buttonContainer {
+  width: 620px;
+  margin: auto;
+  margin-bottom: 80px;
+}
+
+#google {
+  margin-right: 24px;
 }
 
 #mainContent{
@@ -381,18 +403,27 @@ div.twitter{
   margin: 40px 0 0;
 }
 
+#mainContent ul{
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
 #mainContent p{
   color: #63432A;
   text-shadow: 1px 2px 0px rgba(255,255,255, 0.5);
   margin: 0 0 20px;
 }
 
-#registrationAvailable h3, #location h2#title{
+#registrationAvailable h3, #location h2#title, .registrationContent h3, .speakerContent h3{
   font-family: 'Museo-300';
   font-size: 36px;
   color: #bf7334;
   margin: 0 0 25px;
   text-shadow: 1px 2px 0px rgba(255,255,255, 0.4);
+}
+
+.speakerContent h3{
+	padding: 0 0 0 50px;
 }
 
 #registrationAvailable h3{
@@ -463,8 +494,6 @@ a.learnMore{
    margin: 0 0 5px;
    text-shadow: 1px 2px 0px rgba(255,255,255, 0.4);
 }
-
-
 
 .sponsor-desc {
   width: 700px;
@@ -549,8 +578,6 @@ a.learnMore{
   line-height: 18px;
 }
 
-
-
 .quote{
   margin: 30px 0 0;
   float: right;
@@ -599,25 +626,187 @@ div.speaker-content{
   margin: 0 0 10px !important;
 }
 
-/***************************
-Call For Proposals (WuFoo Form)
-***************************/
+/******************************
+Wufoo Form Theme
+*******************************/
+
+@-webkit-keyframes pulse{
+	0% {
+		-webkit-box-shadow: 0px 0px 10px rgba(0,0,0,0.15);
+	}
+	50% {
+		-webkit-box-shadow: 0px 0px 10px rgba(0,0,0,0.45);
+	}
+	100% {
+		-webkit-box-shadow: 0px 0px 10px rgba(0,0,0,0.15);
+	}
+}
+
 .wufoo {
-  font-family: 'OpenSansRegular', 'Lucida Grande', Helvetica, Arial, sans-serif;
-  letter-spacing: .01em;
-  font-size: 16px;
-  color: #63432a;
+	font-family: 'OpenSansRegular', 'Lucida Grande', Helvetica, Arial, sans-serif;
+	letter-spacing: .01em;
+	font-size: 16px;
+	color: #63432a !important;
+	text-shadow: 1px 2px 0px rgba(255, 255, 255, 0.5);
 }
 
-.info h2 {
-  font-weight: normal;
-  font-size: 160%;
-  margin: 0 0 5px 0;
-  clear: left;
+form.wufoo ul li h3, #registrationAvailable form.wufoo ul li h3{
+	background: 0 none !important;
+	font-weight: normal;
+	font-size: 21px;
+	line-height: 135%;
+	margin: 0 0 3px 0;
+	width: auto;
+}
+
+#registrationAvailable form li.section div{
+	padding: 0;
+	margin: 0;
+}
+
+form.wufoo {
+    border-top: 2px solid rgba(255, 255, 255, .4);
+    padding: 1em 0 1em;
+}
+
+form.wufoo ul li input, form.wufoo ul li textarea{
+    display: block;
+    float: left;
+    font-family: inherit;
+    font-size: inherit;
+    padding: 0.2em 0.5em;
+    margin: 0 10px 0 0;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    background: rgba(255,255,255,0.75);
+    -webkit-box-shadow: inset 2px 2px 0px rgba(0,0,0,0.15);
+    -moz-box-shadow: inset 2px 2px 0px rgba(0,0,0,0.15);
+    box-shadow: inset 2px 2px 0px rgba(0,0,0,0.15);
+    border: 0 none;
+    color: #BF7334;
+}
+
+form.wufoo ul li input:focus, form.wufoo ul li textarea:focus{
+	background: rgba(255,255,255,0.90);
+    -webkit-box-shadow: 0px 0px 10px rgba(0,0,0,0.45);
+    -moz-box-shadow: 0px 0px 10px rgba(0,0,0,0.45);
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.45);
+	-webkit-animation: pulse 2s infinite ease-in-out;
+}
+
+label.desc, legend.desc{
+	color: #63432a !important;
+	text-shadow: 1px 2px 0px rgba(255, 255, 255, 0.5);	
+}
+
+textarea.textarea {
+	width: 450px;
+	min-width: inherit !important;
+	max-width: inherit !important;
+}
+
+form li.section {
+	padding: 0 !important;
+}
+
+form li#foli141{
+	width: 100%;
+	padding: 0 0 30px;
+	border-bottom: 2px solid rgba(143, 127, 110, .4);	
+}
+
+form li.section h3, #registrationAvailable form li.section h3{
+	padding: 20px 0 0;	
+    border-top: 2px solid rgba(255, 255, 255, .4);
+}
+
+form li#foli111 div label, form li#foli111 span label {
+	font-size: 12px;
+}
+
+#mainContent p.instruct{
+	margin: 30px 0 0;
+	z-index: 0 !important;
+}
+
+#submit{
+    /*min-width: 316px;*/
+    margin: 30px auto 0;
+    display: inline-block;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    -webkit-box-shadow: 0 8px 0 #531618,  0 10px 10px rgba(0, 0, 0, .75);
+    -moz-box-shadow: 0 8px 0 #531618,  0 10px 10px rgba(0, 0, 0, .75);
+    box-shadow: 0 8px 0 #531618,  0 10px 10px rgba(0, 0, 0, .75);
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+#submit #saveForm{
+    text-align: center;
+    font-size: 28px;
+    font-family: 'Museo-700', sans-serif;
+    color: #531618;
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.25);
+    background: #8a2227;
+    background: -webkit-gradient(linear, left top, left bottom, from(#9b232b), to(#782123));
+    background: -moz-linear-gradient(top, #9b232b, #782123);
+    -webkit-box-shadow: inset 0 2px 1px rgba(242, 65, 80, 1);
+    -moz-box-shadow: inset 0 2px 1px rgba(242, 65, 80, 1);
+    box-shadow: inset 0 2px 1px rgba(242, 65, 80, 1);
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    border: 0 none;
+    outline: none;
+    margin: 0 auto;
+    padding: 8px 18px;
+    cursor: pointer;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+#submit #saveForm:hover{
+    color: #FFFFFF;
+    text-shadow: 0 -1px 1px rgba(19, 65, 88, .8);
+}
+
+#submit #saveForm:active{
+    -webkit-transition: -webkit-transform 0s ease-in-out;
+    -moz-transition: -moz-transform 0s ease-in-out;
+    transition: transform 0s ease-in-out;
+    -webkit-box-shadow: 0 0px 0 #531618,  0 8px 15px rgba(0, 0, 0, .5);
+    -moz-box-shadow: 0 0px 0 #531618,  0 8px 15px rgba(0, 0, 0, .5);
+    box-shadow: 0 0px 0 #531618,  0 8px 15px rgba(0, 0, 0, .5);
 }
 
 
-/* Classes */
+#submit:active #saveForm{
+  -webkit-transform: translate(0,8px);
+  -moz-transform: translate(0,8px);
+  transform: translate(0,8px);
+  -webkit-transition: -webkit-transform 0s ease-in-out;
+  -moz-transition: -moz-transform 0s ease-in-out;
+  transition: transform 0s ease-in-out;
+}
+
+form li.focused {
+	background: 0 none;
+}
+
+.hide, .cloak div, .cloak span, .likert.cloak tbody, .likert.cloak thead {
+display: none !important;
+}
+
+
+/***************************
+Classes
+***************************/
+
 .clear{
   clear: both;
 }
