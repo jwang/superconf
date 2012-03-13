@@ -134,11 +134,11 @@ header nav ul#leftLinks{
 }
 
 header nav ul li a{
-  font-family: 'Museo-700';
-  font-size: 18px;
-  color: #bf7334;
-  text-decoration: none;
-  text-shadow: 0px 0px 5px rgba(0,0,0, 0.5);
+  	font-family: 'Museo-700';
+  	font-size: 18px;
+  	color: #bf7334;
+  	text-decoration: none;
+  	text-shadow: 0px 0px 5px rgba(0,0,0, 0.5);
     -webkit-transition: all 0.2s ease-in-out;
     -moz-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
@@ -147,12 +147,12 @@ header nav ul li a{
 header nav ul li.current{
     background: rgb(89, 18, 2); /* The Fallback */
     background: rgba(89, 18, 2, 0.45);
-  box-shadow: inset 0px 0px 5px 1px rgba(0,0,0, 0.5);
-  box-shadow: 1px 1px 0px 0px rgba(255,255,255, 0.2);
-  -moz-box-shadow: 1px 1px 0px 0px rgba(255,255,255, 0.2);
-  -webkit-box-shadow: 1px 1px 0px 0px rgba(255,255,255, 0.2);
-  height: 28px;
-  border-radius: 13px;
+  	box-shadow: inset 0px 0px 5px 1px rgba(0,0,0, 0.5);
+  	-webkit-box-shadow: 1px 1px 0px 0px rgba(255,255,255, 0.2);
+  	-moz-box-shadow: 1px 1px 0px 0px rgba(255,255,255, 0.2);
+  	box-shadow: 1px 1px 0px 0px rgba(255,255,255, 0.2);
+  	height: 28px;
+  	border-radius: 13px;
 }
 
 header nav ul li a:hover, header nav ul li.current a{
@@ -170,8 +170,8 @@ ul#rightLinks, ul#leftLinks{
 }
 
 a{
-  text-decoration: none;
-  color: #bf7334;
+  	text-decoration: none;
+  	color: #bf7334;
     -webkit-transition: all 0.2s ease-in-out;
     -moz-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
@@ -179,27 +179,31 @@ a{
 
 footer{
   background: url('../images/footer-bg.png') repeat-x center bottom;
-  height: 144px;
+  height: 40px;
   width: 100%;
   position: fixed;
   bottom: 0;
   left: 0;
+  border-top: 2px solid #6B1111;
+  -webkit-box-shadow: 0px 0px 15px rgba(0,0,0,0.5);
+  -moz-box-shadow: 0px 0px 15px rgba(0,0,0,0.5);
+  box-shadow: 0px 0px 15px rgba(0,0,0,0.5);
 }
 
 #footer{
-  margin: 69px auto 0;
-  width: 960px;
+  margin: 0 auto;
   font-family: 'Museo-700';
   font-size: 12px;
   color: #d57130;
   text-shadow: 0px 0px 5px rgba(0,0,0, 0.5);
   text-align: center;
+  width: 960px;
 }
 
 #footer div.socialMedia{
-  width: 255px;
-  margin: 0 auto 20px;
+  margin: 8px auto;
   text-align: left;
+	float: right;
 }
 
 div.twitter, div.google, div.twitter p, div.google p{
@@ -212,7 +216,7 @@ div.twitter p, div.google p{
 }
 
 div.twitter{
-  margin: 0 30px 0 0;
+  margin: 0 15px 0 0;
 }
 
 #footer div.socialMedia a.twitter{
@@ -233,6 +237,10 @@ div.twitter{
   display: block;
 }
 
+#footer p.copyright {
+	float: left;
+	margin: 15px 0 0;
+}
 
 /* ID's */
 #logo{
@@ -241,7 +249,7 @@ div.twitter{
   margin: 0 auto;
 }
 
-#registrationBanner{
+/*#registrationBanner{
   background: url('../images/register-banner.png') no-repeat 0 0;
   position: fixed;
   height: 0;
@@ -251,17 +259,17 @@ div.twitter{
   z-index: 3;
   top: 0;
   right: -7px;
-}
+}*/
 
-#registrationAvailable, #speakerSignUp, #sponsorSignUp, #location{
+#registrationAvailable, #speakerSignUp, #sponsorSignUp, #currentSponsors, #location, .content_box, .contentBox{
   padding: 20px;
   margin: 0 0 40px;
-  border-radius: 20px;
-  -moz-border-radius: 20px;
   -webkit-border-radius: 20px;
-  box-shadow: 0px 0px 10px rgba(0,0,0,0.25);
-  -moz-box-shadow: 0px 0px 10px rgba(0,0,0,0.25);
+  -moz-border-radius: 20px;
+  border-radius: 20px;
   -webkit-box-shadow: 0px 0px 10px rgba(0,0,0,0.25);
+  -moz-box-shadow: 0px 0px 10px rgba(0,0,0,0.25);
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.25);
   background-color: rgba(255, 255, 255, .70);
   /*background: url('../images/content-bg.png') repeat 0 0;*/
 }
@@ -309,7 +317,7 @@ div.twitter{
   text-shadow: 1px 2px 0px rgba(255,255,255, 0.4);
 }
 
-#registrationButton{
+#registrationButton, .registrationButton{
     margin: 10px auto 0;
     display: inline-block;
     -webkit-border-radius: 10px;
@@ -323,7 +331,7 @@ div.twitter{
     transition: all 0.2s ease-in-out;
 }
 
-#registrationButton span{
+#registrationButton span, .registrationButton span {
   display: block;
     text-align: center;
     font-size: 28px;
@@ -346,14 +354,14 @@ div.twitter{
     transition: all 0.2s ease-in-out;
 }
 
-#registrationButton span:hover{
+#registrationButton span:hover, .registrationButton span:hover{
   display: block;
     color: #FFFFFF;
     text-shadow: 0 -1px 1px rgba(19, 65, 88, .8);
 }
 
-#registrationButton span:active{
-  display: block;
+#registrationButton span:active, .registrationButton span:active{
+  	display: block;
     -webkit-transition: -webkit-transform 0s ease-in-out;
     -moz-transition: -moz-transform 0s ease-in-out;
     transition: transform 0s ease-in-out;
@@ -363,7 +371,7 @@ div.twitter{
 }
 
 
-#registrationButton:active span{
+#registrationButton:active span, .registration_button:active span{
   display: block;
   -webkit-transform: translate(0,8px);
   -moz-transform: translate(0,8px);
@@ -371,6 +379,16 @@ div.twitter{
   -webkit-transition: -webkit-transform 0s ease-in-out;
   -moz-transition: -moz-transform 0s ease-in-out;
   transition: transform 0s ease-in-out;
+}
+
+.buttonContainer {
+  width: 620px;
+  margin: auto;
+  margin-bottom: 80px;
+}
+
+#google {
+  margin-right: 24px;
 }
 
 #mainContent{
@@ -381,13 +399,19 @@ div.twitter{
   margin: 40px 0 0;
 }
 
+#mainContent ul{
+  padding: 0 20px;
+  margin-bottom: 20px;
+}
+
 #mainContent p{
   color: #63432A;
   text-shadow: 1px 2px 0px rgba(255,255,255, 0.5);
   margin: 0 0 20px;
+  line-height: 24px;
 }
 
-#registrationAvailable h3, #location h2#title{
+#registrationAvailable h3, #location h2#title, .registrationContent h3, .speakerContent h3{
   font-family: 'Museo-300';
   font-size: 36px;
   color: #bf7334;
@@ -395,9 +419,33 @@ div.twitter{
   text-shadow: 1px 2px 0px rgba(255,255,255, 0.4);
 }
 
+.speakerContent h3{
+	padding: 0 0 0 50px;
+}
+
 #registrationAvailable h3{
   background: url('../images/icon-registration.png') no-repeat 0 7px;
   padding: 0 0 0 50px;
+}
+
+#registrationAvailable #speakers h3, #registrationAvailable #schedule h3, #location h3.entry-title{
+	background: 0 none;
+	padding: 0 0 0 20px;
+	font-size: 28px;
+	margin: 0 0 20px;
+}
+
+#location h3.entry-title{
+	font-family: 'Museo-300';
+	margin: 10px 0 20px;
+	padding: 0;
+  	color: #bf7334;
+  	text-shadow: 1px 2px 0px rgba(255,255,255, 0.4);
+}
+
+#registrationAvailable #schedule h3{
+	padding: 0;
+
 }
 
 #location h2#title{
@@ -416,34 +464,30 @@ a.learnMore{
   text-decoration: none;
 }
 
-.sponsorships {
+.sponsorships, .mini-sponsorships{
   padding: 20px;
   margin: 0 0 40px;
-  border-radius: 20px;
-  -moz-border-radius: 20px;
   -webkit-border-radius: 20px;
-  box-shadow: 0px 0px 10px rgba(0,0,0,0.25);
-  -moz-box-shadow: 0px 0px 10px rgba(0,0,0,0.25);
+  -moz-border-radius: 20px;
+  border-radius: 20px;
   -webkit-box-shadow: 0px 0px 10px rgba(0,0,0,0.25);
+  -moz-box-shadow: 0px 0px 10px rgba(0,0,0,0.25);
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.25);
   background-color: rgba(255, 255, 255, .70);
 }
 
 .mini-sponsorships {
-  padding: 20px;
-  margin: 0 0 40px;
-  border-radius: 20px;
-  -moz-border-radius: 20px;
-  -webkit-border-radius: 20px;
-  box-shadow: 0px 0px 10px rgba(0,0,0,0.25);
-  -moz-box-shadow: 0px 0px 10px rgba(0,0,0,0.25);
-  -webkit-box-shadow: 0px 0px 10px rgba(0,0,0,0.25);
-  background-color: rgba(255, 255, 255, .70);
   height: 150px;
 }
 
 .mini-sponsorships h3 {
   font-size: 22px;
 }
+
+.mini-sponsorships img{
+  margin: 20px 0 0;
+}
+
 .sponsor-photo {
   float: left;
   width: 250px;
@@ -455,6 +499,34 @@ a.learnMore{
   height: 300px;
 }
 
+#currentSponsors .sponsor{
+	float: none;
+	width: inherit;
+	height: inherit;
+  	border-bottom: 1px solid #ba9d86;
+  	border-top: 1px solid #FFFFFF;
+	padding: 20px 0;	
+}
+
+#currentSponsors .sponsor.first{
+	border-top: 0 none;
+	padding: 0 0 20px;
+}
+
+#currentSponsors .sponsor.last{
+	border-bottom: 0 none;
+	padding: 20px 0 0;
+}
+
+#currentSponsors .sponsor p, #currentSponsors .sponsor p a{
+	margin: 0;
+}
+
+#currentSponsors .sponsor h3{
+	text-align: center;
+	margin: 0 0 10px;
+}
+
 .sponsorships h3 {
    font-family: 'Museo-300';
    font-weight: normal;
@@ -464,22 +536,25 @@ a.learnMore{
    text-shadow: 1px 2px 0px rgba(255,255,255, 0.4);
 }
 
-
-
-.sponsor-desc {
-  width: 700px;
+.sponsor-silver {
+  margin: 20px 0 0;
 }
 
 #speakerSignUp{
-  margin: 0 30px 0 0;
+  margin: 0 30px 30px 0;
 }
 
-#speakerSignUp, #sponsorSignUp{
-  width: 422px;
+#speakerSignUp, #sponsorSignUp, #currentSponsors{
+  width: 570px;
   float: left;
 }
 
-#speakerSignUp h4, #sponsorSignUp h4{
+#currentSponsors {
+  	width: 280px;
+	float: right;
+}
+
+#speakerSignUp h4, #sponsorSignUp h4, #currentSponsors h4{
   font-family: 'Museo-300';
   font-size: 28px;
   color: #bf7334;
@@ -492,7 +567,7 @@ a.learnMore{
   background: url('../images/icon-speakers.png') no-repeat 0 7px;
 }
 
-#sponsorSignUp h4{
+#sponsorSignUp h4, #currentSponsors h4{
   background: url('../images/icon-sponsors.png') no-repeat 0 7px;
 }
 
@@ -501,19 +576,47 @@ a.learnMore{
   color: #bf7334;
 }
 
+#currentSponsors p{
+	text-align: center;
+}
+
+#currentSponsors p a{
+	margin: 0 auto 30px;
+	display: block;
+}
+
+#info p{
+	font-size: 18px;
+	margin: 10px 0 30px !important;
+}
+
+#info.sponsorInfo p{
+	margin: 10px 0 !important;
+}
+
 /* Location Page Styles */
 #location .details{
   float: left;
   width: 480px;
+  margin: 10px 0 0;
 }
 
-#location .details h3{
-  font-size: 21px;
-  margin: 0 0 10px;
+#location .details h3 {
+	margin: 0px 0 10px;
+}
+
+#location .details h3 a{
+  	font-size: 28px;
+	font-family: 'Museo-300';
+	margin: 10px 0 20px;
+	padding: 0;
+	color: #bf7334;
+	text-shadow: 1px 2px 0px rgba(255,255,255, 0.4);
 }
 
 #location .map{
   float: right;
+  margin: 10px 0 0;
 }
 
 #location #registrationButton{
@@ -529,6 +632,9 @@ a.learnMore{
 
 #location .note table{
   margin-bottom: 20px;
+  background-color: rgba(255,255,255,0.65);
+  padding: 10px;
+  border-radius: 6px;
 }
 
 #location table td.gutter pre.line-numbers {
@@ -549,8 +655,6 @@ a.learnMore{
   line-height: 18px;
 }
 
-
-
 .quote{
   margin: 30px 0 0;
   float: right;
@@ -568,7 +672,7 @@ div.speaker{
   padding: 20px;
   border-bottom: 1px solid #ba9d86;
   border-top: 1px solid #FFFFFF;
-  width: 580px;
+  width: 570px;
 }
 
 div.speaker.first{
@@ -580,10 +684,20 @@ div.speaker.last{
 }
 
 img.speaker{
+  	width: 150px;
+  	height: 150px;
+  	margin: 0 30px 15px 0;
+	border: 3px solid #63432A;
+	box-shadow: 1px 2px 0px rgba(255, 255, 255, 0.5);
+}
+
+div.imageInfo{
   float: left;
-  width: 150px;
-  height: 150px;
-  margin: 0 20px 0 0;
+}
+
+.name{
+	font-size: 24px;
+	text-shadow: 1px 2px 0px rgba(255, 255, 255, 0.5);
 }
 
 .name, .session{
@@ -592,32 +706,243 @@ img.speaker{
 
 div.speaker-content{
   float: left;
-  width: 400px;
+  width: 380px;
 }
 
-.socialmedia p{
-  margin: 0 0 10px !important;
+div.speaker .socialmedia{
+	float: left;
 }
+
+div.speaker .socialmedia a{
+	font-size: 12px;
+  	margin: 0 0 10px -5px !important;
+	display: block;
+	padding: 0 0 0 35px;
+	height: 20px;
+}
+
+div.speaker .socialmedia a.twitter{
+	background: url('../images/icon-twitter.png') no-repeat left 0px;
+	height: 17px;
+	padding: 3px 0 0 28px;
+  	margin: 0 0 6px 0px !important;
+}
+
+div.speaker .socialmedia a.github{
+	background: url('../images/icon-github.png') no-repeat left 0px;
+	padding: 8px 0 0 35px;
+}
+
+div.speaker .socialmedia a.website{
+	background: url('../images/icon-world.png') no-repeat 8px 0px;
+}
+
+section#speakers{
+	width: 610px;
+	float: left;
+	margin: 20px 0 0;
+}
+
+aside#sidebar{
+	width: 260px;
+	float: left;
+	border-left: 2px solid rgba(143, 127, 110, .4);
+	padding: 0 0 0 20px;
+	height: 400px;
+}
+
+/******************************
+Wufoo Form Theme
+*******************************/
+
+@-webkit-keyframes pulse{
+	0% {
+		-webkit-box-shadow: 0px 0px 10px rgba(0,0,0,0.15);
+	}
+	50% {
+		-webkit-box-shadow: 0px 0px 10px rgba(0,0,0,0.45);
+	}
+	100% {
+		-webkit-box-shadow: 0px 0px 10px rgba(0,0,0,0.15);
+	}
+}
+
+.wufoo {
+	font-family: 'OpenSansRegular', 'Lucida Grande', Helvetica, Arial, sans-serif;
+	letter-spacing: .01em;
+	font-size: 16px;
+	color: #63432a !important;
+	text-shadow: 1px 2px 0px rgba(255, 255, 255, 0.5);
+}
+
+form.wufoo ul li h3, #registrationAvailable form.wufoo ul li h3{
+	background: 0 none !important;
+	font-weight: normal;
+	font-size: 28px;
+	line-height: 135%;
+	margin: 0 0 3px 0;
+	width: auto;
+}
+
+#registrationAvailable form li.section div{
+	padding: 0;
+	margin: 0;
+}
+
+.proposalContent{
+	border-bottom: 2px solid rgba(143, 127, 110, .4);
+}
+
+form.wufoo {
+    border-top: 2px solid rgba(255, 255, 255, .4);
+    /*padding: 1em 0 1em;*/
+}
+
+.contact form.wufoo {
+    border-top: 0 none;
+    /* border-right: 2px solid rgba(255, 255, 255, .4); */
+	width: 610px;
+	float: left;
+}
+
+form.wufoo ul li input, form.wufoo ul li textarea{
+    display: block;
+    float: left;
+    font-family: inherit;
+    font-size: inherit;
+    padding: 0.2em 0.5em;
+    margin: 0 10px 0 0;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    background: rgba(255,255,255,0.75);
+    -webkit-box-shadow: inset 2px 2px 0px rgba(0,0,0,0.15);
+    -moz-box-shadow: inset 2px 2px 0px rgba(0,0,0,0.15);
+    box-shadow: inset 2px 2px 0px rgba(0,0,0,0.15);
+    border: 0 none;
+    color: #BF7334;
+}
+
+form.wufoo ul li input:focus, form.wufoo ul li textarea:focus{
+	background: rgba(255,255,255,0.90);
+    -webkit-box-shadow: 0px 0px 10px rgba(0,0,0,0.45);
+    -moz-box-shadow: 0px 0px 10px rgba(0,0,0,0.45);
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.45);
+	-webkit-animation: pulse 2s infinite ease-in-out;
+}
+
+label.desc, legend.desc{
+	color: #63432a !important;
+	text-shadow: 1px 2px 0px rgba(255, 255, 255, 0.5);	
+}
+
+textarea.textarea {
+	width: 450px;
+	min-width: inherit !important;
+	max-width: inherit !important;
+}
+
+form li.section {
+	padding: 0 !important;
+}
+
+form li#foli141{
+	/*width: 100%;*/
+	padding: 0 0 30px;
+	border-bottom: 2px solid rgba(143, 127, 110, .4);	
+}
+
+form li.section h3, #registrationAvailable form li.section h3{
+	padding: 20px 0 0;	
+    border-top: 2px solid rgba(255, 255, 255, .4);
+}
+
+form li#foli111 div label, form li#foli111 span label {
+	font-size: 12px;
+}
+
+#mainContent p.instruct{
+	margin: 30px 0 0;
+	z-index: 0 !important;
+}
+
+#submit{
+    /*min-width: 316px;*/
+    margin: 30px auto 0;
+    display: inline-block;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    -webkit-box-shadow: 0 8px 0 #531618,  0 10px 10px rgba(0, 0, 0, .75);
+    -moz-box-shadow: 0 8px 0 #531618,  0 10px 10px rgba(0, 0, 0, .75);
+    box-shadow: 0 8px 0 #531618,  0 10px 10px rgba(0, 0, 0, .75);
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+#submit #saveForm{
+    text-align: center;
+    font-size: 21px;
+    font-family: 'Museo-700', sans-serif;
+    color: #531618;
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.25);
+    background: #8a2227;
+    background: -webkit-gradient(linear, left top, left bottom, from(#9b232b), to(#782123));
+    background: -moz-linear-gradient(top, #9b232b, #782123);
+    -webkit-box-shadow: inset 0 2px 1px rgba(242, 65, 80, 1);
+    -moz-box-shadow: inset 0 2px 1px rgba(242, 65, 80, 1);
+    box-shadow: inset 0 2px 1px rgba(242, 65, 80, 1);
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    border: 0 none;
+    outline: none;
+    margin: 0 auto;
+    padding: 8px 18px;
+    cursor: pointer;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+#submit #saveForm:hover{
+    color: #FFFFFF;
+    text-shadow: 0 -1px 1px rgba(19, 65, 88, .8);
+}
+
+#submit #saveForm:active{
+    -webkit-transition: -webkit-transform 0s ease-in-out;
+    -moz-transition: -moz-transform 0s ease-in-out;
+    transition: transform 0s ease-in-out;
+    -webkit-box-shadow: 0 0px 0 #531618,  0 8px 15px rgba(0, 0, 0, .5);
+    -moz-box-shadow: 0 0px 0 #531618,  0 8px 15px rgba(0, 0, 0, .5);
+    box-shadow: 0 0px 0 #531618,  0 8px 15px rgba(0, 0, 0, .5);
+}
+
+
+#submit:active #saveForm{
+  -webkit-transform: translate(0,8px);
+  -moz-transform: translate(0,8px);
+  transform: translate(0,8px);
+  -webkit-transition: -webkit-transform 0s ease-in-out;
+  -moz-transition: -moz-transform 0s ease-in-out;
+  transition: transform 0s ease-in-out;
+}
+
+form li.focused {
+	background: 0 none;
+}
+
+.hide, .cloak div, .cloak span, .likert.cloak tbody, .likert.cloak thead {
+display: none !important;
+}
+
 
 /***************************
-Call For Proposals (WuFoo Form)
+Classes
 ***************************/
-.wufoo {
-  font-family: 'OpenSansRegular', 'Lucida Grande', Helvetica, Arial, sans-serif;
-  letter-spacing: .01em;
-  font-size: 16px;
-  color: #63432a;
-}
 
-.info h2 {
-  font-weight: normal;
-  font-size: 160%;
-  margin: 0 0 5px 0;
-  clear: left;
-}
-
-
-/* Classes */
 .clear{
   clear: both;
 }
@@ -647,4 +972,15 @@ img.speaker {
 .speaker-info .session {
   font-size: 20px;
   font-weight: bold;
+}
+
+.sidebar{
+	padding: 20px;
+	float: left;
+	width: 260px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    
+	background: rgba(255, 255, 255, 0.65);
 }
