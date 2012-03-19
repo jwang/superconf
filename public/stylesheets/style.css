@@ -749,13 +749,13 @@ div.speaker .socialmedia a.website{
 	background: url('../images/icons/icon-world.png') no-repeat 8px 0px;
 }
 
-section#speakers, section#trainingInfo{
+section#speakers, section#trainingInfo, section#speakers.badges{
 	width: 610px;
 	float: left;
 	margin: 20px 0 0;
 }
 
-section#trainingInfo{
+section#trainingInfo, section#speakers.badges{
     margin: 0; 
 }
 
@@ -955,6 +955,18 @@ form li.focused {
 
 .hide, .cloak div, .cloak span, .likert.cloak tbody, .likert.cloak thead {
 display: none !important;
+}
+
+/***************************
+Media Page
+***************************/
+
+section#speakers.badges div.speaker img{
+	margin: 0 0 20px;
+}
+
+section#speakers.badges div.speaker.first code {
+	font-size: 14px;
 }
 
 
