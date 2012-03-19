@@ -85,6 +85,7 @@ header, section, footer, aside, article, nav, figure{
   left: 0;
   z-index: 1;
 }
+
 #container02{
   width: 960px;
   margin: 0 auto;
@@ -159,6 +160,9 @@ header nav ul li a:hover, header nav ul li.current a{
   color: #e5c1a2;
 }
 
+header nav select{
+	display: none;
+}
 
 ul#rightLinks, #logo, ul#leftLinks{
   float: left;
@@ -1015,4 +1019,138 @@ img.speaker {
     border-radius: 6px;
     
 	background: rgba(255, 255, 255, 0.65);
+}
+
+/***************************
+Mobile Site Styles
+***************************/
+
+@media only screen and (max-device-width: 480px) {
+	body {
+		background-position: -780px -10px;
+		-webkit-text-size-adjust: none; 
+		-ms-text-size-adjust: none; 
+		width: 100%; 
+		min-width: 0; 
+		margin: 0; 
+		padding: 0;
+	}
+	
+	#container01{
+	  height: 40px;
+	  width: 100%;
+	  border-bottom: 2px solid #6B1111;
+	  -webkit-box-shadow: 0px 0px 15px rgba(0,0,0,0.5);
+	  -moz-box-shadow: 0px 0px 15px rgba(0,0,0,0.5);
+	  box-shadow: 0px 0px 15px rgba(0,0,0,0.5);
+	}
+
+	#container02, header, header nav, #featureContent, #conferenceInfo{
+	  	width: 100%;
+	  	margin: 0 auto;
+	}
+	
+	#container02.home{
+		max-height: 200px;
+		background: #FFFFFF;
+		border: 1px solid red;
+	}
+
+	header nav{
+		width: 100%;
+	  	text-align: center;
+	}
+
+	header nav select{
+		margin: 10px 0 0;
+		width: 50%;
+		display: block;
+		float: left;
+		background-color: #FFF;
+	}
+	
+	h1#title{
+	  font-size: 48px;
+	  padding: 60px 0 0;
+	}
+	
+	a#logo{
+		width: 100px;
+		margin: 0 20px;
+	  	text-align: center;
+	}
+
+	a#logo img{
+	  width: 100px;
+	  margin: 0 auto;
+	  text-align: center;
+	}
+	
+	ul#rightLinks, ul#leftLinks, #registrationBanner, #mainContent, #sponsorSignUp{
+		display: none;
+		margin: 0;
+		padding: 0;
+		border: 1px solid red;
+	}
+	
+	#conferenceInfo {
+		margin: 0;
+		text-align:center;
+	}
+	
+	#featureContent{
+		margin: 0;
+	}
+	
+	#featureContent img{
+		display: none;
+	}
+
+	#conferenceInfo{
+		padding: 20px 0 0;
+	}
+
+	#conferenceInfo h2.time{
+	  font-size: 34px;
+	}
+
+	#conferenceInfo h3.location{
+	  font-size: 36px;
+	}
+
+	#conferenceInfo h4.place{
+	  font-size: 18px;
+	}
+
+	footer{
+	  width: 100%;
+	}
+
+	#footer{
+	  margin: 0 auto;
+	  text-align: center;
+	  width: 100%;
+	}
+	
+	#footer div.socialMedia{
+	  margin: 5px auto;
+	}
+
+	div.twitter p, div.google p{
+	  padding: 10px 0 0;
+	  margin: 0 10px 0 0;
+	}
+
+	div.twitter p, div.google p{
+	  padding: 0;
+	}
+
+	div.twitter{
+	  margin: 2px 10px 0 0;
+	}
+
+	#footer p.copyright {
+		display: none;
+	}
+	
 }
