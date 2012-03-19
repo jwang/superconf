@@ -220,7 +220,7 @@ div.twitter{
 }
 
 #footer div.socialMedia a.twitter{
-  background: url('../images/twitter-icon.png') no-repeat 0 0;
+  background: url('../images/icons/twitter-icon.png') no-repeat 0 0;
   width: 37px;
   height: 0;
   padding: 28px 0 0;
@@ -229,7 +229,7 @@ div.twitter{
 }
 
 #footer div.socialMedia a.googlePlus{
-  background: url('../images/google-icon.png') no-repeat 0 0;
+  background: url('../images/icons/google-icon.png') no-repeat 0 0;
   width: 30px;
   height: 0;
   padding: 30px 0 0;
@@ -424,7 +424,7 @@ div.twitter{
 }
 
 #registrationAvailable h3{
-  background: url('../images/icon-registration.png') no-repeat 0 7px;
+  background: url('../images/icons/icon-registration.png') no-repeat 0 7px;
   padding: 0 0 0 50px;
 }
 
@@ -449,12 +449,12 @@ div.twitter{
 }
 
 #location h2#title{
-  background: url('../images/icon-location.png') no-repeat 0 7px;
+  background: url('../images/icons/icon-location.png') no-repeat 0 7px;
   padding: 0 0 0 30px;
 }
 
 a.learnMore{
-  background: url('../images/arrow.png') no-repeat 95px 5px;
+  background: url('../images/icons/arrow.png') no-repeat 95px 5px;
   font-size: 16px;
   color: #bf7334;
   text-shadow: 1px 2px 0px rgba(255,255,255, 0.4);
@@ -564,11 +564,11 @@ a.learnMore{
 }
 
 #speakerSignUp h4{
-  background: url('../images/icon-speakers.png') no-repeat 0 7px;
+  background: url('../images/icons/icon-speakers.png') no-repeat 0 7px;
 }
 
 #sponsorSignUp h4, #currentSponsors h4{
-  background: url('../images/icon-sponsors.png') no-repeat 0 7px;
+  background: url('../images/icons/icon-sponsors.png') no-repeat 0 7px;
 }
 
 #mainContent.sub #registrationAvailable h4{
@@ -734,19 +734,19 @@ div.speaker .socialmedia a{
 }
 
 div.speaker .socialmedia a.twitter{
-	background: url('../images/icon-twitter.png') no-repeat left 0px;
+	background: url('../images/icons/icon-twitter.png') no-repeat left 0px;
 	height: 17px;
 	padding: 3px 0 0 28px;
   	margin: 0 0 6px 0px !important;
 }
 
 div.speaker .socialmedia a.github{
-	background: url('../images/icon-github.png') no-repeat left 0px;
+	background: url('../images/icons/icon-github.png') no-repeat left 0px;
 	padding: 8px 0 0 35px;
 }
 
 div.speaker .socialmedia a.website{
-	background: url('../images/icon-world.png') no-repeat 8px 0px;
+	background: url('../images/icons/icon-world.png') no-repeat 8px 0px;
 }
 
 section#speakers, section#trainingInfo{
