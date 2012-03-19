@@ -332,7 +332,7 @@ div.twitter{
 }
 
 #registrationButton span, .registrationButton span {
-  display: block;
+  	display: block !important;
     text-align: center;
     font-size: 28px;
     font-family: 'Museo-700', sans-serif;
