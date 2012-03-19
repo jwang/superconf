@@ -576,8 +576,12 @@ a.learnMore{
   color: #bf7334;
 }
 
-#currentSponsors p{
+#currentSponsors p, #schedule.sidebar .sponsorInfo p{
 	text-align: center;
+}
+
+#schedule.sidebar .sponsorInfo p{
+	margin: 20px 0 0;
 }
 
 #currentSponsors p a{
@@ -651,8 +655,9 @@ a.learnMore{
 #location table td.code span.line {
   display: block;
   font-family: monospace;
-  padding-top: 2px;
+  padding-top: 5px;
   line-height: 18px;
+  font-size: 14px;
 }
 
 .quote{
@@ -744,10 +749,14 @@ div.speaker .socialmedia a.website{
 	background: url('../images/icon-world.png') no-repeat 8px 0px;
 }
 
-section#speakers{
+section#speakers, section#trainingInfo{
 	width: 610px;
 	float: left;
 	margin: 20px 0 0;
+}
+
+section#trainingInfo{
+    margin: 0; 
 }
 
 aside#sidebar{
