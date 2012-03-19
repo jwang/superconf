@@ -864,7 +864,10 @@ form li.section {
 
 form li#foli141{
 	/*width: 100%;*/
-	padding: 0 0 30px;
+	padding: 0 0 30px;	
+}
+
+form div.clear.hr{
 	border-bottom: 2px solid rgba(143, 127, 110, .4);	
 }
 
