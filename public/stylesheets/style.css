@@ -253,7 +253,7 @@ div.twitter{
   margin: 0 auto;
 }
 
-/*#registrationBanner{
+#registrationBanner{
   background: url('../images/register-banner.png') no-repeat 0 0;
   position: fixed;
   height: 0;
@@ -263,7 +263,7 @@ div.twitter{
   z-index: 3;
   top: 0;
   right: -7px;
-}*/
+}
 
 #registrationAvailable, #speakerSignUp, #sponsorSignUp, #currentSponsors, #location, .content_box, .contentBox{
   padding: 20px;
