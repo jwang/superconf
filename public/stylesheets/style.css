@@ -452,6 +452,10 @@ div.twitter{
 
 }
 
+#registrationAvailable a.learnMore{
+	display: none;
+}
+
 #location h2#title{
   background: url('../images/icons/icon-location.png') no-repeat 0 7px;
   padding: 0 0 0 30px;
@@ -1045,9 +1049,44 @@ Mobile Site Styles
 	  box-shadow: 0px 0px 15px rgba(0,0,0,0.5);
 	}
 
-	#container02, header, header nav, #featureContent, #conferenceInfo{
+	#container02, header, header nav, #featureContent, #conferenceInfo, #mainContent, #registrationAvailable, #speakerSignUp, #currentSponsors, #sponsorSignUp{
 	  	width: 100%;
 	  	margin: 0 auto;
+		padding: 0;
+		float: none;
+	}
+	
+	#mainContent.home{
+		width: 90%;
+		margin: 50px 5% 0 !important;
+	}
+	
+	#registrationAvailable, #speakerSignUp, #currentSponsors, #sponsorSignUp{
+		width: 90%;
+		padding: 5%;
+		margin: 0 0 20px;
+	}
+	
+	#registrationAvailable h3, #speakerSignUp h4, #sponsorSignUp h4{
+		font-size: 24px;
+		margin: 0;
+	}
+	
+	#registrationAvailable p, #speakerSignUp p, #sponsorSignUp p, #currentSponsors{
+		display: none;
+		padding: 0;
+		margin: 0;
+	}
+
+	#registrationAvailable a.learnMore, a.learnMore{
+		margin: 10px 0 0;
+		display: block;
+	}
+	
+	#registrationButton{
+		display: block;
+		width: 90%;
+		margin: 30px 5% 0;
 	}
 	
 	#container02.home{
@@ -1070,8 +1109,9 @@ Mobile Site Styles
 	}
 	
 	h1#title{
-	  font-size: 48px;
-	  padding: 60px 0 0;
+	  	font-size: 48px;
+	  	padding: 60px 0 0;
+		line-height: 100%;
 	}
 	
 	a#logo{
@@ -1085,12 +1125,9 @@ Mobile Site Styles
 	  margin: 0 auto;
 	  text-align: center;
 	}
-	
-	ul#rightLinks, ul#leftLinks, #registrationBanner, #mainContent, #sponsorSignUp{
+
+	ul#rightLinks, ul#leftLinks, #registrationBanner{
 		display: none;
-		margin: 0;
-		padding: 0;
-		border: 1px solid red;
 	}
 	
 	#conferenceInfo {
