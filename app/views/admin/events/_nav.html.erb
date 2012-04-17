@@ -2,4 +2,5 @@
   <li class="<%= @active_sub_tab.eql?("event") ? "active" : "" %>"><%= link_to "Event", admin_event_path(@event) %></li>
   <li class="<%= @active_sub_tab.eql?("sponsorship_levels") ? "active" : "" %>"><%= link_to "Sponsorship Levels", admin_event_sponsorship_levels_path(@event) %></li>
   <li class="<%= @active_sub_tab.eql?("sponsors") ? "active" : "" %>"><%= link_to "Sponsors", admin_event_sponsors_path(@event) %></li>
+  <li class="<%= @active_sub_tab.eql?("speakers") ? "active" : "" %>"><%= link_to "Speakers", admin_event_speakers_path(@event) %></li>
 </ul>

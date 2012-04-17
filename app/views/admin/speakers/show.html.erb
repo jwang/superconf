@@ -1,0 +1,8 @@
+<%= render "admin/events/nav" %>
+
+<p><%= @speaker.name %><p>
+<p><%= @speaker.company %><p>
+<p><%= @speaker.bio %><p>
+
+<%= link_to 'Edit', edit_admin_event_speaker_path(@event,@speaker) %> |
+<%= link_to 'Back', admin_event_speakers_path(@event) %>

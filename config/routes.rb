@@ -23,6 +23,7 @@ Superconf::Application.routes.draw do
       resources :snippets
       resources :sponsorship_levels
       resources :sponsors
+      resources :speakers
     end
     resources :snippets
   end

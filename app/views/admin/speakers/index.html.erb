@@ -1,0 +1,22 @@
+<%= render "admin/events/nav" %>
+<h1>Listing admin_speakers</h1>
+
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @speakers.each do |admin_speaker| %>
+  <tr>
+    <td><%= link_to admin_speaker.name, [:admin, @event, admin_speaker] %></td>
+    <td><%= link_to 'Edit', edit_admin_event_speaker_path(@event,admin_speaker) %></td>
+    <td><%= link_to 'Destroy', [:admin, @event, admin_speaker], confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Speaker', new_admin_event_speaker_path(@event) %>

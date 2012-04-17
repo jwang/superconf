@@ -13,6 +13,7 @@ describe Event do
   describe "associations" do
     it { should have_many :snippets }
     it { should have_many :sponsors }
+    it { should have_many :speakers }
     it { should have_many :sponsorship_levels }
   end
 end
