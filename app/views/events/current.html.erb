@@ -1,40 +1,66 @@
 <%= render 'shared/snippet', :snippet_name => "event_top_content" %>
 
 <section id="featureContent">
-  <img src="images/postcards.png" alt="Wish You Were Here postcard">
-  <section id="conferenceInfo">
-  <h2 class="time">October 8-9, 2012</h2>
-  <h3 class="location">Honolulu, Hawaii</h3>
-  <h4 class="place">at the Sheraton Waikiki Beach Hotel</h4>
-  <%= link_to "<span>Register Here!</span>".html_safe, "https://eventrainbow.com/aloharubyconf/2012", :id => "registrationButton" %>
-  </section>
-  <div class="clear"></div>
-  </section><!-- End of Feature Content -->
+<img src="images/postcards.png" alt="Wish You Were Here postcard">
+<section id="conferenceInfo">
+<h2 class="time">October 8-9, 2012</h2>
+<h3 class="location">Honolulu, Hawaii</h3>
+<h4 class="place">at the Sheraton Waikiki Beach Hotel</h4>
+<%= link_to "<span>Register Here!</span>".html_safe, "https://eventrainbow.com/aloharubyconf/2012", :id => "registrationButton" %>
+</section>
+<div class="clear"></div>
+</section><!-- End of Feature Content -->
 
-  <section id="mainContent" class="home">
-  <section id="registrationAvailable">
-  <h3>Early Bird Registration is Open!</h3>
-  <p>Join us for this 4 day event (2 day conference and 2 day training) which brings the Ruby and Rails community’s top speakers and talent together with excited attendees for an unforgettable experience in beautiful Hawaii.</p>
-  <!--<%= link_to "Learn More", register_event_path(@event.year), :class => "learnMore" %>-->
-  <div class="clear"></div>
-  </section>
+<section id="mainContent" class="home">
+<section id="registrationAvailable">
+<h3>Registration is Open!</h3>
+<p>Join us for this 2 day event which brings the Ruby and Rails community’s top speakers and talent together with excited attendees for an unforgettable experience in beautiful Hawaii.</p>
+<!--<%= link_to "Learn More", register_event_path(@event.year), :class => "learnMore" %>-->
+<div class="clear"></div>
+</section>
 
-  <section id="speakerSignUp">
-  <h4>Speaker Sign-Up</h4>
-  <p>Call For Proposals is Opening Soon!
-  We'll be soliciting proposals for talks soon. If you have something awesome to share with us, submit a proposal online by March 31st.</p>
-  <%= link_to "Learn More", call_for_proposals_event_path(@event.year), :class => "learnMore" %>
-  <div class="clear"></div>
-  </section>
+<section id="currentSponsors">
+<h4>Our Sponsors</h4>
+<section class="sponsor first">
+<h3>Silver Sponsor</h3>
+<p><a href='http://agileanimal.com' alt="Agile Animal">
+  <img src='/images/sponsors/agile_animal_small.png' />
+</a>
+</p>
+</section>
+<section class="sponsor">
+<h3>After-Party Sponsor</h3>
+<p><a href='http://github.com'>
+  <img src='/images/sponsors/github.png' />
+</a>
+</p>
+</section>
+<section class="sponsor">
+<h3>Sticker Sponsor</h3>
+<p><a href='http://stickermule.com'>
+  <img src='/images/sponsors/stickermule.png' />
+</a>
+</p>
+</section>
+<section class="sponsor last">
+<h3>Venue Sponsor</h3>
+<p><a href='http://rubycentral.com'>
+  <img src='/images/sponsors/rubycentral_small.png' />
+</a>
+</p>
+</section>
+<div class="clear"></div>
+</section>
 
-  <section id="sponsorSignUp">
-  <h4>Sponsor Sign-Up</h4>
-  <p>Sponsor The Aloha Ruby Conference!Sponsoring the Aloha Ruby Conference is a great way to get access to the top Ruby talent in the Pacific Rim, and from around the world. Join hundreds of passionate Rubyists in an intimate and network-heavy gathering to share your brand awareness, recruiting efforts, developer adoption, or anything else.
-  To learn more about sponsoring, <a href="/assets/aloharuby-sponsorship_prospectus.pdf">download the prospectus</a>.</p>
-  <%= link_to "Learn More", call_for_sponsors_event_path(@event.year), :class => "learnMore" %>
-  <div class="clear"></div>
-  </section>
-  <div class="clear"></div>
+
+<section id="sponsorSignUp">
+<h4>Sponsorship Information</h4>
+<p>Sponsor The Aloha Ruby Conference!Sponsoring the Aloha Ruby Conference is a great way to get access to the top Ruby talent in the Pacific Rim, and from around the world. Join hundreds of passionate Rubyists in an intimate and network-heavy gathering to share your brand awareness, recruiting efforts, developer adoption, or anything else.
+To learn more about sponsoring, <a href="/assets/aloharuby-sponsorship_prospectus.pdf">download the prospectus</a>.</p>
+<%= link_to "Learn More", call_for_sponsors_event_path(@event.year), :class => "learnMore" %>
+<div class="clear"></div>
+</section>
+<div class="clear"></div>
 </section><!-- End of Main Content -->
 
 <%= render 'shared/snippet', :snippet_name => "event_footer" %>

@@ -493,6 +493,10 @@ a.learnMore{
   width: 250px;
 }
 
+.sponsor-photo a img{
+  max-width: 200px;
+}
+
 .sponsor {
   float: left;
   width: 300px;
@@ -1015,4 +1019,12 @@ img.speaker {
     border-radius: 6px;
     
 	background: rgba(255, 255, 255, 0.65);
+}
+
+/*****************
+Ikayzo Logo
+*****************/
+section#ikayzo.sponsor-bronze section.sponsor-desc p{
+  position: relative;
+  top: 25px;
 }

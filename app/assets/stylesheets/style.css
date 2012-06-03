@@ -493,6 +493,11 @@ a.learnMore{
   width: 250px;
 }
 
+.sponsor-photo a img{
+  max-width: 200px;
+}
+
+
 .sponsor {
   float: left;
   width: 300px;
@@ -766,6 +771,7 @@ aside#sidebar{
 	padding: 0 0 0 20px;
 	height: 400px;
 }
+
 
 /******************************
 Wufoo Form Theme
