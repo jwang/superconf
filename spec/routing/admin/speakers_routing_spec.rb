@@ -4,31 +4,31 @@ describe Admin::SpeakersController do
   describe "routing" do
 
     it "routes to #index" do
-      get("/admin/speakers").should route_to("admin/speakers#index")
+      get("/admin/events/1/speakers").should route_to("admin/speakers#index", :event_id => "1")
     end
 
     it "routes to #new" do
-      get("/admin/speakers/new").should route_to("admin/speakers#new")
+      get("/admin/events/1/speakers/new").should route_to("admin/speakers#new", :event_id => "1")
     end
 
     it "routes to #show" do
-      get("/admin/speakers/1").should route_to("admin/speakers#show", :id => "1")
+      get("/admin/events/1/speakers/1").should route_to("admin/speakers#show", :event_id => "1", :id => "1")
     end
 
     it "routes to #edit" do
-      get("/admin/speakers/1/edit").should route_to("admin/speakers#edit", :id => "1")
+      get("/admin/events/1/speakers/1/edit").should route_to("admin/speakers#edit", :event_id => "1", :id => "1")
     end
 
     it "routes to #create" do
-      post("/admin/speakers").should route_to("admin/speakers#create")
+      post("/admin/events/1/speakers").should route_to("admin/speakers#create", :event_id => "1")
     end
 
     it "routes to #update" do
-      put("/admin/speakers/1").should route_to("admin/speakers#update", :id => "1")
+      put("/admin/events/1/speakers/1").should route_to("admin/speakers#update", :event_id => "1", :id => "1")
     end
 
     it "routes to #destroy" do
-      delete("/admin/speakers/1").should route_to("admin/speakers#destroy", :id => "1")
+      delete("/admin/events/1/speakers/1").should route_to("admin/speakers#destroy", :event_id => "1", :id => "1")
     end
 
   end
