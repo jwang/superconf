@@ -5,4 +5,4 @@ before_script:
   - "cp config/database.yml.example config/database.yml"
   - "psql -c 'create database superconf_test;' -U postgres >/dev/null"
 
-script: "bundle exec rake db:drop db:create db:migrate spec cucumber"
+script: "bundle exec rake db:drop db:create db:test:prepare spec cucumber"
