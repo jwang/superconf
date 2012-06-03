@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.1.0'
+gem 'rails', '3.1.5'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -34,7 +34,7 @@ gem "jquery-rails"
 gem 'devise'
 gem 'omniauth'
 gem 'omniauth-openid'
-gem 'omniauth-github'
+#gem 'omniauth-github'
 gem 'omniauth-google'
 gem 'oa-core'
 gem 'cancan'
@@ -73,6 +73,6 @@ group :development do
   #gem 'guard-rails-assets'
   #gem 'guard-sprockets'
   gem 'guard-uglify'
-  gem 'spork', '~> 0.9.0.rc'
+  gem 'spork', '~> 1.0.0.rc3'
   gem 'rails-footnotes', '>= 3.7'
 end
