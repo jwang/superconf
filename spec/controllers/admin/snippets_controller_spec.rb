@@ -2,8 +2,8 @@ require 'spec_helper'
 
 describe Admin::SnippetsController do
   before(:all) do
-    @event = Factory(:event)
-    @admin = Factory(:admin) if @admin.nil?
+    @event = FactoryGirl.create(:event)
+    @admin = FactoryGirl.create(:admin) if @admin.nil?
   end
 
 

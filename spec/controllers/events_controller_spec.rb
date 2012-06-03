@@ -6,7 +6,7 @@ describe EventsController do
   # Event. As you add validations to Event, be sure to
   # update the return value of this method accordingly.
   def valid_attributes
-    Factory.attributes_for(:event) #{}
+    FactoryGirl.attributes_for(:event) #{}
   end
 
   before :all do

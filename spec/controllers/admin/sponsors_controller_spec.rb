@@ -2,8 +2,8 @@ require 'spec_helper'
 
 describe Admin::SponsorsController do
   before(:all) do
-    @admin = Factory(:admin) if @admin.nil?
-    @event = Factory(:event)
+    @admin = FactoryGirl.create(:admin) if @admin.nil?
+    @event = FactoryGirl.create(:event)
   end
 
   login_admin
@@ -21,8 +21,8 @@ describe Admin::SponsorsController do
 
   shared_examples_for "an admin event sponsors view" do |action, single_action|
     it "should set @active_tab to events" do
-      event = Factory(:event)
-      sponsor = Factory(:sponsor, :event => event)
+      event = FactoryGirl.create(:event)
+      sponsor = FactoryGirl.create(:sponsor, :event => event)
       if single_action
         get action, :event_id => event.to_param, :id => sponsor.to_param
       else

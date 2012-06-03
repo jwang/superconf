@@ -1,9 +1,11 @@
 require 'factory_girl'
 require 'faker'
 
-Factory.define :sponsor do |s|
-  s.name Faker::Company.name
-  s.description Faker::Lorem.paragraphs(3)
-  s.association :event
-  s.association :sponsorship_level
+FactoryGirl.define do
+  factory :sponsor do
+    name Faker::Company.name
+    description Faker::Lorem.paragraphs(3)
+    association :event
+    association :sponsorship_level
+  end
 end

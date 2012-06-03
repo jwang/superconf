@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe Event do
   before :all do 
-    @event = Factory(:event)
+    @event = FactoryGirl.create(:event)
   end
   describe "validations" do
     it { should validate_presence_of :name }

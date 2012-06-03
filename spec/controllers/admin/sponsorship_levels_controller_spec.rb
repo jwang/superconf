@@ -3,8 +3,8 @@ require 'spec_helper'
 describe Admin::SponsorshipLevelsController do
 
   before(:all) do
-    @event = Factory(:event)
-    @admin = Factory(:admin) if @admin.nil?
+    @event = FactoryGirl.create(:event)
+    @admin = FactoryGirl.create(:admin) if @admin.nil?
   end
 
   login_admin
@@ -15,8 +15,8 @@ describe Admin::SponsorshipLevelsController do
 
   shared_examples_for "an admin event sponsorship_levels view" do |action, single_action|
     it "should set @active_tab to events" do
-      event = Factory(:event)
-      sponsorship_level = Factory(:sponsorship_level, :event => event)
+      event = FactoryGirl.create(:event)
+      sponsorship_level = FactoryGirl.create(:sponsorship_level, :event => event)
       if single_action
         get action, :event_id => event.to_param, :id => sponsorship_level.to_param
       else

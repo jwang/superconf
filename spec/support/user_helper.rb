@@ -6,7 +6,7 @@ def login_user
     if @user
       sign_in @user
     else
-      sign_in Factory(:user, :email => Faker::Internet.email)
+      sign_in FactoryGirl.create(:user, :email => Faker::Internet.email)
     end
   end
 end
@@ -17,7 +17,7 @@ def login_admin
     if @admin
       sign_in @admin
     else
-      sign_in Factory(:user, :email => Faker::Internet.email, :role => "admin")
+      sign_in FactoryGirl.create(:user, :email => Faker::Internet.email, :role => "admin")
     end
   end
 end

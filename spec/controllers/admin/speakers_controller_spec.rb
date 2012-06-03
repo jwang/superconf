@@ -28,10 +28,9 @@ describe Admin::SpeakersController do
 
   describe "GET index" do
     it "assigns all speakers as @admin_speakers" do
-      Speaker.destroy_all
       speaker = Speaker.create! valid_attributes
       get :index, :event_id => @event.to_param
-      assigns(:speakers).should eq([speaker])
+      assigns(:speakers).should eq(@event.speakers)
     end
   end
 

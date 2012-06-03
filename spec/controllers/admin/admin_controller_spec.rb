@@ -2,8 +2,8 @@ require 'spec_helper'
 
 describe Admin::AdminController do
   before :all do
-    @user = Factory(:user) if @user.nil?
-    @admin = Factory(:admin) if @admin.nil?
+    @user = FactoryGirl.create(:user) if @user.nil?
+    @admin = FactoryGirl.create(:admin) if @admin.nil?
   end
 
   context "when logged in as user" do

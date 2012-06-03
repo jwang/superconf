@@ -2,10 +2,10 @@ require 'spec_helper'
 
 describe ProposalsController do
   def valid_attributes
-    Factory.attributes_for(:proposal)
+    FactoryGirl.attributes_for(:proposal)
   end
   before :all do
-    @user = Factory(:user)
+    @user = FactoryGirl.create(:user)
   end
 
   login_user
@@ -13,8 +13,8 @@ describe ProposalsController do
   describe "#index" do
     it "should display the users' proposals" do
       Proposal.destroy_all
-      Factory(:proposal, :user => @user)
-      other_proposal = Factory(:proposal)
+      FactoryGirl.create(:proposal, :user => @user)
+      other_proposal = FactoryGirl.create(:proposal)
       get :index
       assigns(:proposals).should == @user.proposals
       assigns(:proposals).should_not include(other_proposal)
@@ -68,7 +68,7 @@ describe ProposalsController do
 
   describe "#edit" do
     before :all do
-      @proposal = Factory(:proposal, :user => @user)
+      @proposal = FactoryGirl.create(:proposal, :user => @user)
     end
 
     it "should find the proposal based on id" do
@@ -85,7 +85,7 @@ describe ProposalsController do
 
   describe "#update" do
     before :all do
-      @proposal = Factory(:proposal, :user => @user )
+      @proposal = FactoryGirl.create(:proposal, :user => @user )
     end
 
     describe "with valid params" do

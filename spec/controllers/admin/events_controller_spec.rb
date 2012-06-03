@@ -2,11 +2,11 @@ require 'spec_helper'
 
 describe Admin::EventsController do
   def valid_attributes
-    Factory.attributes_for(:event) #{}
+    FactoryGirl.attributes_for(:event) #{}
   end
 
   before :all do
-    @admin = Factory(:admin) if @admin.nil?
+    @admin = FactoryGirl.create(:admin) if @admin.nil?
   end
 
   login_admin
