@@ -4,6 +4,6 @@ rvm:
 before_script:
   - "cp config/database.yml.example config/database.yml"
   - "psql -c 'create database superconf_test;' -U postgres >/dev/null"
-  - "bundle exec rake db:test:prepare"
+  - "bundle exec rake db:migrate"
 
 script: "bundle exec rake spec cucumber"
