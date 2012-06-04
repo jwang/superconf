@@ -13,13 +13,11 @@ SuperConf is a conference planning web app.
 
 ### Tools used
 
-* Ruby 1.9.2 (p290)
-* Rails 3.1.0
+* Ruby 1.9.3 (p125)
+* Rails 3.1.5
 
 
 Suggested .rvmrc
 ```
-rvm use 1.9.2-p290  
-rvm gemset create superconf  
-rvm use 1.9.2-p290@superconf
+rvm use 1.9.3-p125@superconf --create
 ```
