@@ -4,6 +4,7 @@ Superconf::Application.routes.draw do
   match "/cfp" => redirect("/events/1/call_for_proposals")
   match "/sponsors" => redirect("/events/1/call_for_sponsors")
   match "/location" => redirect("/events/1/location")
+  match "/admin" => redirect("/admin/dashboard")
 
   resources :sponsors, :only => [:index]
   resources :events, :only => [:index, :show] do
@@ -18,7 +19,7 @@ Superconf::Application.routes.draw do
   end
 
   namespace :admin do
-    get "dasboard", :to => "admin#dashboard", :as => :dashboard
+    get "dashboard", :to => "admin#dashboard", :as => :dashboard
     resources :events do
       resources :snippets
       resources :sponsorship_levels

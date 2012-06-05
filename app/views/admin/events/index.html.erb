@@ -7,6 +7,7 @@
     <th>Year</th>
     <th>Start date</th>
     <th>End date</th>
+    <th># Speakers</th>
     <th></th>
     <th></th>
     <th></th>
@@ -19,6 +20,7 @@
       <td><%= event.year %></td>
       <td><%= event.start_date %></td>
       <td><%= event.end_date %></td>
+      <td><%= event.speakers.size %></td>
       <td><%= link_to 'Show', admin_event_path(event) %></td>
       <td><%= link_to 'Edit', edit_admin_event_path(event) %></td>
       <td><%= link_to 'Destroy', admin_event_path(event), confirm: 'Are you sure?', method: :delete %></td>
