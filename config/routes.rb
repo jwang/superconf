@@ -19,7 +19,7 @@ Superconf::Application.routes.draw do
   end
 
   namespace :admin do
-    get "dasboard", :to => "admin#dashboard", :as => :dashboard
+    get "dashboard", :to => "admin#dashboard", :as => :dashboard
     resources :events do
       resources :snippets
       resources :sponsorship_levels
