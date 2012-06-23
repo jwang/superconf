@@ -6,10 +6,12 @@
     <th></th>
     <th></th>
     <th></th>
+    <th></th>
   </tr>
 
 <% @speakers.each do |admin_speaker| %>
   <tr>
+    <td><p><img src="<%= admin_speaker.image.url(:thumb_crop) %>" /></p></td>
     <td><%= link_to admin_speaker.name, [:admin, @event, admin_speaker] %></td>
     <td><%= link_to 'Edit', edit_admin_event_speaker_path(@event,admin_speaker) %></td>
     <td><%= link_to 'Destroy', [:admin, @event, admin_speaker], confirm: 'Are you sure?', method: :delete %></td>

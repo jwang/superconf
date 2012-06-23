@@ -1,9 +1,9 @@
 <%= render "admin/events/nav" %>
 
-<p><%= @speaker.name %><p>
-<p><%= @speaker.company %><p>
-<p><%= @speaker.bio %><p>
-<img src="<%= @speaker.image.url(:default) %>" />
+<p><%= @speaker.name %></p>
+<p><%= @speaker.company %></p>
+<p><%= @speaker.bio %></p>
+<p><img src="<%= @speaker.image.url(:default_crop) %>" /></p>
 
 
 <%= link_to 'Edit', edit_admin_event_speaker_path(@event,@speaker) %> |

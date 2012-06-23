@@ -5,14 +5,12 @@
     <%= f.input :company %>
     <%= f.input :session %>
     <%= f.input :bio %>
-    <%= f.file_field :image %>
+    <%= f.input :image, :as => :file %>
     <%= f.input :twitter %>
     <%= f.input :github %>
     <%= f.input :website %>
     <%= f.input :order %>
   <% end %>
 
-  <%= f.actions  do %>
-    <%= f.action :submit %>
-  <% end %>
+  <%= f.action(:submit) %>
 <% end %>
