@@ -1,17 +1,18 @@
-<%= semantic_form_for [:admin, @event, @speaker] do |f| %>
+<%= semantic_form_for [:admin, @event, @speaker ], :html => { :multipart => true } do |f| %>
   <%= f.inputs do %>
     <%= f.input :name %>
     <%= f.input :event %>
     <%= f.input :company %>
     <%= f.input :session %>
     <%= f.input :bio %>
+    <%= f.file_field :image %>
     <%= f.input :twitter %>
     <%= f.input :github %>
     <%= f.input :website %>
     <%= f.input :order %>
   <% end %>
 
-  <%= f.buttons do %>
-    <%= f.commit_button %>
+  <%= f.actions  do %>
+    <%= f.action :submit %>
   <% end %>
 <% end %>
