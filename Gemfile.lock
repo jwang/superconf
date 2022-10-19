@@ -145,7 +145,7 @@ GEM
     net-scp (1.0.4)
       net-ssh (>= 1.99.1)
     net-ssh (2.5.2)
-    nokogiri (1.5.3)
+    nokogiri (1.5.11)
     oa-core (0.3.2)
     oauth (0.4.6)
     omniauth (1.0.3)
@@ -288,7 +288,7 @@ DEPENDENCIES
   omniauth
   omniauth-google
   omniauth-openid
-  paperclip (~> 2.3)
+  paperclip
   pg
   rails (= 3.1.5)
   rails-footnotes (>= 3.7)
